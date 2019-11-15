@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 #include "title.h"
+#include "mainmenu.h"
+#include "rules.h"
+#include "strats.h"
+#include "counting.h"
+#include "practice.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,14 +21,20 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Title* title;
-    QWidget* menu;
-    QWidget* rules;
-    QWidget* strats;
-    QWidget* counting;
-    QWidget* practice;
+    MainMenu* menu;
+    Rules* rules;
+    Strats* strats;
+    Counting* counting;
+    Practice* practice;
 
 public slots:
     void startBtnPressed();
+    void rulesBtnPressed();
+    void stratsBtnPressed();
+    void countingBtnPressed();
+    void practiceBtnPressed();
+
+
 
 private:
     Ui::MainWindow *ui;

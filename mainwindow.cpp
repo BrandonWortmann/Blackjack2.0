@@ -4,6 +4,14 @@
 #include "ui_title.h"
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
+#include "rules.h"
+#include "ui_rules.h"
+#include "counting.h"
+#include "ui_counting.h"
+#include "practice.h"
+#include "ui_practice.h"
+#include "strats.h"
+#include "ui_strats.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,9 +24,18 @@ MainWindow::MainWindow(QWidget *parent)
     this->title->show();
 
     menu = new MainMenu;
-    this->layout();
+    rules = new Rules;
+    strats = new Strats;
+    counting = new Counting;
+    practice = new Practice;
+
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+
+    connect(menu->ui->rulesBtn, &QPushButton::pressed, this, &MainWindow::rulesBtnPressed);
+    connect(menu->ui->stratsBtn, &QPushButton::pressed, this, &MainWindow::stratsBtnPressed);
+    connect(menu->ui->countingBtn, &QPushButton::pressed, this, &MainWindow::countingBtnPressed);
+    connect(menu->ui->practiceBtn, &QPushButton::pressed, this, &MainWindow::practiceBtnPressed);
 
 }
 
@@ -27,9 +44,35 @@ MainWindow::~MainWindow()
     delete ui;
     delete menu;
     delete title;
+    delete strats;
+    delete rules;
+    delete counting;
+    delete practice;
 }
 
 void MainWindow::startBtnPressed(){
     this->setCentralWidget(menu);
     this->menu->show();
 }
+
+void MainWindow::rulesBtnPressed(){
+    this->setCentralWidget(rules);
+    this->rules->show();
+}
+
+void MainWindow::stratsBtnPressed(){
+    this->setCentralWidget(strats);
+    this->strats->show();
+}
+
+void MainWindow::countingBtnPressed(){
+    this->setCentralWidget(counting);
+    this->counting->show();
+}
+
+void MainWindow::practiceBtnPressed(){
+    this->setCentralWidget(practice);
+    this->practice->show();
+}
+
+

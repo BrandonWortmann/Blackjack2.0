@@ -62,9 +62,13 @@ SOURCES += \
     Box2D/Dynamics/b2World.cpp \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
+    counting.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
+    practice.cpp \
+    rules.cpp \
+    strats.cpp \
     title.cpp
 
 HEADERS += \
@@ -115,13 +119,21 @@ HEADERS += \
     Box2D/Dynamics/b2World.h \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
+    counting.h \
     mainmenu.h \
     mainwindow.h \
+    practice.h \
+    rules.h \
+    strats.h \
     title.h
 
 FORMS += \
+    counting.ui \
     mainmenu.ui \
     mainwindow.ui \
+    practice.ui \
+    rules.ui \
+    strats.ui \
     title.ui
 
 # Default rules for deployment.

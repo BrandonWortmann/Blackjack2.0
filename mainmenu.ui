@@ -13,56 +13,56 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="rulesBtn">
    <property name="geometry">
     <rect>
      <x>140</x>
      <y>80</y>
-     <width>89</width>
+     <width>151</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Rules</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="countingBtn">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>180</y>
+     <width>151</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Counting</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stratsBtn">
    <property name="geometry">
     <rect>
      <x>140</x>
      <y>130</y>
-     <width>89</width>
+     <width>151</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Strategies</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="practiceBtn">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>170</y>
-     <width>89</width>
+     <y>230</y>
+     <width>151</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>220</y>
-     <width>89</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
+    <string>Practice</string>
    </property>
   </widget>
  </widget>
