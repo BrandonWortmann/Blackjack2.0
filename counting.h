@@ -14,8 +14,6 @@ class Counting : public QWidget
 public:
     explicit Counting(QWidget *parent = nullptr);
     ~Counting();
-
-private:
     Ui::Counting *ui;
 };
 

@@ -27,6 +27,8 @@ public:
     Counting* counting;
     Practice* practice;
 
+    void hideAll();
+
 public slots:
     void startBtnPressed();
     void rulesBtnPressed();

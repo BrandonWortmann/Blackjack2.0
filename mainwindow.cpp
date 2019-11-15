@@ -12,23 +12,31 @@
 #include "ui_practice.h"
 #include "strats.h"
 #include "ui_strats.h"
+#include <QStackedWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    title = new Title;
-    this->layout();
-    this->setCentralWidget(title);
-    this->title->show();
 
+    title = new Title;
     menu = new MainMenu;
     rules = new Rules;
     strats = new Strats;
     counting = new Counting;
     practice = new Practice;
 
+
+    QStackedWidget* stack = new QStackedWidget;   //Switch pages to be objects on stack while layout is on heap?
+    stack->addWidget(title);
+    stack->addWidget(menu);
+    stack->addWidget(rules);
+    stack->addWidget(counting);
+    stack->addWidget(strats);
+    stack->addWidget(practice);
+    this->setCentralWidget(stack);
+    title->show();
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
@@ -37,6 +45,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(menu->ui->countingBtn, &QPushButton::pressed, this, &MainWindow::countingBtnPressed);
     connect(menu->ui->practiceBtn, &QPushButton::pressed, this, &MainWindow::practiceBtnPressed);
 
+    connect(counting->ui->countingReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(practice->ui->practiceReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 }
 
 MainWindow::~MainWindow()
@@ -51,28 +63,36 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::startBtnPressed(){
-    this->setCentralWidget(menu);
+    hideAll();
     this->menu->show();
 }
 
 void MainWindow::rulesBtnPressed(){
-    this->setCentralWidget(rules);
+    hideAll();
     this->rules->show();
 }
 
 void MainWindow::stratsBtnPressed(){
-    this->setCentralWidget(strats);
+    hideAll();
     this->strats->show();
 }
 
 void MainWindow::countingBtnPressed(){
-    this->setCentralWidget(counting);
+    hideAll();
     this->counting->show();
 }
 
 void MainWindow::practiceBtnPressed(){
-    this->setCentralWidget(practice);
+    hideAll();
     this->practice->show();
+}
+
+void MainWindow::hideAll(){
+    this->title->hide();
+    this->rules->hide();
+    this->strats->hide();
+    this->counting->hide();
+    this->menu->hide();
 }
 
 
