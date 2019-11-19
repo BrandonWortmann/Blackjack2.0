@@ -62,6 +62,7 @@ SOURCES += \
     Box2D/Dynamics/b2World.cpp \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
+    blackjack.cpp \
     counting.cpp \
     main.cpp \
     mainmenu.cpp \
@@ -119,6 +120,7 @@ HEADERS += \
     Box2D/Dynamics/b2World.h \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
+    blackjack.h \
     counting.h \
     mainmenu.h \
     mainwindow.h \
