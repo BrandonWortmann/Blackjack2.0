@@ -57,3 +57,7 @@ void GameUI::checkDealer() {
     }
     QTimer::singleShot(250, this, &GameUI::startGame);
 }
+
+void GameUI::hitMe() {
+
+}
