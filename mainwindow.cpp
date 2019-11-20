@@ -27,8 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     counting = new Counting;
     practice = new Practice;
 
-
-    QStackedWidget* stack = new QStackedWidget;   //Switch pages to be objects on stack while layout is on heap?
+    QStackedWidget* stack = new QStackedWidget;
     stack->addWidget(title);
     stack->addWidget(menu);
     stack->addWidget(rules);
@@ -102,9 +101,8 @@ void MainWindow::hideAll(){
 
 void MainWindow::updateTitleText(int height)
 {
-   // title->ui->startBtn->setText((string));
-   // QPoint coord = title->ui->label->pos();
-   // title->ui->label->setGeometry(coord.x() , height, 201, 71);
-    title->ui->label->setGeometry(100 , height, 201, 71);
+    QPoint coord = title->ui->label->pos();
+    QSize dim = title->ui->label->size();
+    title->ui->label->setGeometry(coord.x() , height, dim.width(), dim.height());
 }
 
