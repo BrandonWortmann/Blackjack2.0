@@ -9,24 +9,24 @@ class Blackjack
 public:
     Blackjack();
 
-    enum outcome
+    enum _outcome
     {
         win, lose, push, blackjack
     };
     struct result
     {
-        outcome outcome;
+        _outcome outcome;
         long netGain;
         bool isShuffled;
     };
 
-    enum suit
+    enum _suit
     {
         spade, heart, club, diamond, invalid
     };
     struct card
     {
-        suit suit;
+        _suit suit;
         int number;
     };
 
