@@ -15,7 +15,11 @@ public:
     explicit Title(QWidget *parent = nullptr);
     ~Title();
     Ui::Title *ui;
+    bool gameStart;
+    void startAnimation();
 
+signals:
+    void updateTextHeight(int);
 };
 
 #endif // TITLE_H
