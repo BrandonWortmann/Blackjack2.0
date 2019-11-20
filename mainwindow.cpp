@@ -49,6 +49,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(practice->ui->practiceReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+
+    connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
+    title->show();
+    title->startAnimation();
 }
 
 MainWindow::~MainWindow()
@@ -93,6 +97,14 @@ void MainWindow::hideAll(){
     this->strats->hide();
     this->counting->hide();
     this->menu->hide();
+    this->practice->hide();
 }
 
+void MainWindow::updateTitleText(int height)
+{
+   // title->ui->startBtn->setText((string));
+   // QPoint coord = title->ui->label->pos();
+   // title->ui->label->setGeometry(coord.x() , height, 201, 71);
+    title->ui->label->setGeometry(100 , height, 201, 71);
+}
 

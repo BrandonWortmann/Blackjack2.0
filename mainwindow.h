@@ -36,7 +36,7 @@ public slots:
     void countingBtnPressed();
     void practiceBtnPressed();
 
-
+    void updateTitleText(int);
 
 private:
     Ui::MainWindow *ui;
