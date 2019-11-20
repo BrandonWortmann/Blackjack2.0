@@ -13,22 +13,32 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#label_2{
+border-image: url(:/new/images/Resources/casino.jpg) 0 0 1000 8000 stretch stretch;
+}
+</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>60</y>
-     <width>791</width>
-     <height>181</height>
+     <x>90</x>
+     <y>40</y>
+     <width>571</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>30</pointsize>
+     <family>Century Schoolbook L</family>
+     <pointsize>60</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>BLACK JACK TUTORIAL</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;BLACKJACK&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>false</bool>
@@ -37,17 +47,49 @@
   <widget class="QPushButton" name="startBtn">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>640</y>
+     <x>190</x>
+     <y>510</y>
      <width>381</width>
      <height>111</height>
     </rect>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>START</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_2{
+background-image: url(:/new/images/Resources/casino.jpg);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/new/images/Resources/casino.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>label</zorder>
+  <zorder>startBtn</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -10,6 +10,8 @@ Title::Title(QWidget *parent) :
     ui(new Ui::Title)
 {
     ui->setupUi(this);
+
+    //    this->setStyleSheet("{background-image: url(:/Resources/cardClubs10.png);}");
     gameStart = true;
 
     // Define the ground body.

@@ -35,7 +35,6 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(strats);
     stack->addWidget(practice);
     this->setCentralWidget(stack);
-    title->show();
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
