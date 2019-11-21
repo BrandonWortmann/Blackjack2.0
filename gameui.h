@@ -2,6 +2,8 @@
 #define GAMEUI_H
 
 #include <QMainWindow>
+#include <vector>
+#include <QLabel>
 
 namespace Ui {
 class GameUI;
@@ -32,6 +34,8 @@ private:
     int userNum;
     int playerNextCardPos;
     int dealerNextCardPos;
+    QVector<QLabel*> cards;
+    int index;
 };
 
 #endif // GAMEUI_H
