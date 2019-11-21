@@ -49,6 +49,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(practice->ui->practiceReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
     connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
+    connect(title, &Title::updateCard1, this, &MainWindow::updateCard1);
+    connect(title, &Title::updateCard2, this, &MainWindow::updateCard2);
+    connect(title, &Title::updateCard3, this, &MainWindow::updateCard3);
+    connect(title, &Title::updateCard4, this, &MainWindow::updateCard4);
+
+
+
     title->show();
     title->startAnimation();
 }
@@ -100,8 +107,56 @@ void MainWindow::hideAll(){
 
 void MainWindow::updateTitleText(int height)
 {
-    QPoint coord = title->ui->label->pos();
-    QSize dim = title->ui->label->size();
-    title->ui->label->setGeometry(coord.x() , height, dim.width(), dim.height());
+//    QPoint coord1 = title->ui->label->pos();
+//    QSize dim1 = title->ui->label->size();
+
+//    QPoint coord2 = title->ui->label_3->pos();
+//    QSize dim2 = title->ui->label_3->size();
+
+//    title->ui->label->setGeometry(coord1.x() , height, dim1.width(), dim1.height());
+//    title->ui->label_3->setGeometry(coord2.x() , height, dim2.width(), dim2.height());
+
+    height = height + 220;
+
+    QPoint coord1 = title->ui->bouncingCard1->pos();
+    QPoint coord2 = title->ui->bouncingCard2->pos();
+    QPoint coord3 = title->ui->bouncingCard3->pos();
+    QPoint coord4 = title->ui->bouncingCard4->pos();
+
+    QSize dim1 = title->ui->bouncingCard1->size();
+    QSize dim2 = title->ui->bouncingCard2->size();
+    QSize dim3 = title->ui->bouncingCard3->size();
+    QSize dim4 = title->ui->bouncingCard4->size();
+
+    title->ui->bouncingCard1->setGeometry(coord1.x(), height, dim1.width(), dim1.height());
+    title->ui->bouncingCard2->setGeometry(coord2.x(), height, dim2.width(), dim2.height());
+    title->ui->bouncingCard3->setGeometry(coord3.x(), height, dim3.width(), dim3.height());
+    title->ui->bouncingCard4->setGeometry(coord4.x(), height, dim4.width(), dim4.height());
+
 }
 
+void MainWindow::updateCard1(int height)
+{
+    QPoint coord = title->ui->bouncingCard1->pos();
+    QSize dim = title->ui->bouncingCard1->size();
+    title->ui->bouncingCard1->setGeometry(coord.x(), height, dim.width(), dim.height());
+}
+
+void MainWindow::updateCard2(int height)
+{
+    QPoint coord = title->ui->bouncingCard2->pos();
+    QSize dim = title->ui->bouncingCard2->size();
+    title->ui->bouncingCard2->setGeometry(coord.x(), height, dim.width(), dim.height());
+}
+void MainWindow::updateCard3(int height)
+{
+    QPoint coord = title->ui->bouncingCard3->pos();
+    QSize dim = title->ui->bouncingCard3->size();
+    title->ui->bouncingCard3->setGeometry(coord.x(), height, dim.width(), dim.height());
+}
+void MainWindow::updateCard4(int height)
+{
+    QPoint coord = title->ui->bouncingCard4->pos();
+    QSize dim = title->ui->bouncingCard4->size();
+    title->ui->bouncingCard4->setGeometry(coord.x(), height, dim.width(), dim.height());
+}

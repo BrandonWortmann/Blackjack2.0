@@ -37,6 +37,11 @@ public slots:
     void practiceBtnPressed();
 
     void updateTitleText(int);
+    void updateCard1(int);
+    void updateCard2(int);
+    void updateCard3(int);
+    void updateCard4(int);
+
 
 private:
     Ui::MainWindow *ui;
