@@ -145,3 +145,62 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Resources/cardBack_red5.png \
+    Resources/cardClubs10.png \
+    Resources/cardClubs2.png \
+    Resources/cardClubs3.png \
+    Resources/cardClubs4.png \
+    Resources/cardClubs5.png \
+    Resources/cardClubs6.png \
+    Resources/cardClubs7.png \
+    Resources/cardClubs8.png \
+    Resources/cardClubs9.png \
+    Resources/cardClubsA.png \
+    Resources/cardClubsJ.png \
+    Resources/cardClubsK.png \
+    Resources/cardClubsQ.png \
+    Resources/cardDiamonds10.png \
+    Resources/cardDiamonds2.png \
+    Resources/cardDiamonds3.png \
+    Resources/cardDiamonds4.png \
+    Resources/cardDiamonds5.png \
+    Resources/cardDiamonds6.png \
+    Resources/cardDiamonds7.png \
+    Resources/cardDiamonds8.png \
+    Resources/cardDiamonds9.png \
+    Resources/cardDiamondsA.png \
+    Resources/cardDiamondsJ.png \
+    Resources/cardDiamondsK.png \
+    Resources/cardDiamondsQ.png \
+    Resources/cardHearts10.png \
+    Resources/cardHearts2.png \
+    Resources/cardHearts3.png \
+    Resources/cardHearts4.png \
+    Resources/cardHearts5.png \
+    Resources/cardHearts6.png \
+    Resources/cardHearts7.png \
+    Resources/cardHearts8.png \
+    Resources/cardHearts9.png \
+    Resources/cardHeartsA.png \
+    Resources/cardHeartsJ.png \
+    Resources/cardHeartsK.png \
+    Resources/cardHeartsQ.png \
+    Resources/cardJoker.png \
+    Resources/cardSpades10.png \
+    Resources/cardSpades2.png \
+    Resources/cardSpades3.png \
+    Resources/cardSpades4.png \
+    Resources/cardSpades5.png \
+    Resources/cardSpades6.png \
+    Resources/cardSpades7.png \
+    Resources/cardSpades8.png \
+    Resources/cardSpades9.png \
+    Resources/cardSpadesA.png \
+    Resources/cardSpadesJ.png \
+    Resources/cardSpadesK.png \
+    Resources/cardSpadesQ.png
+
+RESOURCES += \
+    Resource.qrc

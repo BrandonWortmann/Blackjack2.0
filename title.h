@@ -1,5 +1,7 @@
 #ifndef TITLE_H
 #define TITLE_H
+#include "Box2D/Box2D.h"
+#include <stdio.h>
 
 #include <QWidget>
 
@@ -16,6 +18,10 @@ public:
     ~Title();
     Ui::Title *ui;
     bool gameStart;
+    b2World world;
+    b2Body* body;
+
+public slots:
     void startAnimation();
 
 signals:

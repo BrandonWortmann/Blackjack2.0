@@ -6,25 +6,13 @@
 
 Title::Title(QWidget *parent) :
     QWidget(parent),
+    world(b2Vec2(0.0f, -10.0f)),
     ui(new Ui::Title)
 {
     ui->setupUi(this);
+
+    //    this->setStyleSheet("{background-image: url(:/Resources/cardClubs10.png);}");
     gameStart = true;
-
-}
-
-Title::~Title()
-{
-    delete ui;
-}
-
-void Title::startAnimation()
-{
-    // Define the gravity vector.
-    b2Vec2 gravity(0.0f, -10.0f);
-
-    // Construct a world object, which will hold and simulate the rigid bodies.
-    b2World world(gravity);
 
     // Define the ground body.
     b2BodyDef groundBodyDef;
@@ -48,7 +36,7 @@ void Title::startAnimation()
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
     bodyDef.position.Set(0.0f, 71.0f);
-    b2Body* body = world.CreateBody(&bodyDef);
+    body = world.CreateBody(&bodyDef);
 
     // Define another box shape for our dynamic body.
     b2PolygonShape dynamicBox;
@@ -68,6 +56,15 @@ void Title::startAnimation()
 
     // Add the shape to the body.
     body->CreateFixture(&fixtureDef);
+}
+
+Title::~Title()
+{
+    delete ui;
+}
+
+void Title::startAnimation()
+{
 
     // Prepare for simulation. Typically we use a time step of 1/60 of a
     // second (60Hz) and 10 iterations. This provides a high quality simulation
@@ -76,10 +73,7 @@ void Title::startAnimation()
     int32 velocityIterations = 6;
     int32 positionIterations = 2;
 
-    int time = 0;
-
     // This is our little game loop.
-    while(time <= 10000)
     {
         // Instruct the world to perform a single step of simulation.
         // It is generally best to keep the time step and iterations fixed.
@@ -90,13 +84,11 @@ void Title::startAnimation()
         float32 angle = body->GetAngle();
 
        // printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
-       // QString textHeight;
-       // textHeight.setNum(double(position.y));
         int textHeight = int(position.y);
-        QTimer::singleShot(time * 5, [this, textHeight] () {
+        QTimer::singleShot(10, [this, textHeight] () {
                            updateTextHeight(textHeight);
                            });
-        ++time;
+        QTimer::singleShot( 10, this, SLOT(startAnimation()));
 
     }
 }
