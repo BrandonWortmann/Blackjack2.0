@@ -13,6 +13,8 @@ GameUI::GameUI(QWidget *parent) :
     ui->standButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
+    money = 500;
+    startGame();
 
     connect(ui->startButton, &QPushButton::pressed,
             this, &GameUI::beginDealing);
@@ -36,8 +38,12 @@ void GameUI::startGame() {
 }
 
 void GameUI::beginDealing() {
+
+    wager = ui->wagerEdit->text().toInt();
+
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
+    ui->startButton->hide();
     ui->standButton->show();
     ui->hitButton->show();
     ui->doubleButton->show();
@@ -72,13 +78,17 @@ void GameUI::checkDealer() {
     int dealernum = (rand() % 10) + 14;
     if(dealernum > userNum && dealernum <= 21) {
         ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(wager));
-        money += wager;
+        ui->loseLabel->show();
+        money -= wager;
+
     }
     else {
         ui->winLabel->setText("You Win!\nYou won $" + QString::number(wager));
+        ui->winLabel->show();
         money += wager;
     }
-    QTimer::singleShot(250, this, &GameUI::startGame);
+    ui->moneyLabel->setText("$" + QString::number(money));
+    QTimer::singleShot(1500, this, &GameUI::startGame);
 }
 
 void GameUI::hitMe() {

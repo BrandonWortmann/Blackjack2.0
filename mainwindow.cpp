@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     strats = new Strats;
     counting = new Counting;
     practice = new Practice;
+    gameUI = new GameUI;
 
     QStackedWidget* stack = new QStackedWidget;
     stack->addWidget(title);
@@ -34,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(counting);
     stack->addWidget(strats);
     stack->addWidget(practice);
+    stack->addWidget(gameUI);
     this->setCentralWidget(stack);
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
@@ -62,6 +64,7 @@ MainWindow::~MainWindow()
     delete rules;
     delete counting;
     delete practice;
+    delete gameUI;
 }
 
 void MainWindow::startBtnPressed(){
@@ -86,7 +89,7 @@ void MainWindow::countingBtnPressed(){
 
 void MainWindow::practiceBtnPressed(){
     hideAll();
-    this->practice->show();
+    this->gameUI->show();
 }
 
 void MainWindow::hideAll(){
