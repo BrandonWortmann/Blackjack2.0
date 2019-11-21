@@ -119,23 +119,6 @@ void MainWindow::updateTitleText(int height)
 //    title->ui->label->setGeometry(coord1.x() , height, dim1.width(), dim1.height());
 //    title->ui->label_3->setGeometry(coord2.x() , height, dim2.width(), dim2.height());
 
-    height = height + 220;
-
-    QPoint coord1 = title->ui->bouncingCard1->pos();
-    QPoint coord2 = title->ui->bouncingCard2->pos();
-    QPoint coord3 = title->ui->bouncingCard3->pos();
-    QPoint coord4 = title->ui->bouncingCard4->pos();
-
-    QSize dim1 = title->ui->bouncingCard1->size();
-    QSize dim2 = title->ui->bouncingCard2->size();
-    QSize dim3 = title->ui->bouncingCard3->size();
-    QSize dim4 = title->ui->bouncingCard4->size();
-
-    title->ui->bouncingCard1->setGeometry(coord1.x(), height, dim1.width(), dim1.height());
-    title->ui->bouncingCard2->setGeometry(coord2.x(), height, dim2.width(), dim2.height());
-    title->ui->bouncingCard3->setGeometry(coord3.x(), height, dim3.width(), dim3.height());
-    title->ui->bouncingCard4->setGeometry(coord4.x(), height, dim4.width(), dim4.height());
-
 }
 
 void MainWindow::updateCard1(int height)

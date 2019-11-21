@@ -35,7 +35,7 @@ Title::Title(QWidget *parent) :
     // Define the dynamic body. We set its position and call the body factory.
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 150.0f);  //20 causes 3rd card to jump like crazy. 10 causes 2nd card to barely hop
+    bodyDef.position.Set(0.0f, 150.0f);
     body = world.CreateBody(&bodyDef);
 
     body2 = world.CreateBody(&bodyDef);
