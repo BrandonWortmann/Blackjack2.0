@@ -18,7 +18,10 @@ public:
     void beginDealing();
     void hitMe();
     void stand();
+    void doubleDown();
+    void split();
     void checkDealer();
+    void dealCard(bool);
 
 
 private:
@@ -26,6 +29,8 @@ private:
     int money;
     int userNum;
     int wager;
+    int playerNextCardPos;
+    int dealerNextCardPos;
 };
 
 #endif // GAMEUI_H
