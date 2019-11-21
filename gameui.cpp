@@ -81,7 +81,9 @@ void GameUI::beginDealing() {
 }
 
 void GameUI::dealCard(bool isPlayer) {
-
+    if(index == 8) {
+        index = 0;
+    }
     int xPos;
     int yPos;
     int suit;
