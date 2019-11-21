@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>10</y>
+      <y>110</y>
       <width>401</width>
       <height>181</height>
      </rect>
@@ -65,8 +65,8 @@ You Lost $200</string>
    <widget class="QLabel" name="loseLabel">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>120</y>
+      <x>210</x>
+      <y>110</y>
       <width>401</width>
       <height>181</height>
      </rect>
@@ -88,7 +88,7 @@ You Lost $200</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>230</y>
+      <y>110</y>
       <width>401</width>
       <height>181</height>
      </rect>
@@ -110,7 +110,7 @@ You Received $200</string>
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>290</y>
+      <y>110</y>
       <width>401</width>
       <height>181</height>
      </rect>
@@ -130,18 +130,21 @@ You Received $200</string>
    <widget class="QLineEdit" name="wagerEdit">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>430</y>
+      <x>350</x>
+      <y>310</y>
       <width>113</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="maxLength">
+     <number>19</number>
     </property>
    </widget>
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>490</y>
+      <x>360</x>
+      <y>360</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -198,6 +201,31 @@ You Received $200</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="backgroundLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>800</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>backgroundLabel</zorder>
+   <zorder>hitButton</zorder>
+   <zorder>standButton</zorder>
+   <zorder>bustLabel</zorder>
+   <zorder>loseLabel</zorder>
+   <zorder>winLabel</zorder>
+   <zorder>wagerLabel</zorder>
+   <zorder>wagerEdit</zorder>
+   <zorder>startButton</zorder>
+   <zorder>doubleButton</zorder>
+   <zorder>splitButton</zorder>
+   <zorder>moneyLabel</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

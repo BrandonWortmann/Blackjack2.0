@@ -2,6 +2,8 @@
 #include "ui_gameui.h"
 #include <QTimer>
 #include <QPushButton>
+#include <QLineEdit>
+#include <QPixmap>
 
 GameUI::GameUI(QWidget *parent) :
     QMainWindow(parent),
@@ -13,6 +15,9 @@ GameUI::GameUI(QWidget *parent) :
     ui->standButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
+
+    ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
+
     money = 500;
     startGame();
 
@@ -22,6 +27,8 @@ GameUI::GameUI(QWidget *parent) :
             this, &GameUI::hitMe);
     connect(ui->standButton, &QPushButton::pressed,
             this, &GameUI::stand);
+    connect(ui->wagerEdit, &QLineEdit::textChanged,
+            this, &GameUI::wagerChanged);
 }
 
 GameUI::~GameUI()
@@ -35,11 +42,19 @@ void GameUI::startGame() {
     ui->loseLabel->hide();
     ui->wagerLabel->show();
     ui->wagerEdit->show();
+    ui->startButton->show();
 }
 
 void GameUI::beginDealing() {
-
-    wager = ui->wagerEdit->text().toInt();
+    unsigned long newWager = (unsigned long) ui->wagerEdit->text().toLong();
+    if(newWager > money) {
+        ui->wagerLabel->setText("You can't wager\n more than you own!");
+        QTimer::singleShot(3000, [this] () {
+            ui->wagerLabel->setText("What is your wager?");
+            });
+        return;
+    }
+    wager = (unsigned long) ui->wagerEdit->text().toLong();
 
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
@@ -70,6 +85,8 @@ void GameUI::dealCard(bool isPlayer) {
 void GameUI::stand() {
     ui->standButton->hide();
     ui->hitButton->hide();
+    ui->splitButton->hide();
+    ui->doubleButton->hide();
     userNum = 18;
     checkDealer();
 }
@@ -80,7 +97,6 @@ void GameUI::checkDealer() {
         ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(wager));
         ui->loseLabel->show();
         money -= wager;
-
     }
     else {
         ui->winLabel->setText("You Win!\nYou won $" + QString::number(wager));
@@ -101,4 +117,16 @@ void GameUI::doubleDown() {
 
 void GameUI::split() {
 
+}
+
+void GameUI::wagerChanged() {
+    QString val = ui->wagerEdit->text();
+    int len = val.length();
+    if(len < 1) {
+        return;
+    }
+    if(val.at(len - 1) < 48 || val.at(len - 1) > 57) {
+        val.chop(1);
+        ui->wagerEdit->setText(val);
+    }
 }

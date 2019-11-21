@@ -22,13 +22,14 @@ public:
     void split();
     void checkDealer();
     void dealCard(bool);
+    void wagerChanged();
 
 
 private:
     Ui::GameUI *ui;
-    int money;
+    unsigned long money;
+    unsigned long wager;
     int userNum;
-    int wager;
     int playerNextCardPos;
     int dealerNextCardPos;
 };
