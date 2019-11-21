@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>350</y>
-      <width>89</width>
+      <y>160</y>
+      <width>101</width>
       <height>25</height>
      </rect>
     </property>
@@ -31,8 +31,8 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>390</y>
-      <width>89</width>
+      <y>260</y>
+      <width>101</width>
       <height>25</height>
      </rect>
     </property>
@@ -148,6 +148,32 @@ You Received $200</string>
     </property>
     <property name="text">
      <string>Start Game</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="doubleButton">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>210</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Double Down!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="splitButton">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>310</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Split</string>
     </property>
    </widget>
   </widget>

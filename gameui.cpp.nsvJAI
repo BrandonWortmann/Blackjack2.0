@@ -51,14 +51,17 @@ void GameUI::dealCard(bool isPlayer) {
     if(isPlayer) {
         xPos = playerNextCardPos;
         yPos = 500;
+        playerNextCardPos += 50;
     }
     else {
         xPos = dealerNextCardPos;
         yPos = 200;
+        dealerNextCardPos += 50;
     }
 
     QLabel* newCard = new QLabel();
     newCard->setGeometry(xPos, yPos, 75, 150);
+
 }
 
 void GameUI::stand() {
