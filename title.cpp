@@ -6,7 +6,7 @@
 
 Title::Title(QWidget *parent) :
     QWidget(parent),
-    world(b2Vec2(0.0f, -10.0f)),
+    world(b2Vec2(0.0f, 10.0f)),
     ui(new Ui::Title)
 {
     ui->setupUi(this);
@@ -16,7 +16,7 @@ Title::Title(QWidget *parent) :
 
     // Define the ground body.
     b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, -10.0f);
+    groundBodyDef.position.Set(0.0f, 300.0f);
 
     // Call the body factory which allocates memory for the ground body
     // from a pool and creates the ground box shape (also from a pool).
@@ -27,7 +27,7 @@ Title::Title(QWidget *parent) :
     b2PolygonShape groundBox;
 
     // The extents are the half-widths of the box.
-    groundBox.SetAsBox(50.0f, 10.0f);
+    groundBox.SetAsBox(800.0f, 10.0f);
 
     // Add the ground fixture to the ground body.
     groundBody->CreateFixture(&groundBox, 0.0f);
@@ -35,8 +35,13 @@ Title::Title(QWidget *parent) :
     // Define the dynamic body. We set its position and call the body factory.
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 71.0f);
+    bodyDef.position.Set(0.0f, 150.0f);
     body = world.CreateBody(&bodyDef);
+
+    body2 = world.CreateBody(&bodyDef);
+    body3 = world.CreateBody(&bodyDef);
+    body4 = world.CreateBody(&bodyDef);
+
 
     // Define another box shape for our dynamic body.
     b2PolygonShape dynamicBox;
@@ -52,10 +57,15 @@ Title::Title(QWidget *parent) :
     // Override the default friction.
     fixtureDef.friction = 0.3f;
 
+    // Set the box restitution
     fixtureDef.restitution = 1.0f;
 
     // Add the shape to the body.
     body->CreateFixture(&fixtureDef);
+
+    body2->CreateFixture(&fixtureDef);
+    body3->CreateFixture(&fixtureDef);
+    body4->CreateFixture(&fixtureDef);
 }
 
 Title::~Title()
@@ -81,14 +91,25 @@ void Title::startAnimation()
 
         // Now print the position and angle of the body.
         b2Vec2 position = body->GetPosition();
-        float32 angle = body->GetAngle();
+        b2Vec2 position2 = body2->GetPosition();
+        b2Vec2 position3 = body3->GetPosition();
+        b2Vec2 position4 = body4->GetPosition();
+
+        //float32 angle = body->GetAngle();
 
        // printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
         int textHeight = int(position.y);
-        QTimer::singleShot(10, [this, textHeight] () {
-                           updateTextHeight(textHeight);
+        int textHeight2 = int(position2.y);
+
+        int textHeight3 = int(position3.y);
+
+        int textHeight4 = int(position4.y);
+
+        QTimer::singleShot(1, [this, textHeight, textHeight2, textHeight3, textHeight4] () {
+                           updateCard1(textHeight), updateCard2(textHeight2), updateCard3(textHeight3), updateCard4(textHeight4);
                            });
-        QTimer::singleShot( 10, this, SLOT(startAnimation()));
+
+        QTimer::singleShot(1, this, SLOT(startAnimation()));
 
     }
 }
