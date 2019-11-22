@@ -13,10 +13,10 @@ bool Blackjack::bet(unsigned long amount)
     playerHand.clear();
     dealerHand.clear();
     playerHand.push_back({QList<card>(), amount});
-    playerHand[currentHand].hand.push_back(deck.pop());
-    dealerHand.push_back(deck.pop());
-    playerHand[currentHand].hand.push_back(deck.pop());
-    dealerHand.push_back(deck.pop());
+    playerHand[currentHand].hand.push_back(dealCard());
+    dealerHand.push_back(dealCard());
+    playerHand[currentHand].hand.push_back(dealCard());
+    dealerHand.push_back(dealCard());
     if (sumHand(playerHand[currentHand].hand) == 21 || sumHand(dealerHand) == 21)
     {
         return true;
@@ -26,7 +26,7 @@ bool Blackjack::bet(unsigned long amount)
 
 Blackjack::card Blackjack::hit()
 {
-    playerHand[currentHand].hand.push_back(deck.pop());
+    playerHand[currentHand].hand.push_back(dealCard());
     return playerHand[currentHand].hand.back();
 }
 
@@ -59,7 +59,7 @@ Blackjack::card Blackjack::dealerStep()
     {
         return {invalid, 0};
     }
-    dealerHand.push_back(deck.pop());
+    dealerHand.push_back(dealCard());
     return dealerHand.back();
 }
 
@@ -191,6 +191,7 @@ int Blackjack::getCurrentHand()
 
 void Blackjack::shuffle()
 {
+    count = 0;
     QList<card> cards;
     for(int i = 0; i < 2; i++)
     {
@@ -210,4 +211,18 @@ void Blackjack::shuffle()
         deck.push(cards[random]);
         cards.removeAt(random);
     }
+}
+
+Blackjack::card Blackjack::dealCard()
+{
+    card card = deck.pop();
+    if(card.number >= 2 && card.number <= 6)
+    {
+        count++;
+    }
+    else if(card.number >= 10 || card.number == 1)
+    {
+        count--;
+    }
+    return card;
 }

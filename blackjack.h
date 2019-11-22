@@ -59,6 +59,7 @@ private:
 
     void shuffle();
     bool isBlackjack(QList<card> hand);
+    card dealCard();
 };
 
 #endif // BLACKJACK_H
