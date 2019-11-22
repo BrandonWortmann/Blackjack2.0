@@ -56,5 +56,6 @@
         <file>Resources/cardClubs2.png</file>
         <file>Resources/cardBack.png</file>
         <file>Resources/green-felt.jpg</file>
+        <file>Resources/koa.jpg</file>
     </qresource>
 </RCC>
