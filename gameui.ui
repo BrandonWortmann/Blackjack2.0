@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>800</height>
+    <height>850</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="hitButton">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>160</y>
+      <x>860</x>
+      <y>550</y>
       <width>101</width>
       <height>25</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="standButton">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>260</y>
+      <x>860</x>
+      <y>650</y>
       <width>101</width>
       <height>25</height>
      </rect>
@@ -43,14 +43,15 @@
    <widget class="QLabel" name="bustLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>401</width>
-      <height>181</height>
+      <x>290</x>
+      <y>310</y>
+      <width>420</width>
+      <height>180</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Noto Mono</family>
       <pointsize>25</pointsize>
      </font>
     </property>
@@ -65,14 +66,15 @@ You Lost $200</string>
    <widget class="QLabel" name="loseLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>401</width>
-      <height>181</height>
+      <x>290</x>
+      <y>310</y>
+      <width>420</width>
+      <height>180</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Noto Mono</family>
       <pointsize>25</pointsize>
      </font>
     </property>
@@ -87,14 +89,15 @@ You Lost $200</string>
    <widget class="QLabel" name="winLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>401</width>
-      <height>181</height>
+      <x>290</x>
+      <y>310</y>
+      <width>420</width>
+      <height>180</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Noto Mono</family>
       <pointsize>25</pointsize>
      </font>
     </property>
@@ -109,14 +112,15 @@ You Received $200</string>
    <widget class="QLabel" name="wagerLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>401</width>
-      <height>181</height>
+      <x>290</x>
+      <y>310</y>
+      <width>420</width>
+      <height>180</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Noto Mono</family>
       <pointsize>25</pointsize>
      </font>
     </property>
@@ -130,9 +134,9 @@ You Received $200</string>
    <widget class="QLineEdit" name="wagerEdit">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>310</y>
-      <width>113</width>
+      <x>430</x>
+      <y>480</y>
+      <width>110</width>
       <height>25</height>
      </rect>
     </property>
@@ -143,9 +147,9 @@ You Received $200</string>
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>360</y>
-      <width>89</width>
+      <x>435</x>
+      <y>520</y>
+      <width>100</width>
       <height>25</height>
      </rect>
     </property>
@@ -156,8 +160,8 @@ You Received $200</string>
    <widget class="QPushButton" name="doubleButton">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>210</y>
+      <x>860</x>
+      <y>600</y>
       <width>101</width>
       <height>25</height>
      </rect>
@@ -169,8 +173,8 @@ You Received $200</string>
    <widget class="QPushButton" name="splitButton">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>310</y>
+      <x>860</x>
+      <y>700</y>
       <width>101</width>
       <height>25</height>
      </rect>
@@ -182,8 +186,8 @@ You Received $200</string>
    <widget class="QLabel" name="moneyLabel">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>10</y>
+      <x>850</x>
+      <y>20</y>
       <width>121</width>
       <height>51</height>
      </rect>
@@ -207,14 +211,14 @@ You Received $200</string>
       <x>0</x>
       <y>0</y>
       <width>1000</width>
-      <height>800</height>
+      <height>850</height>
      </rect>
     </property>
    </widget>
    <widget class="QLabel" name="card1">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>220</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -227,7 +231,7 @@ You Received $200</string>
    <widget class="QLabel" name="card2">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>280</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -240,7 +244,7 @@ You Received $200</string>
    <widget class="QLabel" name="card3">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>340</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -253,7 +257,7 @@ You Received $200</string>
    <widget class="QLabel" name="card4">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>400</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -266,7 +270,7 @@ You Received $200</string>
    <widget class="QLabel" name="card5">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>460</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -279,7 +283,7 @@ You Received $200</string>
    <widget class="QLabel" name="card6">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>520</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -292,7 +296,7 @@ You Received $200</string>
    <widget class="QLabel" name="card7">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>580</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -305,7 +309,7 @@ You Received $200</string>
    <widget class="QLabel" name="card8">
     <property name="geometry">
      <rect>
-      <x>600</x>
+      <x>640</x>
       <y>540</y>
       <width>131</width>
       <height>201</height>
@@ -315,7 +319,119 @@ You Received $200</string>
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="dealerCard7">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard5">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard6">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard1">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard8">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard4">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dealerCard3">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>90</y>
+      <width>131</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>backgroundLabel</zorder>
+   <zorder>dealerCard1</zorder>
+   <zorder>dealerCard2</zorder>
+   <zorder>dealerCard3</zorder>
+   <zorder>dealerCard4</zorder>
+   <zorder>dealerCard5</zorder>
+   <zorder>dealerCard6</zorder>
+   <zorder>dealerCard7</zorder>
+   <zorder>dealerCard8</zorder>
    <zorder>card1</zorder>
    <zorder>card2</zorder>
    <zorder>card3</zorder>

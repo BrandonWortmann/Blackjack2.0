@@ -54,7 +54,7 @@
         <file>Resources/cardClubs4.png</file>
         <file>Resources/cardClubs3.png</file>
         <file>Resources/cardClubs2.png</file>
-        <file>Resources/cardBack_red5.png</file>
+        <file>Resources/cardBack.png</file>
         <file>Resources/green-felt.jpg</file>
     </qresource>
 </RCC>

@@ -23,8 +23,11 @@ public:
     void doubleDown();
     void split();
     void checkDealer();
-    void dealCard(bool);
+    void dealUserCard();
+    void dealDealerCard();
     void wagerChanged();
+    void dealToDealer();
+    QString getCardPath();
 
 
 private:
@@ -32,10 +35,12 @@ private:
     unsigned long money;
     unsigned long wager;
     int userNum;
+    int dealerNum;
     int playerNextCardPos;
     int dealerNextCardPos;
     QVector<QLabel*> cards;
     int index;
+    QVector<QLabel*> dealerCards;
 };
 
 #endif // GAMEUI_H
