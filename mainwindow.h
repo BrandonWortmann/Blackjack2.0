@@ -37,6 +37,10 @@ public slots:
     void stratsBtnPressed();
     void countingBtnPressed();
     void practiceBtnPressed();
+    void toCardsPage();
+    void toChipsPage();
+    void backRulesPage();
+    void backCardsPage();
 
     void updateTitleText(int);
     void updateCard1(int);

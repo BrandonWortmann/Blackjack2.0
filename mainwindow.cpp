@@ -50,6 +50,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(practice->ui->practiceReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
+    connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
+    connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
+    connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
+    connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
+
+
     connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
     connect(title, &Title::updateCard1, this, &MainWindow::updateCard1);
     connect(title, &Title::updateCard2, this, &MainWindow::updateCard2);
@@ -82,6 +89,7 @@ void MainWindow::startBtnPressed(){
 void MainWindow::rulesBtnPressed(){
     hideAll();
     this->rules->show();
+    rules->ui->innerStack->setCurrentIndex(0);
 }
 
 void MainWindow::stratsBtnPressed(){
@@ -119,6 +127,26 @@ void MainWindow::updateTitleText(int height)
 //    title->ui->label->setGeometry(coord1.x() , height, dim1.width(), dim1.height());
 //    title->ui->label_3->setGeometry(coord2.x() , height, dim2.width(), dim2.height());
 
+}
+
+void MainWindow::toCardsPage(){
+    rules->ui->rulesPage->hide();
+    rules->ui->cardsPage->show();
+}
+
+void MainWindow::toChipsPage(){
+    rules->ui->cardsPage->hide();
+    rules->ui->chipsPage->show();
+}
+
+void MainWindow::backRulesPage(){
+    rules->ui->cardsPage->hide();
+    rules->ui->rulesPage->show();
+}
+
+void MainWindow::backCardsPage(){
+    rules->ui->chipsPage->hide();
+    rules->ui->cardsPage->show();
 }
 
 void MainWindow::updateCard1(int height)

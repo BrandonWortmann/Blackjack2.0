@@ -2,6 +2,8 @@
 #define GAMEUI_H
 
 #include <QMainWindow>
+#include <vector>
+#include <QLabel>
 
 namespace Ui {
 class GameUI;
@@ -21,16 +23,24 @@ public:
     void doubleDown();
     void split();
     void checkDealer();
-    void dealCard(bool);
+    void dealUserCard();
+    void dealDealerCard();
+    void wagerChanged();
+    void dealToDealer();
+    QString getCardPath();
 
 
 private:
     Ui::GameUI *ui;
-    int money;
+    unsigned long money;
+    unsigned long wager;
     int userNum;
-    int wager;
+    int dealerNum;
     int playerNextCardPos;
     int dealerNextCardPos;
+    QVector<QLabel*> cards;
+    int index;
+    QVector<QLabel*> dealerCards;
 };
 
 #endif // GAMEUI_H
