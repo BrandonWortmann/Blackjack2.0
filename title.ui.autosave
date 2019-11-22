@@ -24,9 +24,9 @@ color:  white;
 }
 
 QPushButton{
-	font-size: 50px;
+	font-size: 55px;
 	border: none;
-color: black;
+    color: black;
 }
 </string>
   </property>
