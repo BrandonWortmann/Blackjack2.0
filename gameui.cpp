@@ -97,86 +97,138 @@ void GameUI::beginDealing() {
         return;
     }
     wager =  (unsigned long) (ui->wagerEdit->text().toLong());
-
+    bool isBlackjack = game.bet(wager);
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
     ui->startButton->hide();
     ui->standButton->show();
     ui->hitButton->show();
     ui->doubleButton->show();
-    dealUserCard();
-    dealUserCard();
+    dealUserCard(game.getPlayerHand()[0].hand[0]);
+    dealUserCard(game.getPlayerHand()[0].hand[1]);
     index = 1;
     ui->dealerCard1->setStyleSheet("border-image: url(:/new/images/Resources/cardBack.png) 0 0 0 0 stretch");
     ui->dealerCard1->show();
-    dealDealerCard();
+    dealDealerCard(game.getDealerHand()[1]);
+    if(isBlackjack)
+    {
+        stand();
+    }
 
 }
 
-void GameUI::dealUserCard() {
+void GameUI::dealUserCard(Blackjack::card userCard) {
     if(index == 8) {
         index = 0;
     }
 
-    QString file_path = getCardPath();
+    QString file_path = getCardPath(userCard);
     cards[index]->setStyleSheet(file_path);
     cards[index]->show();
     index++;
 }
 
-void GameUI::dealDealerCard() {
+void GameUI::dealDealerCard(Blackjack::card dealerCard) {
     if(index == 8) {
         index = 0;
     }
-    QString file_path = getCardPath();
+    QString file_path = getCardPath(dealerCard);
     dealerCards[index]->setStyleSheet(file_path);
     dealerCards[index]->show();
     index++;
 }
 
 void GameUI::stand() {
+    if(game.stay())
+    {
+        return;
+    }
+    QString file_path = getCardPath(game.getDealerHand()[0]);
+    dealerCards[0]->setStyleSheet(file_path);
+    dealerCards[0]->show();
     ui->standButton->hide();
     ui->hitButton->hide();
     ui->splitButton->hide();
     ui->doubleButton->hide();
-    userNum = 18;
     index = 2;
     checkDealer();
 }
 
-void GameUI::dealToDealer() {
-    dealerNum = 11;
-    while(dealerNum < 18) {
-        dealDealerCard();
-        dealerNum += rand() % 5;
+void GameUI::dealToDealer()
+{
+    Blackjack::card inputCard;
+    inputCard = game.dealerStep();
+    while(inputCard.suit != Blackjack::invalid)
+    {
+        dealDealerCard(inputCard);
+        inputCard = game.dealerStep();
     }
 }
 
-void GameUI::checkDealer() {
-    dealToDealer();
-    if(dealerNum > userNum && dealerNum <= 21) {
-        ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(wager));
-        ui->loseLabel->show();
-        money -= wager;
+void GameUI::checkDealer()
+{
+    //TODO: Check shuffle
+    if(game.getResult().outcome != Blackjack::blackjack)
+    {
+        dealToDealer();
     }
-    else {
-        ui->winLabel->setText("You Win!\nYou won $" + QString::number(wager));
+    Blackjack::result result = game.getResult();
+
+    switch(result.outcome)
+    {
+    case Blackjack::win:
+        ui->winLabel->setText("You Win!\nYou won $" + QString::number(result.netGain));
         ui->winLabel->show();
-        money += wager;
+        money += result.netGain;
+        break;
+
+    case Blackjack::lose:
+        ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(-result.netGain));
+        ui->loseLabel->show();
+        money += result.netGain;
+        break;
+
+    case Blackjack::push:
+        ui->loseLabel->setText("You Push\n");
+        ui->loseLabel->show();
+        break;
+
+    case Blackjack::blackjack:
+        ui->winLabel->setText("BLACKJACK!!!\nYou won $" + QString::number(result.netGain));
+        ui->winLabel->show();
+        money += result.netGain;
+        break;
+
+    case Blackjack::bust:
+        ui->loseLabel->setText("You Bust\nYou lost $" + QString::number(-result.netGain));
+        ui->loseLabel->show();
+        money += result.netGain;
+        break;
+
     }
     ui->moneyLabel->setText("$" + QString::number(money));
-    QTimer::singleShot(1500, this, &GameUI::startGame);
+    QTimer::singleShot(5000, this, &GameUI::startGame);
 }
 
-void GameUI::hitMe() {
-    dealUserCard();
+void GameUI::hitMe()
+{
+    bool isBust = false;
+    dealUserCard(game.hit(isBust));
+    if(isBust)
+    {
+        stand();
+    }
 }
 
-void GameUI::doubleDown() {
-
+void GameUI::doubleDown()
+{
+    //TODO: check money
+    dealUserCard(game.doubleDown());
+    stand();
 }
 
-void GameUI::split() {
+void GameUI::split()
+{
 
 }
 
@@ -192,31 +244,30 @@ void GameUI::wagerChanged() {
     }
 }
 
-QString GameUI::getCardPath() {
-    int suit;
-    int cardnum;
+QString GameUI::getCardPath(Blackjack::card inputCard)
+{
+
     QString file_path = "border-image: url(:/new/images/Resources/";
     QString card = "card";
 
-    suit = (rand() % 4) + 1;
-    cardnum = ((rand() % 13) + 1);
-
-    switch(suit) {
-        case 1:
-            card += "Clubs";
-            break;
-        case 2:
-            card += "Hearts";
-            break;
-        case 3:
-            card += "Diamonds";
-            break;
-        case 4:
+    switch(inputCard.suit) {
+        case Blackjack::spade:
             card += "Spades";
             break;
+        case Blackjack::heart:
+            card += "Hearts";
+            break;
+        case Blackjack::club:
+            card += "Clubs";
+            break;
+        case Blackjack::diamond:
+            card += "Diamonds";
+            break;
+        default:
+            return NULL;
     }
 
-    switch(cardnum) {
+    switch(inputCard.number) {
         case 1:
             card += "A";
             break;
@@ -230,7 +281,7 @@ QString GameUI::getCardPath() {
             card += "K";
             break;
         default:
-            QString newCardNum = QString::number(cardnum);
+            QString newCardNum = QString::number(inputCard.number);
             card += newCardNum;
             break;
     }

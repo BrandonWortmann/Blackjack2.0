@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <vector>
 #include <QLabel>
+#include "blackjack.h"
 
 namespace Ui {
 class GameUI;
@@ -23,11 +24,11 @@ public:
     void doubleDown();
     void split();
     void checkDealer();
-    void dealUserCard();
-    void dealDealerCard();
+    void dealUserCard(Blackjack::card userCard);
+    void dealDealerCard(Blackjack::card dealerCard);
     void wagerChanged();
     void dealToDealer();
-    QString getCardPath();
+    QString getCardPath(Blackjack::card);
 
 
 private:
@@ -41,6 +42,7 @@ private:
     QVector<QLabel*> cards;
     int index;
     QVector<QLabel*> dealerCards;
+    Blackjack game;
 };
 
 #endif // GAMEUI_H

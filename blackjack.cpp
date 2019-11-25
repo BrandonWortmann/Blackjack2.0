@@ -17,16 +17,20 @@ bool Blackjack::bet(unsigned long amount)
     dealerHand.push_back(dealCard());
     playerHand[currentHand].hand.push_back(dealCard());
     dealerHand.push_back(dealCard());
-    if (sumHand(playerHand[currentHand].hand) == 21 || sumHand(dealerHand) == 21)
+    if (isBlackjack(playerHand[currentHand].hand) || isBlackjack(dealerHand))
     {
         return true;
     }
     return false;
 }
 
-Blackjack::card Blackjack::hit()
+Blackjack::card Blackjack::hit(bool& isBust)
 {
     playerHand[currentHand].hand.push_back(dealCard());
+    if(sumHand(playerHand[currentHand].hand) > 21)
+    {
+        isBust = true;
+    }
     return playerHand[currentHand].hand.back();
 }
 
@@ -49,13 +53,22 @@ void Blackjack::split()
 
 Blackjack::card Blackjack::doubleDown()
 {
+    bool isBust = false;
     playerHand[currentHand].betAmount <<= 1;
-    return hit();
+    return hit(isBust);
 }
 
 Blackjack::card Blackjack::dealerStep()
 {
-    if (sumHand(dealerHand) >= 17)
+    bool bust = true;
+    for(hand hand : playerHand)
+    {
+        if(sumHand(hand.hand) <= 21)
+        {
+            bust = false;
+        }
+    }
+    if (bust || sumHand(dealerHand) >= 17)
     {
         return {invalid, 0};
     }
@@ -191,6 +204,7 @@ int Blackjack::getCurrentHand()
 
 void Blackjack::shuffle()
 {
+    srand(time(NULL));
     count = 0;
     QList<card> cards;
     for(int i = 0; i < 2; i++)

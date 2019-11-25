@@ -11,7 +11,7 @@ public:
 
     enum _outcome
     {
-        win, lose, push, blackjack
+        win, lose, push, blackjack, bust
     };
     struct result
     {
@@ -37,7 +37,7 @@ public:
     };
 
     bool bet(unsigned long amount);
-    card hit();
+    card hit(bool& isBust);
     bool stay();
     void split();
     card doubleDown();
