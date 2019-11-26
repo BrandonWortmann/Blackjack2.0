@@ -26,7 +26,6 @@ public:
     Rules* rules;
     Strats* strats;
     Counting* counting;
-    Practice* practice;
     GameUI* gameUI;
 
     void hideAll();

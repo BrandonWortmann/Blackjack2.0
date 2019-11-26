@@ -55,7 +55,7 @@ QPushButton:hover{
     </size>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="rulesPage">
     <property name="minimumSize">
@@ -662,8 +662,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>160</y>
+       <x>80</x>
+       <y>110</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -672,7 +672,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipWhite.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -681,8 +681,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>350</y>
+       <x>80</x>
+       <y>290</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -691,7 +691,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipRed.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -700,8 +700,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_23">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>530</y>
+       <x>80</x>
+       <y>480</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -710,7 +710,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipBlue.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -719,21 +719,85 @@ QPushButton:hover{
     <widget class="QLabel" name="label_24">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>150</y>
+       <x>230</x>
+       <y>100</y>
        <width>201</width>
        <height>151</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $20&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_25">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>330</y>
+       <x>230</x>
+       <y>280</y>
+       <width>201</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>470</y>
+       <width>201</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $25&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>170</y>
+       <width>121</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipGreen.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>400</y>
+       <width>121</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipBlack.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>150</y>
        <width>201</width>
        <height>151</height>
       </rect>
@@ -742,17 +806,17 @@ QPushButton:hover{
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $100&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_26">
+    <widget class="QLabel" name="label_35">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>510</y>
+       <x>590</x>
+       <y>390</y>
        <width>201</width>
        <height>151</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $200&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $500&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <zorder>label_3</zorder>
@@ -763,6 +827,10 @@ QPushButton:hover{
     <zorder>label_24</zorder>
     <zorder>label_25</zorder>
     <zorder>label_26</zorder>
+    <zorder>label_32</zorder>
+    <zorder>label_33</zorder>
+    <zorder>label_34</zorder>
+    <zorder>label_35</zorder>
    </widget>
   </widget>
   <zorder>innerStack</zorder>

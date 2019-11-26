@@ -25,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
     rules = new Rules;
     strats = new Strats;
     counting = new Counting;
-    practice = new Practice;
     gameUI = new GameUI;
 
     QStackedWidget* stack = new QStackedWidget;
@@ -34,7 +33,6 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(rules);
     stack->addWidget(counting);
     stack->addWidget(strats);
-    stack->addWidget(practice);
     stack->addWidget(gameUI);
     this->setCentralWidget(stack);
 
@@ -48,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(counting->ui->countingReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
-    connect(practice->ui->practiceReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
@@ -77,7 +75,6 @@ MainWindow::~MainWindow()
     delete strats;
     delete rules;
     delete counting;
-    delete practice;
     delete gameUI;
 }
 
@@ -113,7 +110,7 @@ void MainWindow::hideAll(){
     this->strats->hide();
     this->counting->hide();
     this->menu->hide();
-    this->practice->hide();
+    this->gameUI->hide();
 }
 
 void MainWindow::updateTitleText(int height)
