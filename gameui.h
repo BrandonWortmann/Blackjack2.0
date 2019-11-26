@@ -24,6 +24,7 @@ public:
     void doubleDown();
     void split();
     void checkDealer();
+    void analyzeResult();
     void dealUserCard(Blackjack::card userCard);
     void dealDealerCard(Blackjack::card dealerCard);
     void wagerChanged();
