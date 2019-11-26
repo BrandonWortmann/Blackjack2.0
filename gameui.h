@@ -30,10 +30,10 @@ public:
     void wagerChanged();
     void dealToDealer();
     QString getCardPath(Blackjack::card);
+    Ui::GameUI *ui;
 
 
 private:
-    Ui::GameUI *ui;
     unsigned long money;
     unsigned long wager;
     int userNum;

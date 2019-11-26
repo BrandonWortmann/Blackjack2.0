@@ -8,10 +8,10 @@
 #include "ui_rules.h"
 #include "counting.h"
 #include "ui_counting.h"
-#include "practice.h"
-#include "ui_practice.h"
 #include "strats.h"
 #include "ui_strats.h"
+#include "gameui.h"
+#include "ui_gameui.h"
 #include <QStackedWidget>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -54,14 +54,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
     connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
 
-
     connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
     connect(title, &Title::updateCard1, this, &MainWindow::updateCard1);
     connect(title, &Title::updateCard2, this, &MainWindow::updateCard2);
     connect(title, &Title::updateCard3, this, &MainWindow::updateCard3);
     connect(title, &Title::updateCard4, this, &MainWindow::updateCard4);
-
-
 
     title->show();
     title->startAnimation();

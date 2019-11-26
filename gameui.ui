@@ -527,7 +527,7 @@ You Received $200</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="GameUIReturnButton">
+   <widget class="QPushButton" name="gameUIReturnBtn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -576,7 +576,7 @@ You Received $200</string>
    <zorder>splitCard2</zorder>
    <zorder>splitCard5</zorder>
    <zorder>splitCard7</zorder>
-   <zorder>GameUIReturnButton</zorder>
+   <zorder>gameUIReturnBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

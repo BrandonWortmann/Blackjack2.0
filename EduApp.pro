@@ -68,7 +68,6 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
-    practice.cpp \
     rules.cpp \
     strats.cpp \
     title.cpp
@@ -126,7 +125,6 @@ HEADERS += \
     gameui.h \
     mainmenu.h \
     mainwindow.h \
-    practice.h \
     rules.h \
     strats.h \
     title.h
@@ -136,7 +134,6 @@ FORMS += \
     gameui.ui \
     mainmenu.ui \
     mainwindow.ui \
-    practice.ui \
     rules.ui \
     strats.ui \
     title.ui
