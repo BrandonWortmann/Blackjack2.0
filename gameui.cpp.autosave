@@ -233,7 +233,7 @@ void GameUI::doubleDown()
 
 void GameUI::split()
 {
-
+    
 }
 
 void GameUI::wagerChanged() {
