@@ -107,9 +107,16 @@ void GameUI::beginDealing() {
     ui->startButton->hide();
     ui->standButton->show();
     ui->hitButton->show();
-    ui->doubleButton->show();
     dealUserCard(game.getPlayerHand()[0].hand[0]);
     dealUserCard(game.getPlayerHand()[0].hand[1]);
+    if(money >= (wager << 1))
+    {
+        ui->doubleButton->show();
+        if((game.getPlayerHand()[0].hand[0].number == game.getPlayerHand()[0].hand[1].number) || (game.getPlayerHand()[0].hand[0].number >= 10 && game.getPlayerHand()[0].hand[1].number >= 10))
+        {
+            ui->splitButton->show();
+        }
+    }
     index = 1;
     ui->dealerCard1->setStyleSheet("border-image: url(:/new/images/Resources/cardBack.png) 0 0 0 0 stretch");
     ui->dealerCard1->show();
@@ -142,7 +149,8 @@ void GameUI::dealDealerCard(Blackjack::card dealerCard) {
     index++;
 }
 
-void GameUI::stand() {
+void GameUI::stand()
+{
     if(game.stay())
     {
         return;
@@ -216,6 +224,8 @@ void GameUI::checkDealer()
 
 void GameUI::hitMe()
 {
+    ui->splitButton->hide();
+    ui->doubleButton->hide();
     bool isBust = false;
     dealUserCard(game.hit(isBust));
     if(isBust)
@@ -226,7 +236,6 @@ void GameUI::hitMe()
 
 void GameUI::doubleDown()
 {
-    //TODO: check money
     dealUserCard(game.doubleDown());
     stand();
 }
