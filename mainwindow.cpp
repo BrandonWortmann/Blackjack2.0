@@ -31,8 +31,6 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(title);
     stack->addWidget(menu);
     stack->addWidget(rules);
-    stack->addWidget(counting);
-    stack->addWidget(strats);
     stack->addWidget(gameUI);
     this->setCentralWidget(stack);
 
@@ -43,9 +41,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(menu->ui->countingBtn, &QPushButton::pressed, this, &MainWindow::countingBtnPressed);
     connect(menu->ui->practiceBtn, &QPushButton::pressed, this, &MainWindow::practiceBtnPressed);
 
-    connect(counting->ui->countingReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    //connect(counting->ui->countingReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
-    connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    //connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
@@ -88,11 +86,13 @@ void MainWindow::rulesBtnPressed(){
 
 void MainWindow::stratsBtnPressed(){
     hideAll();
+    this->gameUI->show();
     this->strats->show();
 }
 
 void MainWindow::countingBtnPressed(){
     hideAll();
+    this->gameUI->show();
     this->counting->show();
 }
 
