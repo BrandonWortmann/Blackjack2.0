@@ -170,11 +170,14 @@ void GameUI::dealToDealer()
 {
     Blackjack::card inputCard;
     inputCard = game.dealerStep();
+    int currTime = 1000;
     while(inputCard.suit != Blackjack::invalid)
     {
-        dealDealerCard(inputCard);
+        QTimer::singleShot(currTime, [this, inputCard] () {dealDealerCard(inputCard);});
         inputCard = game.dealerStep();
+        currTime += 1000;
     }
+    QTimer::singleShot(currTime, this, &GameUI::analyzeResult);
 }
 
 void GameUI::checkDealer()
@@ -184,6 +187,13 @@ void GameUI::checkDealer()
     {
         dealToDealer();
     }
+    else {
+        QTimer::singleShot(1000, this, &GameUI::analyzeResult);
+    }
+
+}
+
+void GameUI::analyzeResult() {
     Blackjack::result result = game.getResult();
 
     switch(result.outcome)
@@ -201,7 +211,7 @@ void GameUI::checkDealer()
         break;
 
     case Blackjack::push:
-        ui->loseLabel->setText("You Push\n");
+        ui->loseLabel->setText("You Tied! You're not broke yet!\n");
         ui->loseLabel->show();
         break;
 

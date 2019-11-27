@@ -57,5 +57,10 @@
         <file>Resources/cardBack.png</file>
         <file>Resources/green-felt.jpg</file>
         <file>Resources/koa.jpg</file>
+        <file>Resources/chipWhite.png</file>
+        <file>Resources/chipRed.png</file>
+        <file>Resources/chipGreen.png</file>
+        <file>Resources/chipBlue.png</file>
+        <file>Resources/chipBlack.png</file>
     </qresource>
 </RCC>

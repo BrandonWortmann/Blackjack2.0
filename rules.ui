@@ -99,14 +99,88 @@ QPushButton:hover{
     <widget class="QLabel" name="label_20">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>140</y>
+       <x>50</x>
+       <y>90</y>
        <width>131</width>
        <height>51</height>
       </rect>
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;How to win:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>500</y>
+       <width>651</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-Hit to receive another card.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-Stand to hold your total and end your turn.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-You can double/split on your first move.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;&lt;br/&gt;-Double is an additional bet, where you double your bet and receive one card.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-Split is an action that splits your two same valued cards into two hands, and doubles your bet.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>171</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Dealer actions:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>440</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Player actions:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>140</y>
+       <width>641</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-The goal of blackjack is to beat the dealer's hand without going over 21. &lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-Each player starts with two cards, one of the dealer's cards is hidden until the end of the turn.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-If you go over 21, you automatically bust; and the dealer wins.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>350</y>
+       <width>641</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-If you are dealt 21 from the start, you got a &amp;quot;blackjack&amp;quot; and win 1.5 the chips you bet.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-The dealer will always hit until their hand is 17 or higher.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
    </widget>
@@ -588,8 +662,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>160</y>
+       <x>80</x>
+       <y>110</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -598,7 +672,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipWhite.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -607,8 +681,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>350</y>
+       <x>80</x>
+       <y>290</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -617,7 +691,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipRed.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -626,8 +700,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_23">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>530</y>
+       <x>80</x>
+       <y>480</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -636,7 +710,7 @@ QPushButton:hover{
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipBlue.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -645,21 +719,85 @@ QPushButton:hover{
     <widget class="QLabel" name="label_24">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>150</y>
+       <x>230</x>
+       <y>100</y>
        <width>201</width>
        <height>151</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $20&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_25">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>330</y>
+       <x>230</x>
+       <y>280</y>
+       <width>201</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>470</y>
+       <width>201</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $25&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>170</y>
+       <width>121</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipGreen.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>400</y>
+       <width>121</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/chipBlack.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>150</y>
        <width>201</width>
        <height>151</height>
       </rect>
@@ -668,17 +806,17 @@ QPushButton:hover{
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $100&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_26">
+    <widget class="QLabel" name="label_35">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>510</y>
+       <x>590</x>
+       <y>390</y>
        <width>201</width>
        <height>151</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $200&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $500&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <zorder>label_3</zorder>
@@ -689,6 +827,10 @@ QPushButton:hover{
     <zorder>label_24</zorder>
     <zorder>label_25</zorder>
     <zorder>label_26</zorder>
+    <zorder>label_32</zorder>
+    <zorder>label_33</zorder>
+    <zorder>label_34</zorder>
+    <zorder>label_35</zorder>
    </widget>
   </widget>
   <zorder>innerStack</zorder>

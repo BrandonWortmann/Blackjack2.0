@@ -24,15 +24,16 @@ public:
     void doubleDown();
     void split();
     void checkDealer();
+    void analyzeResult();
     void dealUserCard(Blackjack::card userCard);
     void dealDealerCard(Blackjack::card dealerCard);
     void wagerChanged();
     void dealToDealer();
     QString getCardPath(Blackjack::card);
+    Ui::GameUI *ui;
 
 
 private:
-    Ui::GameUI *ui;
     unsigned long money;
     unsigned long wager;
     int userNum;

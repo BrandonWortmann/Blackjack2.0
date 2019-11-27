@@ -7,7 +7,6 @@
 #include "rules.h"
 #include "strats.h"
 #include "counting.h"
-#include "practice.h"
 #include "gameui.h"
 
 QT_BEGIN_NAMESPACE
@@ -26,7 +25,6 @@ public:
     Rules* rules;
     Strats* strats;
     Counting* counting;
-    Practice* practice;
     GameUI* gameUI;
 
     void hideAll();
