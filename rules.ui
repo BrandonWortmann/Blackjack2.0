@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Blackjack App</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton{
@@ -57,7 +57,7 @@ QPushButton:hover{
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="introductionPage">
+   <widget class="QWidget" name="introPage">
     <widget class="QLabel" name="label_36">
      <property name="geometry">
       <rect>
@@ -77,69 +77,17 @@ QPushButton:hover{
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_37">
-     <property name="geometry">
-      <rect>
-       <x>300</x>
-       <y>10</y>
-       <width>121</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Introduction</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_38">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>110</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Welcome:</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_39">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>170</y>
+       <x>150</x>
+       <y>130</y>
        <width>361</width>
        <height>91</height>
       </rect>
      </property>
      <property name="text">
       <string>The structure of our game</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_40">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>290</y>
-       <width>67</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Strats:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_41">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>430</y>
-       <width>67</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Counting:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_42">
@@ -164,8 +112,8 @@ QPushButton:hover{
     <widget class="QLabel" name="label_43">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>300</y>
+       <x>130</x>
+       <y>290</y>
        <width>451</width>
        <height>91</height>
       </rect>
@@ -177,14 +125,113 @@ QPushButton:hover{
     <widget class="QLabel" name="label_44">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>490</y>
+       <x>130</x>
+       <y>450</y>
        <width>451</width>
        <height>91</height>
       </rect>
      </property>
      <property name="text">
       <string>Explain counting. Describe the popup and what it means.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toRulesBtn">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>710</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="introductionTitle">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>30</y>
+       <width>231</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Introduction&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>90</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Welcome:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>250</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Strats:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_40">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>400</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Counting:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_41">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>550</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;Practice:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_45">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>610</y>
+       <width>451</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Playing the game while betting to practice your new skills.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -312,6 +359,40 @@ QPushButton:hover{
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backIntroBtn">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>710</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Previous</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rulesTitle">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>30</y>
+       <width>221</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Rules&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -673,12 +754,12 @@ QPushButton:hover{
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Face Values&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="cardTitle">
      <property name="geometry">
       <rect>
-       <x>397</x>
-       <y>50</y>
-       <width>261</width>
+       <x>400</x>
+       <y>30</y>
+       <width>221</width>
        <height>81</height>
       </rect>
      </property>
@@ -689,6 +770,9 @@ QPushButton:hover{
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Card Values&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_18">
@@ -747,7 +831,7 @@ QPushButton:hover{
     <zorder>label_16</zorder>
     <zorder>label_17</zorder>
     <zorder>label_9</zorder>
-    <zorder>label_2</zorder>
+    <zorder>cardTitle</zorder>
     <zorder>label_18</zorder>
     <zorder>label_19</zorder>
    </widget>
@@ -950,6 +1034,27 @@ QPushButton:hover{
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; color:#000000;&quot;&gt;= $500&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+    <widget class="QLabel" name="chipValuesTitle">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>30</y>
+       <width>221</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Chip Values&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
     <zorder>label_3</zorder>
     <zorder>backCardsBtn</zorder>
     <zorder>label_21</zorder>
@@ -962,6 +1067,7 @@ QPushButton:hover{
     <zorder>label_33</zorder>
     <zorder>label_34</zorder>
     <zorder>label_35</zorder>
+    <zorder>chipValuesTitle</zorder>
    </widget>
   </widget>
   <zorder>innerStack</zorder>
