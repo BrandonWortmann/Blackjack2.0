@@ -105,6 +105,7 @@ Blackjack::result Blackjack::getResult()
             dealerSum = 0;
         }
         int playerSum;
+        bool isBust = true;
         for(hand hand : playerHand)
         {
             playerSum = sumHand(hand.hand);
@@ -115,13 +116,19 @@ Blackjack::result Blackjack::getResult()
             else if(dealerSum > playerSum)
             {
                 result.netGain -= hand.betAmount;
+                isBust = false;
             }
             else if(dealerSum < playerSum)
             {
                 result.netGain += hand.betAmount;
+                isBust = false;
             }
         }
-        if(result.netGain < 0)
+        if(isBust)
+        {
+            result.outcome = bust;
+        }
+        else if(result.netGain < 0 )
         {
             result.outcome = lose;
         }
