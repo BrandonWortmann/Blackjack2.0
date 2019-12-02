@@ -36,7 +36,9 @@ public slots:
     void countingBtnPressed();
     void practiceBtnPressed();
     void toCardsPage();
+    void toRulesPage();
     void toChipsPage();
+    void backIntroPage();
     void backRulesPage();
     void backCardsPage();
 

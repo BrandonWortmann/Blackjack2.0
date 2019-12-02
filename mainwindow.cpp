@@ -31,8 +31,6 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(title);
     stack->addWidget(menu);
     stack->addWidget(rules);
-    stack->addWidget(counting);
-    stack->addWidget(strats);
     stack->addWidget(gameUI);
     this->setCentralWidget(stack);
 
@@ -43,14 +41,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(menu->ui->countingBtn, &QPushButton::pressed, this, &MainWindow::countingBtnPressed);
     connect(menu->ui->practiceBtn, &QPushButton::pressed, this, &MainWindow::practiceBtnPressed);
 
-    connect(counting->ui->countingReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
-    connect(strats->ui->stratsReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(rules->ui->toRulesBtn, &QPushButton::pressed, this, &MainWindow::toRulesPage);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
+    connect(rules->ui->backIntroBtn, &QPushButton::pressed, this, &MainWindow::backIntroPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
     connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
 
@@ -88,11 +86,13 @@ void MainWindow::rulesBtnPressed(){
 
 void MainWindow::stratsBtnPressed(){
     hideAll();
+    this->gameUI->show();
     this->strats->show();
 }
 
 void MainWindow::countingBtnPressed(){
     hideAll();
+    this->gameUI->show();
     this->counting->show();
 }
 
@@ -123,24 +123,39 @@ void MainWindow::updateTitleText(int height)
 
 }
 
-void MainWindow::toCardsPage(){
+void MainWindow::toRulesPage()
+{
+    rules->ui->introPage->hide();
+    rules->ui->rulesPage->show();
+}
+
+void MainWindow::toCardsPage()
+{
     rules->ui->rulesPage->hide();
     rules->ui->cardsPage->show();
 }
 
-void MainWindow::toChipsPage(){
+void MainWindow::toChipsPage()
+{
     rules->ui->cardsPage->hide();
     rules->ui->chipsPage->show();
 }
 
-void MainWindow::backRulesPage(){
+void MainWindow::backRulesPage()
+{
     rules->ui->cardsPage->hide();
     rules->ui->rulesPage->show();
 }
 
-void MainWindow::backCardsPage(){
+void MainWindow::backCardsPage()
+{
     rules->ui->chipsPage->hide();
     rules->ui->cardsPage->show();
+}
+
+void MainWindow::backIntroPage(){
+    rules->ui->rulesPage->hide();
+    rules->ui->introPage->show();
 }
 
 void MainWindow::updateCard1(int height)
