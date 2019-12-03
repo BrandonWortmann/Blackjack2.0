@@ -55,7 +55,7 @@ QPushButton:hover{
     </size>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="introPage">
     <widget class="QLabel" name="label_36">
@@ -88,25 +88,6 @@ QPushButton:hover{
      </property>
      <property name="text">
       <string>The structure of our game</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_42">
-     <property name="geometry">
-      <rect>
-       <x>670</x>
-       <y>230</y>
-       <width>141</width>
-       <height>241</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="Resource.qrc">:/new/images/Resources/strat.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_43">
