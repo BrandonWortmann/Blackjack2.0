@@ -13,6 +13,19 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+	font-size: 12px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="hitButton">
     <property name="geometry">
@@ -426,8 +439,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard4">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>540</y>
+      <x>650</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -439,8 +452,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard6">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>540</y>
+      <x>720</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -452,8 +465,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard3">
     <property name="geometry">
      <rect>
-      <x>675</x>
-      <y>540</y>
+      <x>615</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -465,8 +478,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard8">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>540</y>
+      <x>790</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -478,8 +491,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard1">
     <property name="geometry">
      <rect>
-      <x>605</x>
-      <y>540</y>
+      <x>545</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -491,8 +504,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard2">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>540</y>
+      <x>580</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -504,8 +517,8 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard5">
     <property name="geometry">
      <rect>
-      <x>745</x>
-      <y>540</y>
+      <x>685</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
@@ -517,11 +530,24 @@ You Received $200</string>
    <widget class="QLabel" name="splitCard7">
     <property name="geometry">
      <rect>
-      <x>815</x>
-      <y>540</y>
+      <x>755</x>
+      <y>550</y>
       <width>131</width>
       <height>201</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font-size: 12px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -540,7 +566,43 @@ You Received $200</string>
      <string>Return</string>
     </property>
    </widget>
+   <widget class="QLabel" name="firstHighlightLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>520</y>
+      <width>531</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="secondHighlightLabel">
+    <property name="geometry">
+     <rect>
+      <x>515</x>
+      <y>520</y>
+      <width>511</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>backgroundLabel</zorder>
+   <zorder>firstHighlightLabel</zorder>
+   <zorder>secondHighlightLabel</zorder>
+   <zorder>splitCard1</zorder>
+   <zorder>splitCard2</zorder>
+   <zorder>splitCard3</zorder>
+   <zorder>splitCard4</zorder>
+   <zorder>splitCard5</zorder>
+   <zorder>splitCard6</zorder>
+   <zorder>splitCard7</zorder>
+   <zorder>splitCard8</zorder>
    <zorder>dealerCard1</zorder>
    <zorder>dealerCard2</zorder>
    <zorder>dealerCard3</zorder>
@@ -568,14 +630,6 @@ You Received $200</string>
    <zorder>doubleButton</zorder>
    <zorder>splitButton</zorder>
    <zorder>moneyLabel</zorder>
-   <zorder>splitCard4</zorder>
-   <zorder>splitCard6</zorder>
-   <zorder>splitCard3</zorder>
-   <zorder>splitCard8</zorder>
-   <zorder>splitCard1</zorder>
-   <zorder>splitCard2</zorder>
-   <zorder>splitCard5</zorder>
-   <zorder>splitCard7</zorder>
    <zorder>gameUIReturnBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">

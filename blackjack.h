@@ -36,6 +36,11 @@ public:
         unsigned long betAmount;
     };
 
+    enum action
+    {
+        _hit, _stand, _doubledown, _split
+    };
+
     bool bet(unsigned long amount);
     card hit(bool& isBust);
     bool stay();
@@ -49,6 +54,7 @@ public:
     QList<card> getDealerHand();
     QList<hand> getPlayerHand();
     int getCurrentHand();
+    action correctMove();
 
 private:
     QStack<card> deck;
@@ -60,6 +66,7 @@ private:
     void shuffle();
     bool isBlackjack(QList<card> hand);
     card dealCard();
+    bool sameCard(QList<card> hand);
 };
 
 #endif // BLACKJACK_H
