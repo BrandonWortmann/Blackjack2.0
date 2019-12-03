@@ -44,6 +44,8 @@ private:
     int index;
     QVector<QLabel*> dealerCards;
     Blackjack game;
+    Blackjack::action action;
+    QString correctMove;
 };
 
 #endif // TutorialUI_H
