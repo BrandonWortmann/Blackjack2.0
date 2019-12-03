@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     tutorial = new TutorialUI;
     gameUI = new GameUI;
 
-    QStackedWidget* stack = new QStackedWidget;
+    QStackedWidget* stack = new QStackedWidget;  
     stack->addWidget(title);
     stack->addWidget(menu);
     stack->addWidget(rules);
