@@ -105,6 +105,7 @@ Blackjack::result Blackjack::getResult()
             dealerSum = 0;
         }
         int playerSum;
+        bool isBust = true;
         for(hand hand : playerHand)
         {
             playerSum = sumHand(hand.hand);
@@ -115,13 +116,23 @@ Blackjack::result Blackjack::getResult()
             else if(dealerSum > playerSum)
             {
                 result.netGain -= hand.betAmount;
+                isBust = false;
             }
             else if(dealerSum < playerSum)
             {
                 result.netGain += hand.betAmount;
+                isBust = false;
+            }
+            else
+            {
+                isBust = false;
             }
         }
-        if(result.netGain < 0)
+        if(isBust)
+        {
+            result.outcome = bust;
+        }
+        else if(result.netGain < 0 )
         {
             result.outcome = lose;
         }
@@ -239,4 +250,172 @@ Blackjack::card Blackjack::dealCard()
         count--;
     }
     return card;
+}
+
+Blackjack::action Blackjack::correctMove()
+{
+    int dealerValue = dealerHand[1].number;
+    if(dealerValue > 10)
+    {
+        dealerValue = 10;
+    }
+    int player1 = playerHand[currentHand].hand[0].number;
+    if(player1 > 10)
+    {
+        player1 = 10;
+    }
+    int player2 = playerHand[currentHand].hand[0].number;
+    if(player2 > 10)
+    {
+        player2 = 10;
+    }
+    if(player1 == player2)
+    {
+        switch (player1)
+        {
+        case 1:
+            return _split;
+        case 2:
+            if (dealerValue >= 2 && dealerValue <= 7)
+            {
+                return _split;
+            }
+            return _hit;
+        case 3:
+            if (dealerValue >= 2 && dealerValue <= 7)
+            {
+                return _split;
+            }
+            return _hit;
+        case 4:
+            if (dealerValue == 5 || dealerValue == 6)
+            {
+                return _split;
+            }
+            return _hit;
+        case 5:
+            if (dealerValue == 1 || dealerValue == 10)
+            {
+                return _hit;
+            }
+            return _doubledown;
+        case 6:
+            if (dealerValue >= 2 && dealerValue <= 6)
+            {
+                return _split;
+            }
+            return _hit;
+        case 7:
+            if (dealerValue >= 2 && dealerValue <= 7)
+            {
+                return _split;
+            }
+            return _hit;
+        case 8:
+            return _split;
+        case 9:
+            if (dealerValue == 1 || dealerValue == 7 || dealerValue == 10)
+            {
+                return _stand;
+            }
+            return _split;
+        case 10:
+            return _stand;
+        }
+    }
+    if (player1 == 1 || player2 == 1)
+    {
+        if (player1 == 1)
+        {
+            player1 = player2;
+        }
+        switch (player1)
+        {
+        case 2:
+            if (dealerValue == 5 || dealerValue == 6)
+            {
+                return _doubledown;
+            }
+            return _hit;
+        case 3:
+            if (dealerValue == 5 || dealerValue == 6)
+            {
+                return _doubledown;
+            }
+            return _hit;
+        case 4:
+            if (dealerValue >= 4 && dealerValue <= 6)
+            {
+                return _doubledown;
+            }
+            return _hit;
+        case 5:
+            if (dealerValue >= 4 && dealerValue <= 6)
+            {
+                return _doubledown;
+            }
+            return _hit;
+        case 6:
+            if (dealerValue >= 3 && dealerValue <= 6)
+            {
+                return _doubledown;
+            }
+            return _hit;
+        case 7:
+            if (dealerValue >= 3 && dealerValue <= 6)
+            {
+                return _doubledown;
+            }
+            if (dealerValue == 2 || dealerValue == 7 || dealerValue == 8)
+            {
+                return _stand;
+            }
+            return _hit;
+        default:
+            return _stand;
+        }
+    }
+    int sum = player1 + player2;
+    if (sum <= 8)
+    {
+        return _hit;
+    }
+    switch (sum)
+    {
+    case 9:
+        if (dealerValue >= 3 && dealerValue <= 6)
+        {
+            return _doubledown;
+        }
+        return _hit;
+    case 10:
+        if (dealerValue == 1 || dealerValue == 10)
+        {
+            return _hit;
+        }
+        return _doubledown;
+    case 11:
+        if (dealerValue == 1)
+        {
+            return _hit;
+        }
+        return _doubledown;
+    case 12:
+        if (dealerValue >= 4 && dealerValue <= 6)
+        {
+            return _stand;
+        }
+        return _hit;
+    default:
+        break;
+    }
+    if (sum <= 16)
+    {
+        if (dealerValue >= 2 && dealerValue <= 6)
+        {
+            return _stand;
+        }
+        return _hit;
+    }
+    return _stand;
 }
