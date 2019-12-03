@@ -70,7 +70,8 @@ SOURCES += \
     mainwindow.cpp \
     rules.cpp \
     strats.cpp \
-    title.cpp
+    title.cpp \
+    tutorial.cpp
 
 HEADERS += \
     Box2D/Box2D.h \
@@ -127,7 +128,8 @@ HEADERS += \
     mainwindow.h \
     rules.h \
     strats.h \
-    title.h
+    title.h \
+    tutorial.h
 
 FORMS += \
     counting.ui \
@@ -136,7 +138,8 @@ FORMS += \
     mainwindow.ui \
     rules.ui \
     strats.ui \
-    title.ui
+    title.ui \
+    tutorial.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
