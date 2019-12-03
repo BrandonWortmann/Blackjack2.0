@@ -90,6 +90,25 @@ QPushButton:hover{
       <string>The structure of our game</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_42">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>230</y>
+       <width>141</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/strat.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
     <widget class="QLabel" name="label_43">
      <property name="geometry">
       <rect>
