@@ -53,59 +53,13 @@ QPushButton:hover{
      <string>Stand</string>
     </property>
    </widget>
-   <widget class="QLabel" name="bustLabel">
+   <widget class="QLabel" name="resultLabel">
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>310</y>
+      <y>159</y>
       <width>420</width>
-      <height>180</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Noto Mono</family>
-      <pointsize>25</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>You Busted!
-You Lost $200</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="loseLabel">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>310</y>
-      <width>420</width>
-      <height>180</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Noto Mono</family>
-      <pointsize>25</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>You Lose!
-You Lost $200</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="winLabel">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>310</y>
-      <width>420</width>
-      <height>180</height>
+      <height>331</height>
      </rect>
     </property>
     <property name="font">
@@ -126,9 +80,9 @@ You Received $200</string>
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>310</y>
+      <y>319</y>
       <width>420</width>
-      <height>180</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="font">
@@ -621,9 +575,7 @@ QPushButton:hover{
    <zorder>card8</zorder>
    <zorder>hitButton</zorder>
    <zorder>standButton</zorder>
-   <zorder>bustLabel</zorder>
-   <zorder>loseLabel</zorder>
-   <zorder>winLabel</zorder>
+   <zorder>resultLabel</zorder>
    <zorder>wagerLabel</zorder>
    <zorder>wagerEdit</zorder>
    <zorder>startButton</zorder>

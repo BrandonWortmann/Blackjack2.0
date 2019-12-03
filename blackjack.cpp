@@ -123,6 +123,10 @@ Blackjack::result Blackjack::getResult()
                 result.netGain += hand.betAmount;
                 isBust = false;
             }
+            else
+            {
+                isBust = false;
+            }
         }
         if(isBust)
         {
