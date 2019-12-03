@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     tutorial = new TutorialUI;
     gameUI = new GameUI;
 
-    QStackedWidget* stack = new QStackedWidget;
+    QStackedWidget* stack = new QStackedWidget;  
     stack->addWidget(title);
     stack->addWidget(menu);
     stack->addWidget(rules);
@@ -47,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->toRulesBtn, &QPushButton::pressed, this, &MainWindow::toRulesPage);
@@ -91,13 +92,11 @@ void MainWindow::rulesBtnPressed(){
 void MainWindow::stratsBtnPressed(){
     hideAll();
     this->tutorial->show();
-    this->strats->show();
 }
 
 void MainWindow::countingBtnPressed(){
     hideAll();
     this->gameUI->show();
-    this->counting->show();
 }
 
 void MainWindow::practiceBtnPressed(){
@@ -112,6 +111,7 @@ void MainWindow::hideAll(){
     this->counting->hide();
     this->menu->hide();
     this->gameUI->hide();
+    this->tutorial->hide();
 }
 
 void MainWindow::updateTitleText(int height)
