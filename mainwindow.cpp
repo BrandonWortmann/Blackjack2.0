@@ -12,6 +12,8 @@
 #include "ui_strats.h"
 #include "gameui.h"
 #include "ui_gameui.h"
+#include "tutorial.h"
+#include "ui_tutorial.h"
 #include <QStackedWidget>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -25,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     rules = new Rules;
     strats = new Strats;
     counting = new Counting;
+    tutorial = new TutorialUI;
     gameUI = new GameUI;
 
     QStackedWidget* stack = new QStackedWidget;
@@ -32,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(menu);
     stack->addWidget(rules);
     stack->addWidget(gameUI);
+    stack->addWidget(tutorial);
     this->setCentralWidget(stack);
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
@@ -86,7 +90,7 @@ void MainWindow::rulesBtnPressed(){
 
 void MainWindow::stratsBtnPressed(){
     hideAll();
-    this->gameUI->show();
+    this->tutorial->show();
     this->strats->show();
 }
 

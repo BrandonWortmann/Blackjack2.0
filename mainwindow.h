@@ -8,6 +8,7 @@
 #include "strats.h"
 #include "counting.h"
 #include "gameui.h"
+#include "tutorial.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +27,7 @@ public:
     Strats* strats;
     Counting* counting;
     GameUI* gameUI;
+    TutorialUI* tutorial;
 
     void hideAll();
 
