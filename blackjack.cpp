@@ -264,7 +264,7 @@ Blackjack::action Blackjack::correctMove()
     {
         player1 = 10;
     }
-    int player2 = playerHand[currentHand].hand[0].number;
+    int player2 = playerHand[currentHand].hand[1].number;
     if(player2 > 10)
     {
         player2 = 10;
