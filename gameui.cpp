@@ -73,9 +73,7 @@ void GameUI::startGame() {
         dealerCards[i]->hide();
     }
 
-    ui->bustLabel->hide();
-    ui->winLabel->hide();
-    ui->loseLabel->hide();
+    ui->resultLabel->hide();
     ui->firstHighlightLabel->hide();
     ui->secondHighlightLabel->hide();
     ui->wagerLabel->show();
@@ -211,35 +209,34 @@ void GameUI::analyzeResult() {
     switch(result.outcome)
     {
     case Blackjack::win:
-        ui->winLabel->setText("You Win!\nYou won $" + QString::number(result.netGain));
-        ui->winLabel->show();
+        ui->resultLabel->setText("You Win!\nYou won $" + QString::number(result.netGain));
         money += result.netGain;
         break;
 
     case Blackjack::lose:
-        ui->loseLabel->setText("You Lose!\nYou lost $" + QString::number(-result.netGain));
-        ui->loseLabel->show();
+        ui->resultLabel->setText("You Lose!\nYou lost $" + QString::number(-result.netGain));
         money += result.netGain;
         break;
 
     case Blackjack::push:
-        ui->loseLabel->setText("You Tied! You're\n not broke yet!\n");
-        ui->loseLabel->show();
+        ui->resultLabel->setText("You Tied! \nYou're not broke yet!");
         break;
 
     case Blackjack::blackjack:
-        ui->winLabel->setText("BLACKJACK!!!\nYou won $" + QString::number(result.netGain));
-        ui->winLabel->show();
+        ui->resultLabel->setText("BLACKJACK!!!\nYou won $" + QString::number(result.netGain));
         money += result.netGain;
         break;
 
     case Blackjack::bust:
-        ui->loseLabel->setText("You Bust\nYou lost $" + QString::number(-result.netGain));
-        ui->loseLabel->show();
+        ui->resultLabel->setText("You Bust!\nYou lost $" + QString::number(-result.netGain));
         money += result.netGain;
         break;
 
     }
+    if(result.isShuffled) {
+        ui->resultLabel->setText(ui->resultLabel->text() + "\nDeck is being shuffled");
+    }
+    ui->resultLabel->show();
     ui->moneyLabel->setText("$" + QString::number(money));
     QTimer::singleShot(5000, this, &GameUI::startGame);
 }
@@ -271,8 +268,9 @@ void GameUI::split()
     }
 
     game.split();
-    ui->splitCard1->setStyleSheet(getCardPath(game.getPlayerHand()[0].hand[0]));
+    ui->splitCard1->setStyleSheet(getCardPath(game.getPlayerHand()[1].hand[0]));
     cards[1]->setStyleSheet("");
+    ui->splitCard1->show();
     cards.push_back(ui->splitCard1);
     cards.push_back(ui->splitCard2);
     cards.push_back(ui->splitCard3);
