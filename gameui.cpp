@@ -4,6 +4,8 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QPixmap>
+#include <QWidget>
+#include <QImage>
 #include <unistd.h>
 
 GameUI::GameUI(QWidget *parent) :
@@ -38,6 +40,11 @@ GameUI::GameUI(QWidget *parent) :
     dealerCards.push_back(ui->dealerCard8);
     startGame();
 
+    QImage* highlightColor = new QImage(561, 211, QImage::Format_RGBA64);
+    highlightColor->fill(*(new QColor(0, 0, 255, 100)));
+    ui->firstHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
+    ui->secondHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
+
     connect(ui->startButton, &QPushButton::pressed,
             this, &GameUI::beginDealing);
     connect(ui->hitButton, &QPushButton::pressed,
@@ -58,29 +65,33 @@ GameUI::~GameUI()
 }
 
 void GameUI::startGame() {
-    ui->card1->hide();
-    ui->card2->hide();
-    ui->card3->hide();
-    ui->card4->hide();
-    ui->card5->hide();
-    ui->card6->hide();
-    ui->card7->hide();
-    ui->card8->hide();
-    ui->dealerCard1->hide();
-    ui->dealerCard2->hide();
-    ui->dealerCard3->hide();
-    ui->dealerCard4->hide();
-    ui->dealerCard5->hide();
-    ui->dealerCard6->hide();
-    ui->dealerCard7->hide();
-    ui->dealerCard8->hide();
+    for(int i = 0; i < cards.size(); i++) {
+        cards[i]->hide();
+    }
+
+    for(int i = 0; i < dealerCards.size(); i++) {
+        dealerCards[i]->hide();
+    }
+
     ui->bustLabel->hide();
     ui->winLabel->hide();
     ui->loseLabel->hide();
+    ui->firstHighlightLabel->hide();
+    ui->secondHighlightLabel->hide();
     ui->wagerLabel->show();
     ui->wagerEdit->show();
     ui->startButton->show();
     index = 0;
+
+    if(ui->card1->geometry().x() < 200) {
+        for(int i = 0; i < 8; i++) {
+            cards.removeLast();
+        }
+
+        for(int i = 0; i < 8; i++) {
+            cards[i]->setGeometry(cards[i]->geometry().x() + 200, cards[i]->geometry().y(), 131, 201);
+        }
+    }
 }
 
 void GameUI::beginDealing() {
@@ -140,9 +151,6 @@ void GameUI::dealUserCard(Blackjack::card userCard) {
 }
 
 void GameUI::dealDealerCard(Blackjack::card dealerCard) {
-    if(index == 8) {
-        index = 0;
-    }
     QString file_path = getCardPath(dealerCard);
     dealerCards[index]->setStyleSheet(file_path);
     dealerCards[index]->show();
@@ -153,8 +161,12 @@ void GameUI::stand()
 {
     if(game.stay())
     {
+        index = 9;
+        ui->secondHighlightLabel->show();
+        ui->firstHighlightLabel->hide();
         return;
     }
+    ui->secondHighlightLabel->hide();
     QString file_path = getCardPath(game.getDealerHand()[0]);
     dealerCards[0]->setStyleSheet(file_path);
     dealerCards[0]->show();
@@ -205,13 +217,13 @@ void GameUI::analyzeResult() {
         break;
 
     case Blackjack::lose:
-        ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(-result.netGain));
+        ui->loseLabel->setText("You Lose!\nYou lost $" + QString::number(-result.netGain));
         ui->loseLabel->show();
         money += result.netGain;
         break;
 
     case Blackjack::push:
-        ui->loseLabel->setText("You Tied! You're not broke yet!\n");
+        ui->loseLabel->setText("You Tied! You're\n not broke yet!\n");
         ui->loseLabel->show();
         break;
 
@@ -252,7 +264,25 @@ void GameUI::doubleDown()
 
 void GameUI::split()
 {
+    ui->splitButton->hide();
+    for(int i = 0; i < 8; i++) {
 
+        cards[i]->setGeometry(cards[i]->geometry().x() - 200, cards[i]->geometry().y(), 131, 201);
+    }
+
+    game.split();
+    ui->splitCard1->setStyleSheet(getCardPath(game.getPlayerHand()[0].hand[0]));
+    cards[1]->setStyleSheet("");
+    cards.push_back(ui->splitCard1);
+    cards.push_back(ui->splitCard2);
+    cards.push_back(ui->splitCard3);
+    cards.push_back(ui->splitCard4);
+    cards.push_back(ui->splitCard5);
+    cards.push_back(ui->splitCard6);
+    cards.push_back(ui->splitCard7);
+    cards.push_back(ui->splitCard8);
+    index = 1;
+    ui->firstHighlightLabel->show();
 }
 
 void GameUI::wagerChanged() {
