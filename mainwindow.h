@@ -40,6 +40,8 @@ public slots:
     void toCardsPage();
     void toRulesPage();
     void toChipsPage();
+    void toTutorialPage();
+    void backTutorialPage();
     void backIntroPage();
     void backRulesPage();
     void backCardsPage();

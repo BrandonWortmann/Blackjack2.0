@@ -47,15 +47,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
-    connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backTutorialPage);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
     connect(rules->ui->toRulesBtn, &QPushButton::pressed, this, &MainWindow::toRulesPage);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
     connect(rules->ui->backIntroBtn, &QPushButton::pressed, this, &MainWindow::backIntroPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
     connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
+
 
     connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
     connect(title, &Title::updateCard1, this, &MainWindow::updateCard1);
@@ -91,6 +93,7 @@ void MainWindow::rulesBtnPressed(){
 
 void MainWindow::stratsBtnPressed(){
     hideAll();
+    tutorial->ui->tutorialStack->setCurrentIndex(0);
     this->tutorial->show();
 }
 
@@ -145,11 +148,26 @@ void MainWindow::toChipsPage()
     rules->ui->chipsPage->show();
 }
 
+
+void MainWindow::toTutorialPage()
+{
+    tutorial->ui->infoPage->hide();
+    tutorial->ui->gamePage->show();
+}
+
 void MainWindow::backRulesPage()
 {
     rules->ui->cardsPage->hide();
     rules->ui->rulesPage->show();
 }
+
+void MainWindow::backTutorialPage()
+{
+    tutorial->ui->gamePage->hide();
+    tutorial->ui->infoPage->show();
+    startBtnPressed();
+}
+
 
 void MainWindow::backCardsPage()
 {
