@@ -5,6 +5,7 @@
 #include <QLineEdit>
 #include <QPixmap>
 #include <unistd.h>
+#include <iostream>
 
 TutorialUI::TutorialUI(QWidget *parent) :
     QMainWindow(parent),
@@ -19,7 +20,7 @@ TutorialUI::TutorialUI(QWidget *parent) :
 
     ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
     index = 0;
-    //money = 500;
+    money = 500;
     cards.push_back(ui->card1);
     cards.push_back(ui->card2);
     cards.push_back(ui->card3);
@@ -85,28 +86,29 @@ void TutorialUI::startGame() {
 }
 
 void TutorialUI::beginDealing() {
-    unsigned long newWager = (unsigned long) ui->wagerEdit->text().toLong();
-    if(newWager > money) {
-        ui->wagerLabel->setText("You ain't got\nthe dough son!");
-        QTimer::singleShot(3000, [this] () {
-            ui->wagerLabel->setText("What is your wager?");
-            });
-        return;
-    }
 
-    if(newWager == 0) {
-        ui->wagerLabel->setText("We're gonna need some\n money from ya dawg.");
-        QTimer::singleShot(3000, [this] () {
-            ui->wagerLabel->setText("What is your wager?");
-            });
-        return;
-    }
-    wager =  (unsigned long) (ui->wagerEdit->text().toLong());
     bool isBlackjack = game.bet(wager);
+    action = game.correctMove();
+    switch(action) {
+     case(Blackjack::_stand):
+        correctMove = "Stand";
+        break;
+     case(Blackjack::_hit):
+        correctMove = "Hit";
+        break;
+     case(Blackjack::_split):
+        correctMove = "Split";
+        break;
+     case(Blackjack::_doubledown):
+        correctMove = "Double Down";
+        break;
+    }
+    std::cout << correctMove.toStdString() << std::endl;
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
     ui->startButton->hide();
     ui->standButton->show();
+    ui->doubleButton->show();
     ui->hitButton->show();
     dealUserCard(game.getPlayerHand()[0].hand[0]);
     dealUserCard(game.getPlayerHand()[0].hand[1]);
@@ -152,31 +154,17 @@ void TutorialUI::dealDealerCard(Blackjack::card dealerCard) {
 
 void TutorialUI::stand()
 {
-    Blackjack::action action = game.correctMove();
-    if(action == Blackjack::_doubledown) {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: green }");
+    if(action == Blackjack::_stand) {
+        ui->moveLight->setStyleSheet("background-color:green;");
     }
     else {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: red }");
+        ui->moveLight->setStyleSheet("background-color:red;");
+        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
+        ui->wagerLabel->show();
     }
 
     ui->moveLight->show();
-    QTimer::singleShot(5000, this, &TutorialUI::startGame);
-
-    /*if(game.stay())
-    {
-        return;
-    }
-    QString file_path = getCardPath(game.getDealerHand()[0]);
-    dealerCards[0]->setStyleSheet(file_path);
-    dealerCards[0]->show();
-    ui->standButton->hide();
-    ui->hitButton->hide();
-    ui->splitButton->hide();
-    ui->doubleButton->hide();
-    index = 2;
-    checkDealer();
-    */
+    QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::dealToDealer()
@@ -247,12 +235,13 @@ void TutorialUI::analyzeResult() {
 
 void TutorialUI::hitMe()
 {
-    Blackjack::action action = game.correctMove();
     if(action == Blackjack::_hit) {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: green }");
+        ui->moveLight->setStyleSheet("background-color:green;");
     }
     else {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: red }");
+        ui->moveLight->setStyleSheet("background-color:red;");
+        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
+        ui->wagerLabel->show();
     }
 
     ui->moveLight->show();
@@ -260,46 +249,37 @@ void TutorialUI::hitMe()
     ui->splitButton->hide();
     ui->doubleButton->hide();
 
-    QTimer::singleShot(5000, this, &TutorialUI::startGame);
-
-    /*
-    bool isBust = false;    
-    dealUserCard(game.hit(isBust));
-    if(isBust)
-    {
-        stand();
-    }*/
+    QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::doubleDown()
 {
-    Blackjack::action action = game.correctMove();
     if(action == Blackjack::_doubledown) {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: green }");
+        ui->moveLight->setStyleSheet("background-color:green;");
     }
     else {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: red }");
+        ui->moveLight->setStyleSheet("background-color:red;");
+        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
+        ui->wagerLabel->show();
     }
 
     ui->moveLight->show();
-    QTimer::singleShot(5000, this, &TutorialUI::startGame);
-
-    //dealUserCard(game.doubleDown());
-    //stand();
+    QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::split()
 {
-    Blackjack::action action = game.correctMove();
-    if(action == Blackjack::_doubledown) {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: green }");
+    if(action == Blackjack::_split) {
+        ui->moveLight->setStyleSheet("background-color:green;");
     }
     else {
-        ui->moveLight->setStyleSheet("QLineEdit { background-color: red }");
+        ui->moveLight->setStyleSheet("background-color:red");
+        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
+        ui->wagerLabel->show();
     }
 
     ui->moveLight->show();
-    QTimer::singleShot(5000, this, &TutorialUI::startGame);
+    QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::wagerChanged() {
