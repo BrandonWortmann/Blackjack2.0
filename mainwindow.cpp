@@ -58,8 +58,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
     connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
 
-
-    connect(title, &Title::updateTextHeight, this, &MainWindow::updateTitleText);
     connect(title, &Title::updateCard1, this, &MainWindow::updateCard1);
     connect(title, &Title::updateCard2, this, &MainWindow::updateCard2);
     connect(title, &Title::updateCard3, this, &MainWindow::updateCard3);
@@ -117,18 +115,6 @@ void MainWindow::hideAll(){
     this->tutorial->hide();
 }
 
-void MainWindow::updateTitleText(int height)
-{
-//    QPoint coord1 = title->ui->label->pos();
-//    QSize dim1 = title->ui->label->size();
-
-//    QPoint coord2 = title->ui->label_3->pos();
-//    QSize dim2 = title->ui->label_3->size();
-
-//    title->ui->label->setGeometry(coord1.x() , height, dim1.width(), dim1.height());
-//    title->ui->label_3->setGeometry(coord2.x() , height, dim2.width(), dim2.height());
-
-}
 
 void MainWindow::toRulesPage()
 {
@@ -167,7 +153,6 @@ void MainWindow::backTutorialPage()
     tutorial->ui->infoPage->show();
     startBtnPressed();
 }
-
 
 void MainWindow::backCardsPage()
 {

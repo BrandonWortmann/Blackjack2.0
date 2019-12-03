@@ -46,7 +46,6 @@ public slots:
     void backRulesPage();
     void backCardsPage();
 
-    void updateTitleText(int);
     void updateCard1(int);
     void updateCard2(int);
     void updateCard3(int);
