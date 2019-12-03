@@ -103,7 +103,6 @@ void TutorialUI::beginDealing() {
         correctMove = "Double Down";
         break;
     }
-    std::cout << correctMove.toStdString() << std::endl;
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
     ui->startButton->hide();
