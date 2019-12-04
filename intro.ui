@@ -63,12 +63,12 @@ QPushButton:hover{
     <rect>
      <x>130</x>
      <y>450</y>
-     <width>601</width>
+     <width>571</width>
      <height>91</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the counting tab button in the main menu will bring you to a informational page, describing what and how to count cards. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the counting tab button in the main menu will bring you to a informational page, describing how to count cards.  Then you practice playing blackjack with the occasional quiz; testing you on the current card counting number.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -103,7 +103,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the strategies menu option will direct you to a informational page that will teach you about when to hit and stay; given the face-up cards.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the strategies menu option will direct you to a informational page that will teach you about when to hit and stay; given the face-up cards. Then, you can practice choosing the ideal action in wager-free games.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -112,9 +112,9 @@ QPushButton:hover{
   <widget class="QLabel" name="label_45">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>130</x>
      <y>600</y>
-     <width>601</width>
+     <width>581</width>
      <height>91</height>
     </rect>
    </property>
@@ -169,7 +169,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The structure of our game is divided into 4 main categories; aimed at teaching you everything from the basics of the game to practicing counting cards and betting. The following categories are: Rules, strategies, counting, and practice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The structure of our game is divided into 4 main categories; aimed at teaching you everything from the basics of the game to practicing counting cards. The following categories are: Rules, strategies, counting, and practice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>

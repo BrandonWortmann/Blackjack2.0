@@ -62,5 +62,7 @@
         <file>Resources/chipBlue.png</file>
         <file>Resources/chipBlack.png</file>
         <file>Resources/strat.png</file>
+        <file>Resources/hitCheatSheet</file>
+        <file>Resources/countingCheatsheet.png</file>
     </qresource>
 </RCC>
