@@ -10,6 +10,7 @@
 #include "gameui.h"
 #include "tutorial.h"
 #include "counttutorial.h"
+#include "intro.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,23 +31,23 @@ public:
     GameUI* gameUI;
     TutorialUI* tutorial;
     CountTutorial* countTutorial;
+    Intro* intro;
 
     void hideAll();
 
 public slots:
     void startBtnPressed();
+    void introBtnPressed();
     void rulesBtnPressed();
     void stratsBtnPressed();
     void countingBtnPressed();
     void practiceBtnPressed();
     void toCardsPage();
-    void toRulesPage();
     void toChipsPage();
     void toTutorialPage();
     void toCountTutorialPage();
     void backTutorialPage();
     void backCountTutorialPage();
-    void backIntroPage();
     void backRulesPage();
     void backCardsPage();
 

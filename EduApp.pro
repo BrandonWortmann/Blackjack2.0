@@ -66,6 +66,7 @@ SOURCES += \
     counting.cpp \
     counttutorial.cpp \
     gameui.cpp \
+    intro.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
@@ -126,6 +127,7 @@ HEADERS += \
     counting.h \
     counttutorial.h \
     gameui.h \
+    intro.h \
     mainmenu.h \
     mainwindow.h \
     rules.h \
@@ -137,6 +139,7 @@ FORMS += \
     counting.ui \
     counttutorial.ui \
     gameui.ui \
+    intro.ui \
     mainmenu.ui \
     mainwindow.ui \
     rules.ui \

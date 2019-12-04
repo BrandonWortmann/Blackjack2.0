@@ -17,6 +17,8 @@
 #include "counttutorial.h"
 #include "ui_counttutorial.h"
 #include <QStackedWidget>
+#include "intro.h"
+#include "ui_intro.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     menu = new MainMenu;
     rules = new Rules;
     strats = new Strats;
+    intro = new Intro;
     counting = new Counting;
     tutorial = new TutorialUI;
     countTutorial = new CountTutorial;
@@ -38,17 +41,20 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(menu);
     stack->addWidget(rules);
     stack->addWidget(gameUI);
+    stack->addWidget(intro);
     stack->addWidget(countTutorial);
     stack->addWidget(tutorial);
     this->setCentralWidget(stack);
 
     connect(title->ui->startBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
 
+    connect(menu->ui->introBtn, &QPushButton::pressed, this, &MainWindow::introBtnPressed);
     connect(menu->ui->rulesBtn, &QPushButton::pressed, this, &MainWindow::rulesBtnPressed);
     connect(menu->ui->stratsBtn, &QPushButton::pressed, this, &MainWindow::stratsBtnPressed);
     connect(menu->ui->countingBtn, &QPushButton::pressed, this, &MainWindow::countingBtnPressed);
     connect(menu->ui->practiceBtn, &QPushButton::pressed, this, &MainWindow::practiceBtnPressed);
 
+    connect(intro->ui->introReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backTutorialPage);
@@ -57,10 +63,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
     connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
-    connect(rules->ui->toRulesBtn, &QPushButton::pressed, this, &MainWindow::toRulesPage);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
-    connect(rules->ui->backIntroBtn, &QPushButton::pressed, this, &MainWindow::backIntroPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
     connect(rules->ui->backRulesBtn, &QPushButton::pressed, this, &MainWindow::backRulesPage);
 
@@ -87,6 +91,11 @@ MainWindow::~MainWindow()
 void MainWindow::startBtnPressed(){
     hideAll();
     this->menu->show();
+}
+
+void MainWindow::introBtnPressed(){
+    hideAll();
+    this->intro->show();
 }
 
 void MainWindow::rulesBtnPressed(){
@@ -119,14 +128,10 @@ void MainWindow::hideAll(){
     this->menu->hide();
     this->gameUI->hide();
     this->tutorial->hide();
+    this->intro->hide();
+    this->countTutorial->hide();
 }
 
-
-void MainWindow::toRulesPage()
-{
-    rules->ui->introPage->hide();
-    rules->ui->rulesPage->show();
-}
 
 void MainWindow::toCardsPage()
 {
@@ -179,10 +184,6 @@ void MainWindow::backCardsPage()
     rules->ui->cardsPage->show();
 }
 
-void MainWindow::backIntroPage(){
-    rules->ui->rulesPage->hide();
-    rules->ui->introPage->show();
-}
 
 void MainWindow::updateCard1(int height)
 {
