@@ -55,7 +55,7 @@ QPushButton:hover{
     </size>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="rulesPage">
     <property name="minimumSize">
@@ -244,6 +244,9 @@ QPushButton:hover{
      </property>
      <property name="pixmap">
       <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="backRulesBtn">

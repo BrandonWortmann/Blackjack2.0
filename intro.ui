@@ -68,7 +68,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the counting tab button in the main menu will bring you to a informational page, describing how to count cards.  Then you practice playing blackjack with the occasional quiz; testing you on the current card counting number.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the counting tab button in the main menu will bring you to an informational page, describing how to count cards. Then you practice playing blackjack with the occasional quiz; testing you on the current card counting number.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
@@ -103,7 +103,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the strategies menu option will direct you to a informational page that will teach you about when to hit and stay; given the face-up cards. Then, you can practice choosing the ideal action in wager-free games.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the strategies menu option will direct you to an informational page that will teach you about when to hit and stay; given the face-up cards. Then, you can practice choosing the ideal action in wager-free games.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
