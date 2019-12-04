@@ -580,9 +580,9 @@ QPushButton:hover{
    <zorder>wagerEdit</zorder>
    <zorder>startButton</zorder>
    <zorder>doubleButton</zorder>
-   <zorder>splitButton</zorder>
    <zorder>moneyLabel</zorder>
    <zorder>gameUIReturnBtn</zorder>
+   <zorder>splitButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

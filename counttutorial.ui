@@ -57,14 +57,48 @@
     <widget class="QPushButton" name="countTutorialBtn">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>370</y>
-       <width>111</width>
+       <x>780</x>
+       <y>710</y>
+       <width>141</width>
        <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font-size: 30px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="introductionTitle">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>331</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Counting Tutorial&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

@@ -42,17 +42,30 @@
        <height>800</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font-size: 30px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
+     </property>
      <widget class="QPushButton" name="tutorialNextBtn">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>290</y>
-        <width>121</width>
-        <height>61</height>
+        <x>780</x>
+        <y>710</y>
+        <width>141</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Start</string>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -74,8 +87,30 @@
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QLabel" name="introductionTitle">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>351</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Hit/Stay Tutorial&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
      <zorder>label</zorder>
      <zorder>tutorialNextBtn</zorder>
+     <zorder>introductionTitle</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
@@ -116,7 +151,7 @@
         <x>0</x>
         <y>0</y>
         <width>1000</width>
-        <height>850</height>
+        <height>800</height>
        </rect>
       </property>
      </widget>
