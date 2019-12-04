@@ -47,14 +47,35 @@
        <rect>
         <x>340</x>
         <y>290</y>
-        <width>89</width>
-        <height>25</height>
+        <width>121</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="text">
        <string>PushButton</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1000</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>tutorialNextBtn</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
@@ -584,6 +605,8 @@ You Received $200</string>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

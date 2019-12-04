@@ -30,7 +30,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>240</y>
+     <y>290</y>
      <width>200</width>
      <height>60</height>
     </rect>
@@ -43,7 +43,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>400</y>
+     <y>450</y>
      <width>200</width>
      <height>60</height>
     </rect>
@@ -56,7 +56,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>320</y>
+     <y>370</y>
      <width>200</width>
      <height>60</height>
     </rect>
@@ -69,7 +69,7 @@ QPushButton:hover{
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>480</y>
+     <y>530</y>
      <width>200</width>
      <height>60</height>
     </rect>
@@ -97,11 +97,25 @@ QPushButton:hover{
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="introBtn">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>210</y>
+     <width>200</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Introduction</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>rulesBtn</zorder>
   <zorder>countingBtn</zorder>
   <zorder>stratsBtn</zorder>
   <zorder>practiceBtn</zorder>
+  <zorder>introBtn</zorder>
  </widget>
  <resources>
   <include location="Resource.qrc"/>

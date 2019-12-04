@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CountTutorial</class>
+ <widget class="QWidget" name="CountTutorial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>800</height>
+    </size>
+   </property>
+   <widget class="QWidget" name="infoPage">
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1000</width>
+       <height>800</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="countTutorialBtn">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>370</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gamePage">
+    <property name="minimumSize">
+     <size>
+      <width>1000</width>
+      <height>800</height>
+     </size>
+    </property>
+    <widget class="QPushButton" name="startButton">
+     <property name="geometry">
+      <rect>
+       <x>435</x>
+       <y>520</y>
+       <width>100</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Game</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="loseLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>420</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>25</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>You Lose!
+You Lost $200</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="splitButton">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>760</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Split</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard4">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard1">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard3">
+     <property name="geometry">
+      <rect>
+       <x>675</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card1">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card6">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard5">
+     <property name="geometry">
+      <rect>
+       <x>745</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard8">
+     <property name="geometry">
+      <rect>
+       <x>465</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard7">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="backgroundLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1000</width>
+       <height>800</height>
+      </rect>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card8">
+     <property name="geometry">
+      <rect>
+       <x>465</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard5">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard6">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card7">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard4">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard2">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hitButton">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>760</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>HIt Me!</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card3">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard2">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card4">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="wagerEdit">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>480</y>
+       <width>110</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>19</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card5">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="moveLight">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>10</y>
+       <width>161</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard1">
+     <property name="geometry">
+      <rect>
+       <x>605</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bustLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>420</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>25</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>You Busted!
+You Lost $200</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard7">
+     <property name="geometry">
+      <rect>
+       <x>815</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="splitCard8">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>540</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="standButton">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>760</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stand</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="wagerLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>420</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>25</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>What is your wager?</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dealerCard6">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>90</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="doubleButton">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>760</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Double Down!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="countTutorialUIReturnBtn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Return</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="winLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>310</y>
+       <width>420</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>25</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>You Won!
+You Received $200</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card2">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>550</y>
+       <width>131</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>backgroundLabel</zorder>
+    <zorder>startButton</zorder>
+    <zorder>loseLabel</zorder>
+    <zorder>splitCard4</zorder>
+    <zorder>dealerCard1</zorder>
+    <zorder>splitCard3</zorder>
+    <zorder>card1</zorder>
+    <zorder>card6</zorder>
+    <zorder>splitCard5</zorder>
+    <zorder>dealerCard8</zorder>
+    <zorder>dealerCard7</zorder>
+    <zorder>dealerCard3</zorder>
+    <zorder>card8</zorder>
+    <zorder>dealerCard5</zorder>
+    <zorder>splitCard6</zorder>
+    <zorder>card7</zorder>
+    <zorder>dealerCard4</zorder>
+    <zorder>splitCard2</zorder>
+    <zorder>card3</zorder>
+    <zorder>dealerCard2</zorder>
+    <zorder>card4</zorder>
+    <zorder>wagerEdit</zorder>
+    <zorder>card5</zorder>
+    <zorder>moveLight</zorder>
+    <zorder>splitCard1</zorder>
+    <zorder>bustLabel</zorder>
+    <zorder>splitCard7</zorder>
+    <zorder>splitCard8</zorder>
+    <zorder>wagerLabel</zorder>
+    <zorder>dealerCard6</zorder>
+    <zorder>countTutorialUIReturnBtn</zorder>
+    <zorder>winLabel</zorder>
+    <zorder>card2</zorder>
+    <zorder>splitButton</zorder>
+    <zorder>doubleButton</zorder>
+    <zorder>standButton</zorder>
+    <zorder>hitButton</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
