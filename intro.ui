@@ -63,12 +63,15 @@ QPushButton:hover{
     <rect>
      <x>130</x>
      <y>450</y>
-     <width>451</width>
+     <width>601</width>
      <height>91</height>
     </rect>
    </property>
    <property name="text">
-    <string>Explain counting. Describe the popup and what it means.</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the counting tab button in the main menu will bring you to a informational page, describing what and how to count cards. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_36">
@@ -95,25 +98,31 @@ QPushButton:hover{
     <rect>
      <x>130</x>
      <y>290</y>
-     <width>451</width>
+     <width>611</width>
      <height>91</height>
     </rect>
    </property>
    <property name="text">
-    <string>When to hit and stay; with visual feedback and unlimited games.</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the strategies menu option will direct you to a informational page that will teach you about when to hit and stay; given the face-up cards.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_45">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>610</y>
-     <width>451</width>
+     <x>120</x>
+     <y>600</y>
+     <width>601</width>
      <height>91</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Playing the game while betting to practice your new skills.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Pressing the practice tab, you will have a chance to practice your newly found blackjack skills in a realistic setting. With the introduction of wagering chips, you can put your counting abilities to the test!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="introductionTitle">
@@ -153,14 +162,17 @@ QPushButton:hover{
   <widget class="QLabel" name="label_39">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>130</y>
-     <width>361</width>
-     <height>91</height>
+     <width>701</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="text">
-    <string>The structure of our game</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The structure of our game is divided into 4 main categories; aimed at teaching you everything from the basics of the game to practicing counting cards and betting. The following categories are: Rules, strategies, counting, and practice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_38">

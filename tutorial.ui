@@ -119,6 +119,19 @@ QPushButton:hover{
        <height>800</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font-size: 12px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
+     </property>
      <widget class="QLabel" name="splitCard3">
       <property name="geometry">
        <rect>
