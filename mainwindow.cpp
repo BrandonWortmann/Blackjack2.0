@@ -66,7 +66,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backTutorialPage);
-    //connect(countTutorial->ui->returnButton, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+
+    connect(countTutorial->ui->returnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+    connect(tutorial->ui->returnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
+
     connect(countTutorial->ui->returnButton, &QPushButton::pressed, this, &MainWindow::backCountTutorialPage);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);

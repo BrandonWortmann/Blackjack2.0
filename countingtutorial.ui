@@ -456,6 +456,32 @@ QPushButton:hover{
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QPushButton" name="returnBtn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Return</string>
+      </property>
+     </widget>
      <zorder>label</zorder>
      <zorder>label_5</zorder>
      <zorder>label_6</zorder>
@@ -476,6 +502,7 @@ QPushButton:hover{
      <zorder>label_12</zorder>
      <zorder>label_13</zorder>
      <zorder>label_14</zorder>
+     <zorder>returnBtn</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
