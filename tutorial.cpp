@@ -60,6 +60,10 @@ TutorialUI::~TutorialUI()
 
 void TutorialUI::startGame() {
     ui->moveLight->hide();
+    ui->hitButton->hide();
+    ui->doubleButton->hide();
+    ui->splitButton->hide();
+    ui->standButton->hide();
     ui->card1->hide();
     ui->card2->hide();
     ui->card3->hide();
@@ -79,8 +83,8 @@ void TutorialUI::startGame() {
     ui->bustLabel->hide();
     ui->winLabel->hide();
     ui->loseLabel->hide();
-    ui->wagerLabel->show();
-    ui->wagerEdit->show();
+    ui->wagerLabel->hide();
+    ui->wagerEdit->hide();
     ui->startButton->show();
     index = 0;
 }
@@ -154,15 +158,16 @@ void TutorialUI::dealDealerCard(Blackjack::card dealerCard) {
 void TutorialUI::stand()
 {
     if(action == Blackjack::_stand) {
-        ui->moveLight->setStyleSheet("background-color:green;");
+        ui->wagerLabel->setText("Correct Move!");
     }
     else {
-        ui->moveLight->setStyleSheet("background-color:red;");
-        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
-        ui->wagerLabel->show();
+        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
-
-    ui->moveLight->show();
+    ui->hitButton->hide();
+    ui->doubleButton->hide();
+    ui->splitButton->hide();
+    ui->standButton->hide();
+    ui->wagerLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
@@ -235,49 +240,51 @@ void TutorialUI::analyzeResult() {
 void TutorialUI::hitMe()
 {
     if(action == Blackjack::_hit) {
-        ui->moveLight->setStyleSheet("background-color:green;");
+        ui->wagerLabel->setText("Correct Move!");
     }
     else {
-        ui->moveLight->setStyleSheet("background-color:red;");
-        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
-        ui->wagerLabel->show();
+        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
 
-    ui->moveLight->show();
-
-    ui->splitButton->hide();
+    ui->hitButton->hide();
     ui->doubleButton->hide();
-
+    ui->splitButton->hide();
+    ui->standButton->hide();
+    ui->wagerLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::doubleDown()
 {
     if(action == Blackjack::_doubledown) {
-        ui->moveLight->setStyleSheet("background-color:green;");
+        ui->wagerLabel->setText("Correct Move!");
     }
     else {
-        ui->moveLight->setStyleSheet("background-color:red;");
-        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
-        ui->wagerLabel->show();
+        ui->wagerLabel->setText("Incorrect!\n Optimal Move: \n" + correctMove);
     }
 
-    ui->moveLight->show();
+    ui->hitButton->hide();
+    ui->doubleButton->hide();
+    ui->splitButton->hide();
+    ui->standButton->hide();
+    ui->wagerLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::split()
 {
     if(action == Blackjack::_split) {
-        ui->moveLight->setStyleSheet("background-color:green;");
+        ui->wagerLabel->setText("Correct Move!");
     }
     else {
-        ui->moveLight->setStyleSheet("background-color:red");
-        ui->wagerLabel->setText("Optimal Move:\n" + correctMove);
-        ui->wagerLabel->show();
+        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
 
-    ui->moveLight->show();
+    ui->hitButton->hide();
+    ui->doubleButton->hide();
+    ui->splitButton->hide();
+    ui->standButton->hide();
+    ui->wagerLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
