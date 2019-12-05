@@ -105,7 +105,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>42</x>
-       <y>440</y>
+       <y>570</y>
        <width>35</width>
        <height>38</height>
       </rect>
@@ -130,7 +130,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>420</y>
+       <y>550</y>
        <width>20</width>
        <height>21</height>
       </rect>
@@ -152,7 +152,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>154</x>
-       <y>170</y>
+       <y>330</y>
        <width>111</width>
        <height>21</height>
       </rect>
@@ -174,7 +174,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>42</x>
-       <y>440</y>
+       <y>570</y>
        <width>111</width>
        <height>171</height>
       </rect>
@@ -193,7 +193,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>122</x>
-       <y>440</y>
+       <y>570</y>
        <width>31</width>
        <height>38</height>
       </rect>
@@ -218,7 +218,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>122</x>
-       <y>160</y>
+       <y>320</y>
        <width>35</width>
        <height>38</height>
       </rect>
@@ -242,21 +242,29 @@ QPushButton:hover{
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>282</x>
-       <y>450</y>
-       <width>81</width>
-       <height>21</height>
+       <x>280</x>
+       <y>540</y>
+       <width>321</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>The first card is a 3, so the count should increment by 1. The second card is a 9, so the count doesn't change.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>42</x>
-       <y>160</y>
+       <y>320</y>
        <width>111</width>
        <height>171</height>
       </rect>
@@ -275,7 +283,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>127</x>
-       <y>420</y>
+       <y>550</y>
        <width>20</width>
        <height>21</height>
       </rect>
@@ -315,21 +323,30 @@ QPushButton:hover{
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>298</x>
-       <y>170</y>
-       <width>81</width>
-       <height>21</height>
+       <x>280</x>
+       <y>330</y>
+       <width>331</width>
+       <height>51</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>The dealer's showing card is an ace, so the current number should decrease by 1.
+</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
        <x>122</x>
-       <y>160</y>
+       <y>320</y>
        <width>111</width>
        <height>171</height>
       </rect>
@@ -348,7 +365,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>122</x>
-       <y>440</y>
+       <y>570</y>
        <width>111</width>
        <height>171</height>
       </rect>
@@ -367,8 +384,8 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>58</x>
-       <y>410</y>
-       <width>181</width>
+       <y>540</y>
+       <width>211</width>
        <height>21</height>
       </rect>
      </property>
@@ -389,7 +406,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>130</y>
+       <y>290</y>
        <width>141</width>
        <height>17</height>
       </rect>
@@ -402,13 +419,34 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>630</y>
+       <y>750</y>
        <width>141</width>
        <height>17</height>
       </rect>
      </property>
      <property name="text">
       <string>Player's Hand</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>120</y>
+       <width>560</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Card counting is the practice of keeping track of a number that tells you if you are likely to win. The higher the number, the better your chances are of winning, so you should bet more. You start at 0 and change it based on every card that is dealt, including the dealer's face down card when it is revealed. The chart on the right shows how the number should change based on the value of each card. The number should reset to 0 whenever the deck is shuffled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <zorder>label</zorder>
@@ -430,6 +468,7 @@ QPushButton:hover{
     <zorder>line_4</zorder>
     <zorder>label_12</zorder>
     <zorder>label_13</zorder>
+    <zorder>label_14</zorder>
    </widget>
    <widget class="QWidget" name="gamePage">
     <property name="minimumSize">

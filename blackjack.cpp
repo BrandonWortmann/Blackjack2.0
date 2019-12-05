@@ -102,7 +102,7 @@ Blackjack::result Blackjack::getResult()
             result.outcome = lose;
         }
     }
-    else if(isBlackjack(playerHand[0].hand))
+    else if(isBlackjack(playerHand[0].hand) && playerHand.count() == 1)
     {
         result.netGain += (int)ceil((double)playerHand[0].betAmount * 1.5);
         result.outcome = blackjack;

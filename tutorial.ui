@@ -81,7 +81,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/green-felt.jpg</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -121,7 +121,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -140,7 +140,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/cardBack.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -159,7 +159,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/cardSpadesA.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpadesA.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -178,7 +178,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/cardDiamonds10.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds10.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -197,7 +197,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/new/images/Resources/cardClubs8.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs8.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -473,7 +473,7 @@ QPushButton:hover{
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here is a table that shows the optimal move to make in any situation. In order to see what what move to make look at the dealer card that is showing as we as your hand. The dealer's card tells you what column to look at, and your cards tell you what row. If you have 2 of the same value (face cards all have a value of 10), look at the bottom third of the chart. If your hand contains one ace, look at the middle third. Otherwise, add the two cards together and look at the top third. If you don't have enough money to split, add the cards together and look at the top third. If you don't have enough money to double, then hit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here is a table that shows the optimal move to make in any situation. In order to see what move to make, look at the dealer card that is showing as we as your hand. The dealer's card tells you what column to look at, and your cards tell you what row. If you have 2 of the same value (face cards all have a value of 10), look at the bottom third of the chart. If your hand contains one ace, look at the middle third. Otherwise, add the two cards together and look at the top third. If you don't have enough money to split, add the cards together and look at the top third. If you don't have enough money to double, then hit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1124,6 +1124,8 @@ You Received $200</string>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
