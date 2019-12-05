@@ -939,14 +939,14 @@ You Received $200</string>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>435</x>
-        <y>520</y>
-        <width>100</width>
-        <height>25</height>
+        <x>380</x>
+        <y>360</y>
+        <width>211</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="text">
-       <string>Start Game</string>
+       <string>Play Hand</string>
       </property>
      </widget>
      <widget class="QLabel" name="splitCard8">
@@ -1027,6 +1027,43 @@ You Received $200</string>
        <string/>
       </property>
      </widget>
+     <zorder>splitCard3</zorder>
+     <zorder>dealerCard5</zorder>
+     <zorder>backgroundLabel</zorder>
+     <zorder>hitButton</zorder>
+     <zorder>splitCard7</zorder>
+     <zorder>splitCard6</zorder>
+     <zorder>card6</zorder>
+     <zorder>splitCard1</zorder>
+     <zorder>tutorialUIReturnBtn</zorder>
+     <zorder>card8</zorder>
+     <zorder>card3</zorder>
+     <zorder>dealerCard7</zorder>
+     <zorder>bustLabel</zorder>
+     <zorder>loseLabel</zorder>
+     <zorder>card4</zorder>
+     <zorder>dealerCard3</zorder>
+     <zorder>winLabel</zorder>
+     <zorder>dealerCard8</zorder>
+     <zorder>moveLight</zorder>
+     <zorder>dealerCard4</zorder>
+     <zorder>dealerCard1</zorder>
+     <zorder>splitCard2</zorder>
+     <zorder>wagerLabel</zorder>
+     <zorder>wagerEdit</zorder>
+     <zorder>card7</zorder>
+     <zorder>card5</zorder>
+     <zorder>card1</zorder>
+     <zorder>doubleButton</zorder>
+     <zorder>splitButton</zorder>
+     <zorder>startButton</zorder>
+     <zorder>splitCard8</zorder>
+     <zorder>splitCard4</zorder>
+     <zorder>standButton</zorder>
+     <zorder>splitCard5</zorder>
+     <zorder>dealerCard6</zorder>
+     <zorder>dealerCard2</zorder>
+     <zorder>card2</zorder>
     </widget>
    </widget>
   </widget>
