@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  tutorial.cpp                                *
+ *  widget that holds modified gameUI, used     *
+ *  for practicing hit/stay strategies.         *
+ *                                              *
+ ************************************************/
+
 #include "tutorial.h"
 #include "ui_tutorial.h"
 #include <QTimer>

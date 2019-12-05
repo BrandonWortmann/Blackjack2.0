@@ -1,5 +1,14 @@
-#include "mainwindow.h"
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  main.cpp                                    *
+ *  main program that starts the project        *
+ *                                              *
+ ************************************************/
 
+#include "mainwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

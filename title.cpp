@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  title.cpp                                   *
+ *  Widget that holds title ui animation        *
+ *  and utilizes box2D.                         *
+ *                                              *
+ ************************************************/
+
 #include "title.h"
 #include "ui_title.h"
 #include "Box2D/Box2D.h"
@@ -106,7 +117,7 @@ void Title::startAnimation()
         int textHeight4 = int(position4.y);
 
         QTimer::singleShot(1, [this, textHeight, textHeight2, textHeight3, textHeight4] () {
-                           updateCard1(textHeight), updateCard2(textHeight2), updateCard3(textHeight3), updateCard4(textHeight4);
+                           updateCard1(textHeight); updateCard2(textHeight2); updateCard3(textHeight3); updateCard4(textHeight4);
                            });
 
         QTimer::singleShot(1, this, SLOT(startAnimation()));

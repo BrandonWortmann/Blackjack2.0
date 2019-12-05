@@ -1,3 +1,13 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  blackjack.cpp                               *
+ *  Backend and logic of blackjack game.        *
+ *                                              *
+ ************************************************/
+
 #include "blackjack.h"
 #include <stdlib.h>
 #include <cmath>

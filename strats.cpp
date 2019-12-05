@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  strats.cpp                                  *
+ *  Widget that holds Hit/Stay popup            *
+ *  cheatsheet.                                 *
+ *                                              *
+ ************************************************/
+
 #include "strats.h"
 #include "ui_strats.h"
 

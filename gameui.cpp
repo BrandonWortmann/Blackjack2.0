@@ -1,3 +1,13 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  gameUI.cpp                                  *
+ *  blackjack gameUI with wagers.               *
+ *                                              *
+ ************************************************/
+
 #include "gameui.h"
 #include "ui_gameui.h"
 #include <QTimer>

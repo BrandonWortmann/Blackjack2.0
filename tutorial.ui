@@ -121,7 +121,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/hitCheatSheet</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -395,9 +395,9 @@ QPushButton:hover{
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>645</x>
-        <y>140</y>
-        <width>311</width>
+        <x>642</x>
+        <y>115</y>
+        <width>319</width>
         <height>21</height>
        </rect>
       </property>
@@ -420,10 +420,10 @@ QPushButton:hover{
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>925</x>
-        <y>122</y>
-        <width>31</width>
-        <height>471</height>
+        <x>928</x>
+        <y>94</y>
+        <width>32</width>
+        <height>505</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -440,6 +440,32 @@ QPushButton:hover{
       </property>
       <property name="margin">
        <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dealer's Hand</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>610</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Player's Hand</string>
       </property>
      </widget>
      <zorder>label</zorder>
@@ -461,6 +487,8 @@ QPushButton:hover{
      <zorder>label_11</zorder>
      <zorder>label_12</zorder>
      <zorder>label_13</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_15</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">

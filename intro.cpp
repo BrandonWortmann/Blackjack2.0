@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  intro.cpp                                   *
+ *  Introduction widget that explains app       *
+ *  structure.                                  *
+ *                                              *
+ ************************************************/
+
 #include "intro.h"
 #include "ui_intro.h"
 
