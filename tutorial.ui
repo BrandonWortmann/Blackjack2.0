@@ -102,7 +102,7 @@ QPushButton:hover{
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Hit/Stay Tutorial&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Strategies&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -130,8 +130,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>150</y>
+        <x>40</x>
+        <y>370</y>
         <width>111</width>
         <height>171</height>
        </rect>
@@ -149,8 +149,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>150</y>
+        <x>120</x>
+        <y>370</y>
         <width>111</width>
         <height>171</height>
        </rect>
@@ -168,8 +168,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>430</y>
+        <x>40</x>
+        <y>600</y>
         <width>111</width>
         <height>171</height>
        </rect>
@@ -187,8 +187,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>430</y>
+        <x>120</x>
+        <y>600</y>
         <width>111</width>
         <height>171</height>
        </rect>
@@ -206,8 +206,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>430</y>
+        <x>40</x>
+        <y>600</y>
         <width>35</width>
         <height>38</height>
        </rect>
@@ -231,8 +231,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>430</y>
+        <x>120</x>
+        <y>600</y>
         <width>31</width>
         <height>38</height>
        </rect>
@@ -256,8 +256,8 @@ QPushButton:hover{
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>150</y>
+        <x>120</x>
+        <y>370</y>
         <width>35</width>
         <height>38</height>
        </rect>
@@ -281,8 +281,8 @@ QPushButton:hover{
      <widget class="Line" name="line">
       <property name="geometry">
        <rect>
-        <x>38</x>
-        <y>410</y>
+        <x>40</x>
+        <y>580</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -303,8 +303,8 @@ QPushButton:hover{
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>115</x>
-        <y>410</y>
+        <x>120</x>
+        <y>580</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -325,8 +325,8 @@ QPushButton:hover{
      <widget class="Line" name="line_3">
       <property name="geometry">
        <rect>
-        <x>46</x>
-        <y>400</y>
+        <x>50</x>
+        <y>570</y>
         <width>181</width>
         <height>21</height>
        </rect>
@@ -347,8 +347,8 @@ QPushButton:hover{
      <widget class="Line" name="line_4">
       <property name="geometry">
        <rect>
-        <x>142</x>
-        <y>160</y>
+        <x>150</x>
+        <y>380</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -369,35 +369,51 @@ QPushButton:hover{
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>286</x>
-        <y>160</y>
-        <width>81</width>
-        <height>21</height>
+        <x>270</x>
+        <y>360</y>
+        <width>311</width>
+        <height>61</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here the dealer has an ace so we look at the last column of the chart.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>440</y>
-        <width>81</width>
-        <height>21</height>
+        <x>250</x>
+        <y>570</y>
+        <width>361</width>
+        <height>141</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The player's cards are not the same and neither of them is an ace. Therefore, we add the 2 cards together and look at the top third of the table. The sum is 18 so we look at the first column of the table. If we combine this with the dealers card we get S, which means we should stay.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>642</x>
-        <y>115</y>
-        <width>319</width>
+        <x>645</x>
+        <y>140</y>
+        <width>311</width>
         <height>21</height>
        </rect>
       </property>
@@ -420,10 +436,10 @@ QPushButton:hover{
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>928</x>
-        <y>94</y>
-        <width>32</width>
-        <height>505</height>
+        <x>925</x>
+        <y>122</y>
+        <width>31</width>
+        <height>471</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -445,27 +461,66 @@ QPushButton:hover{
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>120</y>
-        <width>141</width>
-        <height>17</height>
+        <x>40</x>
+        <y>130</y>
+        <width>551</width>
+        <height>211</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>Dealer's Hand</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here is a table that shows the optimal move to make in any situation. In order to see what what move to make look at the dealer card that is showing as we as your hand. The dealer's card tells you what column to look at, and your cards tell you what row. If you have 2 of the same value (face cards all have a value of 10), look at the bottom third of the chart. If your hand contains one ace, look at the middle third. Otherwise, add the two cards together and look at the top third. If you don't have enough money to split, add the cards together and look at the top third. If you don't have enough money to double, then hit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_15">
+     <widget class="Line" name="line_5">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>610</y>
-        <width>141</width>
-        <height>17</height>
+        <x>648</x>
+        <y>301</y>
+        <width>307</width>
+        <height>20</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Player's Hand</string>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="geometry">
+       <rect>
+        <x>648</x>
+        <y>416</y>
+        <width>307</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>4</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <zorder>label</zorder>
@@ -488,7 +543,8 @@ QPushButton:hover{
      <zorder>label_12</zorder>
      <zorder>label_13</zorder>
      <zorder>label_14</zorder>
-     <zorder>label_15</zorder>
+     <zorder>line_5</zorder>
+     <zorder>line_6</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
@@ -939,14 +995,14 @@ You Received $200</string>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>360</y>
-        <width>211</width>
-        <height>81</height>
+        <x>435</x>
+        <y>520</y>
+        <width>100</width>
+        <height>25</height>
        </rect>
       </property>
       <property name="text">
-       <string>Play Hand</string>
+       <string>Start Game</string>
       </property>
      </widget>
      <widget class="QLabel" name="splitCard8">
