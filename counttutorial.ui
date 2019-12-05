@@ -385,6 +385,32 @@ QPushButton:hover{
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dealer's Hand</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>630</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Player's Hand</string>
+     </property>
+    </widget>
     <zorder>label</zorder>
     <zorder>label_5</zorder>
     <zorder>label_6</zorder>
@@ -402,6 +428,8 @@ QPushButton:hover{
     <zorder>label_10</zorder>
     <zorder>line_3</zorder>
     <zorder>line_4</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_13</zorder>
    </widget>
    <widget class="QWidget" name="gamePage">
     <property name="minimumSize">

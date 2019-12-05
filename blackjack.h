@@ -1,3 +1,12 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  header file for blackjack                   *
+ *                                              *
+ ************************************************/
+
 #ifndef BLACKJACK_H
 #define BLACKJACK_H
 

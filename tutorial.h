@@ -2,6 +2,15 @@
 #define TUTORIALUI_H
 
 #include <QMainWindow>
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  header file for tutorial                    *
+ *                                              *
+ ************************************************/
+
 #include <vector>
 #include <QLabel>
 #include "blackjack.h"

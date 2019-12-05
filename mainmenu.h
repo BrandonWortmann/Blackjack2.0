@@ -1,3 +1,12 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  header file for mainmenu                    *
+ *                                              *
+ ************************************************/
+
 #ifndef MAINMENU_H
 #define MAINMENU_H
 

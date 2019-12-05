@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  mainwindow.cpp                              *
+ *  Underlying QMainWindow that holds all       *
+ *  widgets and windows that are displayed.     *
+ *                                              *
+ ************************************************/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "title.h"

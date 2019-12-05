@@ -1,3 +1,14 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  counttutorial.cpp                           *
+ *  widget that holds info for reading          *
+ *  counting popup and counting practice UI.    *
+ *                                              *
+ ************************************************/
+
 #include "counttutorial.h"
 #include "ui_counttutorial.h"
 #include <QTimer>

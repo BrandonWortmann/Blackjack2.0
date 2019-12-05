@@ -1,3 +1,12 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  header file for title                       *
+ *                                              *
+ ************************************************/
+
 #ifndef TITLE_H
 #define TITLE_H
 #include "Box2D/Box2D.h"

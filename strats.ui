@@ -45,7 +45,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="Resource.qrc">:/new/images/Resources/strat.png</pixmap>
+    <pixmap>:/new/images/Resources/strat.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -67,20 +67,20 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>580</y>
-     <width>311</width>
+     <width>71</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Ds = Double if allowed, otherwise stay</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SP = Split&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>180</x>
      <y>550</y>
      <width>71</width>
      <height>17</height>
@@ -93,8 +93,8 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>550</y>
+     <x>180</x>
+     <y>580</y>
      <width>81</width>
      <height>17</height>
     </rect>

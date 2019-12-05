@@ -1,6 +1,15 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  header file for mainwindow                  *
+ *                                              *
+ ************************************************/
+
 #include <QMainWindow>
 #include "title.h"
 #include "mainmenu.h"
