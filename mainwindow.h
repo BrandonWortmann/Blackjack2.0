@@ -59,6 +59,8 @@ public slots:
     void backCountTutorialPage();
     void backRulesPage();
     void backCardsPage();
+    void countPopup();
+    void stratsPopup();
 
     void updateCard1(int);
     void updateCard2(int);

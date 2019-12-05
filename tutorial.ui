@@ -1083,6 +1083,19 @@ You Received $200</string>
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="cheatsheetBtn">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cheatsheet</string>
+      </property>
+     </widget>
      <zorder>splitCard3</zorder>
      <zorder>dealerCard5</zorder>
      <zorder>backgroundLabel</zorder>
@@ -1120,6 +1133,7 @@ You Received $200</string>
      <zorder>dealerCard6</zorder>
      <zorder>dealerCard2</zorder>
      <zorder>card2</zorder>
+     <zorder>cheatsheetBtn</zorder>
     </widget>
    </widget>
   </widget>
