@@ -126,13 +126,9 @@ void TutorialUI::beginDealing() {
     ui->hitButton->show();
     dealUserCard(game.getPlayerHand()[0].hand[0]);
     dealUserCard(game.getPlayerHand()[0].hand[1]);
-    if(money >= (wager << 1))
+    if((game.getPlayerHand()[0].hand[0].number == game.getPlayerHand()[0].hand[1].number) || (game.getPlayerHand()[0].hand[0].number >= 10 && game.getPlayerHand()[0].hand[1].number >= 10))
     {
-        ui->doubleButton->show();
-        if((game.getPlayerHand()[0].hand[0].number == game.getPlayerHand()[0].hand[1].number) || (game.getPlayerHand()[0].hand[0].number >= 10 && game.getPlayerHand()[0].hand[1].number >= 10))
-        {
-            ui->splitButton->show();
-        }
+        ui->splitButton->show();
     }
     index = 1;
     ui->dealerCard1->setStyleSheet("border-image: url(:/new/images/Resources/cardBack.png) 0 0 0 0 stretch");
