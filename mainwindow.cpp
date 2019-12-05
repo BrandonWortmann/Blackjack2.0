@@ -74,6 +74,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
     connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
+    connect(countTutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::countPopup);
+    connect(tutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::stratsPopup);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
@@ -161,6 +163,16 @@ void MainWindow::toTutorialPage()
 {
     tutorial->ui->infoPage->hide();
     tutorial->ui->gamePage->show();
+}
+
+void MainWindow::countPopup()
+{
+    counting->show();
+}
+
+void MainWindow::stratsPopup()
+{
+    strats->show();
 }
 
 void MainWindow::toCountTutorialPage()
