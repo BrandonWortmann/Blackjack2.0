@@ -81,7 +81,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/green-felt.jpg</pixmap>
+       <pixmap>:/new/images/Resources/green-felt.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -121,7 +121,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
+       <pixmap>:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -140,7 +140,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+       <pixmap>:/new/images/Resources/cardBack.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -159,7 +159,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpadesA.png</pixmap>
+       <pixmap>:/new/images/Resources/cardSpadesA.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -178,7 +178,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds10.png</pixmap>
+       <pixmap>:/new/images/Resources/cardDiamonds10.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -197,7 +197,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs8.png</pixmap>
+       <pixmap>:/new/images/Resources/cardClubs8.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -995,14 +995,14 @@ You Received $200</string>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
        <rect>
-        <x>435</x>
-        <y>520</y>
-        <width>100</width>
-        <height>25</height>
+        <x>350</x>
+        <y>360</y>
+        <width>271</width>
+        <height>91</height>
        </rect>
       </property>
       <property name="text">
-       <string>Start Game</string>
+       <string>Play Hand</string>
       </property>
      </widget>
      <widget class="QLabel" name="splitCard8">
@@ -1124,8 +1124,6 @@ You Received $200</string>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="Resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
