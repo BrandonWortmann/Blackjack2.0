@@ -8,8 +8,8 @@
  *                                              *
  ************************************************/
 
-#include "counttutorial.h"
-#include "ui_counttutorial.h"
+#include "countingtutorial.h"
+#include "ui_countingtutorial.h"
 #include <QTimer>
 #include <QPushButton>
 #include <QLineEdit>
@@ -18,74 +18,78 @@
 #include <QImage>
 #include <unistd.h>
 
-CountTutorial::CountTutorial(QWidget *parent) :
+
+CountingTutorial::CountingTutorial(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::CountTutorial)
+    ui(new Ui::CountingTutorial)
 {
     ui->setupUi(this);
-    srand((unsigned int) time(nullptr));
-    ui->hitButton->hide();
-    ui->standButton->hide();
-    ui->doubleButton->hide();
-    ui->splitButton->hide();
-    ui->cardCountLabel->hide();
-    ui->checkButton->hide();
+        srand((unsigned int) time(nullptr));
+        ui->hitButton->hide();
+        ui->standButton->hide();
+        ui->doubleButton->hide();
+        ui->splitButton->hide();
+        ui->cardCountLabel->hide();
+        ui->checkButton->hide();
 
-    ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
-    index = 0;
-    money = 500;
-    handCount = 0;
-    cards.push_back(ui->card1);
-    cards.push_back(ui->card2);
-    cards.push_back(ui->card3);
-    cards.push_back(ui->card4);
-    cards.push_back(ui->card5);
-    cards.push_back(ui->card6);
-    cards.push_back(ui->card7);
-    cards.push_back(ui->card8);
-    dealerCards.push_back(ui->dealerCard1);
-    dealerCards.push_back(ui->dealerCard2);
-    dealerCards.push_back(ui->dealerCard3);
-    dealerCards.push_back(ui->dealerCard4);
-    dealerCards.push_back(ui->dealerCard5);
-    dealerCards.push_back(ui->dealerCard6);
-    dealerCards.push_back(ui->dealerCard7);
-    dealerCards.push_back(ui->dealerCard8);
-    if((handCount % 3) == 0 && handCount != 0) {
-        ui->cardCountLabel->show();
-        ui->checkButton->show();
-        ui->wagerEdit->show();
-    }
-    else
-        startGame();
+        ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
+        index = 0;
+        money = 500;
+        handCount = 0;
+        cards.push_back(ui->card1);
+        cards.push_back(ui->card2);
+        cards.push_back(ui->card3);
+        cards.push_back(ui->card4);
+        cards.push_back(ui->card5);
+        cards.push_back(ui->card6);
+        cards.push_back(ui->card7);
+        cards.push_back(ui->card8);
+        dealerCards.push_back(ui->dealerCard1);
+        dealerCards.push_back(ui->dealerCard2);
+        dealerCards.push_back(ui->dealerCard3);
+        dealerCards.push_back(ui->dealerCard4);
+        dealerCards.push_back(ui->dealerCard5);
+        dealerCards.push_back(ui->dealerCard6);
+        dealerCards.push_back(ui->dealerCard7);
+        dealerCards.push_back(ui->dealerCard8);
 
-    QImage* highlightColor = new QImage(561, 211, QImage::Format_RGBA64);
-    highlightColor->fill(*(new QColor(0, 0, 255, 100)));
-    ui->firstHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
-    ui->secondHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
+        if(handCount == 3) {
+            handCount = 0;
+            ui->cardCountLabel->show();
+            ui->checkButton->show();
+            ui->wagerEdit->show();
+        }
+        else
+            startGame();
 
-    connect(ui->startButton, &QPushButton::pressed,
-            this, &CountTutorial::beginDealing);
-    connect(ui->hitButton, &QPushButton::pressed,
-            this, &CountTutorial::hitMe);
-    connect(ui->standButton, &QPushButton::pressed,
-            this, &CountTutorial::stand);
-    connect(ui->wagerEdit, &QLineEdit::textChanged,
-            this, &CountTutorial::wagerChanged);
-    connect(ui->doubleButton, &QPushButton::pressed,
-            this, &CountTutorial::doubleDown);
-    connect(ui->splitButton, &QPushButton::pressed,
-            this, &CountTutorial::split);
-    connect(ui->checkButton, &QPushButton::pressed,
-            this, &CountTutorial::checkCardCount);
+        QImage* highlightColor = new QImage(561, 211, QImage::Format_RGBA64);
+        highlightColor->fill(*(new QColor(0, 0, 255, 100)));
+        ui->firstHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
+        ui->secondHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
+
+        connect(ui->startButton, &QPushButton::pressed,
+                this, &CountingTutorial::beginDealing);
+        connect(ui->hitButton, &QPushButton::pressed,
+                this, &CountingTutorial::hitMe);
+        connect(ui->standButton, &QPushButton::pressed,
+                this, &CountingTutorial::stand);
+        connect(ui->wagerEdit, &QLineEdit::textChanged,
+                this, &CountingTutorial::wagerChanged);
+        connect(ui->doubleButton, &QPushButton::pressed,
+                this, &CountingTutorial::doubleDown);
+        connect(ui->splitButton, &QPushButton::pressed,
+                this, &CountingTutorial::split);
+        connect(ui->checkButton, &QPushButton::pressed,
+                this, &CountingTutorial::checkCardCount);
+
 }
 
-CountTutorial::~CountTutorial()
+CountingTutorial::~CountingTutorial()
 {
     delete ui;
 }
 
-void CountTutorial::checkCardCount() {
+void CountingTutorial::checkCardCount() {
     Blackjack b;
     int cardCount = b.getCount();
     int count = ui->wagerEdit->text().toInt();
@@ -98,15 +102,15 @@ void CountTutorial::checkCardCount() {
         ui->cardCountLabel->setText("Incorrect! Correct Num: " + num);
     }
 
-    QTimer::singleShot(2000, this, &CountTutorial::startGame);
+    QTimer::singleShot(2000, this, &CountingTutorial::startGame);
 }
 
-void CountTutorial::startGame() {
+void CountingTutorial::startGame() {
     handCount++;
-    //ui->cardCountLabel->setText("What is the current\ncard count?");
-    //ui->wagerEdit->clear();
-    //ui->cardCountLabel->hide();
-    //ui->wagerEdit->hide();
+    ui->cardCountLabel->setText("What is the current\ncard count?");
+    ui->wagerEdit->clear();
+    ui->cardCountLabel->hide();
+    ui->wagerEdit->show();
 
     for(int i = 0; i < cards.size(); i++) {
         cards[i]->hide();
@@ -135,7 +139,7 @@ void CountTutorial::startGame() {
     }
 }
 
-void CountTutorial::beginDealing() {
+void CountingTutorial::beginDealing() {
     unsigned long newWager = (unsigned long) ui->wagerEdit->text().toLong();
     if(newWager > money) {
         ui->wagerLabel->setText("You ain't got\nthe dough son!");
@@ -180,7 +184,7 @@ void CountTutorial::beginDealing() {
 
 }
 
-void CountTutorial::dealUserCard(Blackjack::card userCard) {
+void CountingTutorial::dealUserCard(Blackjack::card userCard) {
     if(index == 8) {
         index = 0;
     }
@@ -191,14 +195,14 @@ void CountTutorial::dealUserCard(Blackjack::card userCard) {
     index++;
 }
 
-void CountTutorial::dealDealerCard(Blackjack::card dealerCard) {
+void CountingTutorial::dealDealerCard(Blackjack::card dealerCard) {
     QString file_path = getCardPath(dealerCard);
     dealerCards[index]->setStyleSheet(file_path);
     dealerCards[index]->show();
     index++;
 }
 
-void CountTutorial::stand()
+void CountingTutorial::stand()
 {
     if(game.stay())
     {
@@ -219,7 +223,7 @@ void CountTutorial::stand()
     checkDealer();
 }
 
-void CountTutorial::dealToDealer()
+void CountingTutorial::dealToDealer()
 {
     Blackjack::card inputCard;
     inputCard = game.dealerStep();
@@ -230,10 +234,10 @@ void CountTutorial::dealToDealer()
         inputCard = game.dealerStep();
         currTime += 1000;
     }
-    QTimer::singleShot(currTime, this, &CountTutorial::analyzeResult);
+    QTimer::singleShot(currTime, this, &CountingTutorial::analyzeResult);
 }
 
-void CountTutorial::checkDealer()
+void CountingTutorial::checkDealer()
 {
     //TODO: Check shuffle
     if(game.getResult().outcome != Blackjack::blackjack)
@@ -241,12 +245,12 @@ void CountTutorial::checkDealer()
         dealToDealer();
     }
     else {
-        QTimer::singleShot(1000, this, &CountTutorial::analyzeResult);
+        QTimer::singleShot(1000, this, &CountingTutorial::analyzeResult);
     }
 
 }
 
-void CountTutorial::analyzeResult() {
+void CountingTutorial::analyzeResult() {
     Blackjack::result result = game.getResult();
 
     switch(result.outcome)
@@ -281,10 +285,10 @@ void CountTutorial::analyzeResult() {
     }
     ui->resultLabel->show();
     ui->moneyLabel->setText("$" + QString::number(money));
-    QTimer::singleShot(5000, this, &CountTutorial::startGame);
+    QTimer::singleShot(5000, this, &CountingTutorial::startGame);
 }
 
-void CountTutorial::hitMe()
+void CountingTutorial::hitMe()
 {
     ui->splitButton->hide();
     ui->doubleButton->hide();
@@ -296,13 +300,13 @@ void CountTutorial::hitMe()
     }
 }
 
-void CountTutorial::doubleDown()
+void CountingTutorial::doubleDown()
 {
     dealUserCard(game.doubleDown());
     stand();
 }
 
-void CountTutorial::split()
+void CountingTutorial::split()
 {
     ui->splitButton->hide();
     for(int i = 0; i < 8; i++) {
@@ -326,7 +330,7 @@ void CountTutorial::split()
     ui->firstHighlightLabel->show();
 }
 
-void CountTutorial::wagerChanged() {
+void CountingTutorial::wagerChanged() {
     QString val = ui->wagerEdit->text();
     int len = val.length();
     if(len < 1) {
@@ -338,7 +342,7 @@ void CountTutorial::wagerChanged() {
     }
 }
 
-QString CountTutorial::getCardPath(Blackjack::card inputCard)
+QString CountingTutorial::getCardPath(Blackjack::card inputCard)
 {
 
     QString file_path = "border-image: url(:/new/images/Resources/";

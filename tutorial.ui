@@ -1001,6 +1001,18 @@ You Received $200</string>
         <height>91</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 20pt &quot;Ubuntu&quot;;</string>
+      </property>
       <property name="text">
        <string>Play Hand</string>
       </property>

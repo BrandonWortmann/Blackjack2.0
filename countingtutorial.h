@@ -1,32 +1,22 @@
-/************************************************
- *      A9 - Educational App                    *
- *  Author: Wasted Potential                    *
- *  CS 3505                                     *
- *                                              *
- *  header file for counttutorial               *
- *                                              *
- ************************************************/
+#ifndef COUNTINGTUTORIAL_H
+#define COUNTINGTUTORIAL_H
 
-#ifndef COUNTTUTORIAL_H
-#define COUNTTUTORIAL_H
-
-#include <QWidget>
-#include <vector>
+#include <QMainWindow>
 #include <QLabel>
 #include "blackjack.h"
 
 namespace Ui {
-class CountTutorial;
+class CountingTutorial;
 }
 
-class CountTutorial : public QWidget
+class CountingTutorial : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit CountTutorial(QWidget *parent = nullptr);
-    ~CountTutorial();
-    Ui::CountTutorial *ui;
+    explicit CountingTutorial(QWidget *parent = nullptr);
+    ~CountingTutorial();
+    Ui::CountingTutorial *ui;
     void startGame();
     void beginDealing();
     void hitMe();
@@ -60,3 +50,4 @@ private:
 };
 
 #endif // COUNTTUTORIAL_H
+

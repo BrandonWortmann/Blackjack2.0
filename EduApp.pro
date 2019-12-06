@@ -64,7 +64,7 @@ SOURCES += \
     Box2D/Rope/b2Rope.cpp \
     blackjack.cpp \
     counting.cpp \
-    counttutorial.cpp \
+    countingtutorial.cpp \
     gameui.cpp \
     intro.cpp \
     main.cpp \
@@ -125,7 +125,7 @@ HEADERS += \
     Box2D/Rope/b2Rope.h \
     blackjack.h \
     counting.h \
-    counttutorial.h \
+    countingtutorial.h \
     gameui.h \
     intro.h \
     mainmenu.h \
@@ -137,7 +137,7 @@ HEADERS += \
 
 FORMS += \
     counting.ui \
-    counttutorial.ui \
+    countingtutorial.ui \
     gameui.ui \
     intro.ui \
     mainmenu.ui \

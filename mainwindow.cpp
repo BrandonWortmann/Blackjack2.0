@@ -25,8 +25,8 @@
 #include "ui_gameui.h"
 #include "tutorial.h"
 #include "ui_tutorial.h"
-#include "counttutorial.h"
-#include "ui_counttutorial.h"
+#include "countingtutorial.h"
+#include "ui_countingtutorial.h"
 #include <QStackedWidget>
 #include "intro.h"
 #include "ui_intro.h"
@@ -44,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
     intro = new Intro;
     counting = new Counting;
     tutorial = new TutorialUI;
-    countTutorial = new CountTutorial;
+    countTutorial = new CountingTutorial;
     gameUI = new GameUI;
 
     QStackedWidget* stack = new QStackedWidget;  
@@ -69,11 +69,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backTutorialPage);
-    connect(countTutorial->ui->countTutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backCountTutorialPage);
+    //connect(countTutorial->ui->countTutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backCountTutorialPage);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
-    connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
+    //connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
@@ -165,8 +165,8 @@ void MainWindow::toTutorialPage()
 
 void MainWindow::toCountTutorialPage()
 {
-    countTutorial->ui->infoPage->hide();
-    countTutorial->ui->gamePage->show();
+    //countTutorial->ui->infoPage->hide();
+    //countTutorial->ui->gamePage->show();
 }
 
 void MainWindow::backRulesPage()
@@ -184,8 +184,8 @@ void MainWindow::backTutorialPage()
 
 void MainWindow::backCountTutorialPage()
 {
-    countTutorial->ui->gamePage->hide();
-    countTutorial->ui->infoPage->show();
+    //countTutorial->ui->gamePage->hide();
+    //countTutorial->ui->infoPage->show();
     startBtnPressed();
 }
 

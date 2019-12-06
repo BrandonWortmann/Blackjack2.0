@@ -18,7 +18,7 @@
 #include "counting.h"
 #include "gameui.h"
 #include "tutorial.h"
-#include "counttutorial.h"
+#include "countingtutorial.h"
 #include "intro.h"
 
 QT_BEGIN_NAMESPACE
@@ -39,7 +39,7 @@ public:
     Counting* counting;
     GameUI* gameUI;
     TutorialUI* tutorial;
-    CountTutorial* countTutorial;
+    CountingTutorial* countTutorial;
     Intro* intro;
 
     void hideAll();
