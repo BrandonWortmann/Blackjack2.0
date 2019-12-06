@@ -11,6 +11,7 @@
 #include "blackjack.h"
 #include <stdlib.h>
 #include <cmath>
+#include <QDebug>
 
 Blackjack::Blackjack()
 {
@@ -157,7 +158,6 @@ Blackjack::result Blackjack::getResult()
     }
     if(deck.size() < 26)
     {
-        shuffle();
         result.isShuffled = true;
     }
     else

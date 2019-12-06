@@ -41,6 +41,11 @@ public:
     QString getCardPath(Blackjack::card);
     Ui::GameUI *ui;
 
+    void chipWhiteButtonPressed();
+    void chipRedButtonPressed();
+    void chipBlueButtonPressed();
+    void chipGreenButtonPressed();
+    void chipBlackButtonPressed();
 
 private:
     unsigned long money;
@@ -53,6 +58,7 @@ private:
     int index;
     QVector<QLabel*> dealerCards;
     Blackjack game;
+    bool hasShuffled;
 };
 
 #endif // GAMEUI_H

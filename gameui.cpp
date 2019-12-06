@@ -16,6 +16,7 @@
 #include <QPixmap>
 #include <QWidget>
 #include <QImage>
+#include <QDebug>
 #include <unistd.h>
 
 GameUI::GameUI(QWidget *parent) :
@@ -67,6 +68,18 @@ GameUI::GameUI(QWidget *parent) :
             this, &GameUI::doubleDown);
     connect(ui->splitButton, &QPushButton::pressed,
             this, &GameUI::split);
+    connect(ui->chipWhiteButton, &QPushButton::pressed,
+            this, &GameUI::chipWhiteButtonPressed);
+    connect(ui->chipRedButton, &QPushButton::pressed,
+            this, &GameUI::chipRedButtonPressed);
+    connect(ui->chipBlueButton, &QPushButton::pressed,
+            this, &GameUI::chipBlueButtonPressed);
+    connect(ui->chipGreenButton, &QPushButton::pressed,
+            this, &GameUI::chipGreenButtonPressed);
+    connect(ui->chipBlackButton, &QPushButton::pressed,
+            this, &GameUI::chipBlackButtonPressed);
+    connect(ui->clearButton, &QPushButton::pressed,
+            ui->wagerEdit, &QLineEdit::clear);
 }
 
 GameUI::~GameUI()
@@ -83,12 +96,18 @@ void GameUI::startGame() {
         dealerCards[i]->hide();
     }
 
+    hasShuffled = false;
     ui->resultLabel->hide();
     ui->firstHighlightLabel->hide();
     ui->secondHighlightLabel->hide();
     ui->wagerLabel->show();
     ui->wagerEdit->show();
     ui->startButton->show();
+    ui->chipWhiteButton->show();
+    ui->chipRedButton->show();
+    ui->chipBlueButton->show();
+    ui->chipGreenButton->show();
+    ui->chipBlackButton->show();
     index = 0;
 
     if(ui->card1->geometry().x() < 200) {
@@ -124,6 +143,11 @@ void GameUI::beginDealing() {
     ui->wagerLabel->hide();
     ui->wagerEdit->hide();
     ui->startButton->hide();
+    ui->chipWhiteButton->hide();
+    ui->chipRedButton->hide();
+    ui->chipBlueButton->hide();
+    ui->chipGreenButton->hide();
+    ui->chipBlackButton->hide();
     ui->standButton->show();
     ui->hitButton->show();
     dealUserCard(game.getPlayerHand()[0].hand[0]);
@@ -203,6 +227,8 @@ void GameUI::dealToDealer()
 void GameUI::checkDealer()
 {
     //TODO: Check shuffle
+    Blackjack::result res = game.getResult();
+    hasShuffled = hasShuffled || res.isShuffled;
     if(game.getResult().outcome != Blackjack::blackjack)
     {
         dealToDealer();
@@ -243,12 +269,13 @@ void GameUI::analyzeResult() {
         break;
 
     }
-    if(result.isShuffled) {
+    hasShuffled = result.isShuffled || hasShuffled;
+    if(hasShuffled) {
         ui->resultLabel->setText(ui->resultLabel->text() + "\nDeck is being shuffled");
     }
     ui->resultLabel->show();
     ui->moneyLabel->setText("$" + QString::number(money));
-    QTimer::singleShot(5000, this, &GameUI::startGame);
+    QTimer::singleShot(2500, this, &GameUI::startGame);
 }
 
 void GameUI::hitMe()
@@ -350,4 +377,69 @@ QString GameUI::getCardPath(Blackjack::card inputCard)
     file_path += card;
     file_path += ".png) 0 0 0 0 stretch";
     return file_path;
+}
+
+void GameUI::chipWhiteButtonPressed() {
+    QString val = ui->wagerEdit->text();
+    int num;
+    if(val == "") {
+        num = 0;
+    }
+    else {
+        num = val.toInt();
+    }
+
+    ui->wagerEdit->setText(QString::number(num + 1));
+}
+
+void GameUI::chipRedButtonPressed() {
+    QString val = ui->wagerEdit->text();
+    int num;
+    if(val == "") {
+        num = 0;
+    }
+    else {
+        num = val.toInt();
+    }
+
+    ui->wagerEdit->setText(QString::number(num + 5));
+}
+
+void GameUI::chipBlueButtonPressed() {
+    QString val = ui->wagerEdit->text();
+    int num;
+    if(val == "") {
+        num = 0;
+    }
+    else {
+        num = val.toInt();
+    }
+
+    ui->wagerEdit->setText(QString::number(num + 25));
+}
+
+void GameUI::chipGreenButtonPressed() {
+    QString val = ui->wagerEdit->text();
+    int num;
+    if(val == "") {
+        num = 0;
+    }
+    else {
+        num = val.toInt();
+    }
+
+    ui->wagerEdit->setText(QString::number(num + 100));
+}
+
+void GameUI::chipBlackButtonPressed() {
+    QString val = ui->wagerEdit->text();
+    int num;
+    if(val == "") {
+        num = 0;
+    }
+    else {
+        num = val.toInt();
+    }
+
+    ui->wagerEdit->setText(QString::number(num + 500));
 }
