@@ -232,9 +232,8 @@ void GameUI::dealToDealer()
 
 void GameUI::checkDealer()
 {
-    //TODO: Check shuffle
     Blackjack::result res = game.getResult();
-    hasShuffled = hasShuffled || res.isShuffled;
+    hasShuffled = res.isShuffled;
     if(game.getResult().outcome != Blackjack::blackjack)
     {
         dealToDealer();
@@ -275,8 +274,7 @@ void GameUI::analyzeResult() {
         break;
 
     }
-    hasShuffled = result.isShuffled || hasShuffled;
-    if(hasShuffled) {
+    if(result.isShuffled || hasShuffled) {
         ui->resultLabel->setText(ui->resultLabel->text() + "\nDeck is being shuffled");
     }
     ui->resultLabel->show();

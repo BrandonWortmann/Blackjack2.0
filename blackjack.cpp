@@ -158,6 +158,7 @@ Blackjack::result Blackjack::getResult()
     }
     if(deck.size() < 26)
     {
+        shuffle();
         result.isShuffled = true;
     }
     else
