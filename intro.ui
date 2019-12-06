@@ -169,7 +169,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The structure of our game is divided into 4 main categories; aimed at teaching you everything from the basics of the game to practicing counting cards. The following categories are: Rules, strategies, counting, and practice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The structure of our game is divided into 3 main categories; aimed at teaching you everything from the basics of the game to practicing counting cards. The following categories are: strategies, counting, and practice.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>
