@@ -19,7 +19,6 @@
 #include "ui_rules.h"
 #include "counting.h"
 #include "ui_counting.h"
-#include "strats.h"
 #include "ui_strats.h"
 #include "gameui.h"
 #include "ui_gameui.h"
@@ -40,7 +39,6 @@ MainWindow::MainWindow(QWidget *parent)
     title = new Title;
     menu = new MainMenu;
     rules = new Rules;
-    strats = new Strats;
     intro = new Intro;
     counting = new Counting;
     tutorial = new TutorialUI;
@@ -75,7 +73,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
     connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
     connect(countTutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::countPopup);
-    connect(tutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::stratsPopup);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);
@@ -95,7 +92,6 @@ MainWindow::~MainWindow()
     delete ui;
     delete menu;
     delete title;
-    delete strats;
     delete rules;
     delete counting;
     delete gameUI;
@@ -136,7 +132,6 @@ void MainWindow::practiceBtnPressed(){
 void MainWindow::hideAll(){
     this->title->hide();
     this->rules->hide();
-    this->strats->hide();
     this->counting->hide();
     this->menu->hide();
     this->gameUI->hide();
@@ -168,11 +163,6 @@ void MainWindow::toTutorialPage()
 void MainWindow::countPopup()
 {
     counting->show();
-}
-
-void MainWindow::stratsPopup()
-{
-    strats->show();
 }
 
 void MainWindow::toCountTutorialPage()

@@ -28,7 +28,8 @@ TutorialUI::TutorialUI(QWidget *parent) :
     ui->standButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
-
+    ui->stratPicture_2->hide();
+    ui->stratDescript_2->hide();
     ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
     index = 0;
     cards.push_back(ui->card1);
@@ -45,6 +46,8 @@ TutorialUI::TutorialUI(QWidget *parent) :
             this, &TutorialUI::doubleDown);
     connect(ui->splitButton, &QPushButton::pressed,
             this, &TutorialUI::split);
+    connect(ui->cheatsheetBtn, &QPushButton::pressed,
+            this, &TutorialUI::cheatSheet);
 }
 
 TutorialUI::~TutorialUI()
@@ -237,4 +240,18 @@ QString TutorialUI::getCardPath(Blackjack::card inputCard)
     file_path += card;
     file_path += ".png) 0 0 0 0 stretch";
     return file_path;
+}
+
+void TutorialUI::cheatSheet()
+{
+    if (ui->stratPicture_2->isHidden())
+    {
+        ui->stratPicture_2->show();
+        ui->stratDescript_2->show();
+    }
+    else
+    {
+        ui->stratPicture_2->hide();
+        ui->stratDescript_2->hide();
+    }
 }

@@ -108,20 +108,20 @@ QPushButton:hover{
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="stratPicture">
       <property name="geometry">
        <rect>
         <x>640</x>
         <y>90</y>
-        <width>321</width>
-        <height>571</height>
+        <width>320</width>
+        <height>500</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/hit_stay_CheatSheet.png</pixmap>
+       <pixmap resource="Resource.qrc">:/new/images/Resources/strat.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -281,7 +281,7 @@ QPushButton:hover{
      <widget class="Line" name="line">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>47</x>
         <y>580</y>
         <width>20</width>
         <height>21</height>
@@ -303,7 +303,7 @@ QPushButton:hover{
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>120</x>
+        <x>126</x>
         <y>580</y>
         <width>20</width>
         <height>21</height>
@@ -325,9 +325,9 @@ QPushButton:hover{
      <widget class="Line" name="line_3">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>55</x>
         <y>570</y>
-        <width>181</width>
+        <width>210</width>
         <height>21</height>
        </rect>
       </property>
@@ -347,8 +347,8 @@ QPushButton:hover{
      <widget class="Line" name="line_4">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>380</y>
+        <x>152</x>
+        <y>379</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -390,7 +390,7 @@ QPushButton:hover{
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>270</x>
         <y>570</y>
         <width>361</width>
         <height>141</height>
@@ -411,9 +411,9 @@ QPushButton:hover{
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>645</x>
-        <y>140</y>
-        <width>311</width>
+        <x>640</x>
+        <y>107</y>
+        <width>320</width>
         <height>21</height>
        </rect>
       </property>
@@ -436,10 +436,10 @@ QPushButton:hover{
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>925</x>
-        <y>122</y>
+        <x>931</x>
+        <y>88</y>
         <width>31</width>
-        <height>471</height>
+        <height>505</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -482,9 +482,9 @@ QPushButton:hover{
      <widget class="Line" name="line_5">
       <property name="geometry">
        <rect>
-        <x>648</x>
-        <y>301</y>
-        <width>307</width>
+        <x>640</x>
+        <y>278</y>
+        <width>320</width>
         <height>20</height>
        </rect>
       </property>
@@ -504,9 +504,9 @@ QPushButton:hover{
      <widget class="Line" name="line_6">
       <property name="geometry">
        <rect>
-        <x>648</x>
-        <y>416</y>
-        <width>307</width>
+        <x>640</x>
+        <y>403</y>
+        <width>320</width>
         <height>20</height>
        </rect>
       </property>
@@ -523,10 +523,36 @@ QPushButton:hover{
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
+     <widget class="QLabel" name="stratDescript">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>600</y>
+        <width>320</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>H - Hit                                      S - Stand
+
+D - Double Down                 SP - Split</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>label</zorder>
      <zorder>tutorialNextBtn</zorder>
      <zorder>introductionTitle</zorder>
-     <zorder>label_2</zorder>
+     <zorder>stratPicture</zorder>
      <zorder>label_3</zorder>
      <zorder>label_4</zorder>
      <zorder>label_5</zorder>
@@ -545,6 +571,7 @@ QPushButton:hover{
      <zorder>label_14</zorder>
      <zorder>line_5</zorder>
      <zorder>line_6</zorder>
+     <zorder>stratDescript</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
@@ -618,7 +645,7 @@ QPushButton:hover{
      <widget class="QLabel" name="bustLabel">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>90</x>
         <y>310</y>
         <width>520</width>
         <height>180</height>
@@ -729,6 +756,51 @@ You Lost $200</string>
        <string>Cheatsheet</string>
       </property>
      </widget>
+     <widget class="QLabel" name="stratPicture_2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>90</y>
+        <width>320</width>
+        <height>500</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/strat.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stratDescript_2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>600</y>
+        <width>320</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>H - Hit                                      S - Stand
+
+D - Double Down                 SP - Split</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>backgroundLabel</zorder>
      <zorder>hitButton</zorder>
      <zorder>tutorialUIReturnBtn</zorder>
@@ -741,6 +813,8 @@ You Lost $200</string>
      <zorder>dealerCard2</zorder>
      <zorder>card2</zorder>
      <zorder>cheatsheetBtn</zorder>
+     <zorder>stratPicture_2</zorder>
+     <zorder>stratDescript_2</zorder>
     </widget>
    </widget>
   </widget>

@@ -32,21 +32,14 @@ public:
     void stand();
     void doubleDown();
     void split();
-    //void checkDealer();
-    //void analyzeResult();
+    void cheatSheet();
     void dealUserCard(Blackjack::card userCard);
     void dealDealerCard(Blackjack::card dealerCard);
-    //void wagerChanged();
-    //void dealToDealer();
     QString getCardPath(Blackjack::card);
     Ui::TutorialUI *ui;
 
 
 private:
-    //unsigned long money;
-    //unsigned long wager;
-    //int userNum;
-    //int dealerNum;
     int playerNextCardPos;
     int dealerNextCardPos;
     QVector<QLabel*> cards;

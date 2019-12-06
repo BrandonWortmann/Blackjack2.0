@@ -14,7 +14,6 @@
 #include "title.h"
 #include "mainmenu.h"
 #include "rules.h"
-#include "strats.h"
 #include "counting.h"
 #include "gameui.h"
 #include "tutorial.h"
@@ -35,7 +34,6 @@ public:
     Title* title;
     MainMenu* menu;
     Rules* rules;
-    Strats* strats;
     Counting* counting;
     GameUI* gameUI;
     TutorialUI* tutorial;
@@ -60,7 +58,6 @@ public slots:
     void backRulesPage();
     void backCardsPage();
     void countPopup();
-    void stratsPopup();
 
     void updateCard1(int);
     void updateCard2(int);
