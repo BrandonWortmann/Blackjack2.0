@@ -108,6 +108,7 @@ void GameUI::startGame() {
     ui->chipBlueButton->show();
     ui->chipGreenButton->show();
     ui->chipBlackButton->show();
+    ui->clearButton->show();
     index = 0;
 
     if(ui->card1->geometry().x() < 200) {
@@ -148,6 +149,7 @@ void GameUI::beginDealing() {
     ui->chipBlueButton->hide();
     ui->chipGreenButton->hide();
     ui->chipBlackButton->hide();
+    ui->clearButton->hide();
     ui->standButton->show();
     ui->hitButton->show();
     dealUserCard(game.getPlayerHand()[0].hand[0]);
