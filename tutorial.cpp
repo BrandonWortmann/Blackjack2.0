@@ -31,33 +31,16 @@ TutorialUI::TutorialUI(QWidget *parent) :
 
     ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
     index = 0;
-    money = 500;
     cards.push_back(ui->card1);
     cards.push_back(ui->card2);
-    cards.push_back(ui->card3);
-    cards.push_back(ui->card4);
-    cards.push_back(ui->card5);
-    cards.push_back(ui->card6);
-    cards.push_back(ui->card7);
-    cards.push_back(ui->card8);
     dealerCards.push_back(ui->dealerCard1);
     dealerCards.push_back(ui->dealerCard2);
-    dealerCards.push_back(ui->dealerCard3);
-    dealerCards.push_back(ui->dealerCard4);
-    dealerCards.push_back(ui->dealerCard5);
-    dealerCards.push_back(ui->dealerCard6);
-    dealerCards.push_back(ui->dealerCard7);
-    dealerCards.push_back(ui->dealerCard8);
     startGame();
 
-    connect(ui->startButton, &QPushButton::pressed,
-            this, &TutorialUI::beginDealing);
     connect(ui->hitButton, &QPushButton::pressed,
             this, &TutorialUI::hitMe);
     connect(ui->standButton, &QPushButton::pressed,
             this, &TutorialUI::stand);
-    connect(ui->wagerEdit, &QLineEdit::textChanged,
-            this, &TutorialUI::wagerChanged);
     connect(ui->doubleButton, &QPushButton::pressed,
             this, &TutorialUI::doubleDown);
     connect(ui->splitButton, &QPushButton::pressed,
@@ -70,39 +53,22 @@ TutorialUI::~TutorialUI()
 }
 
 void TutorialUI::startGame() {
-    ui->moveLight->hide();
     ui->hitButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
     ui->standButton->hide();
     ui->card1->hide();
     ui->card2->hide();
-    ui->card3->hide();
-    ui->card4->hide();
-    ui->card5->hide();
-    ui->card6->hide();
-    ui->card7->hide();
-    ui->card8->hide();
     ui->dealerCard1->hide();
     ui->dealerCard2->hide();
-    ui->dealerCard3->hide();
-    ui->dealerCard4->hide();
-    ui->dealerCard5->hide();
-    ui->dealerCard6->hide();
-    ui->dealerCard7->hide();
-    ui->dealerCard8->hide();
     ui->bustLabel->hide();
-    ui->winLabel->hide();
-    ui->loseLabel->hide();
-    ui->wagerLabel->hide();
-    ui->wagerEdit->hide();
-    ui->startButton->show();
     index = 0;
+    beginDealing();
 }
 
 void TutorialUI::beginDealing() {
 
-    bool isBlackjack = game.bet(wager);
+    bool isBlackjack = game.bet(0);
     action = game.correctMove();
     switch(action) {
      case(Blackjack::_stand):
@@ -118,9 +84,6 @@ void TutorialUI::beginDealing() {
         correctMove = "Double Down";
         break;
     }
-    ui->wagerLabel->hide();
-    ui->wagerEdit->hide();
-    ui->startButton->hide();
     ui->standButton->show();
     ui->doubleButton->show();
     ui->hitButton->show();
@@ -136,7 +99,7 @@ void TutorialUI::beginDealing() {
     dealDealerCard(game.getDealerHand()[1]);
     if(isBlackjack)
     {
-        stand();
+        startGame();
     }
 
 }
@@ -165,146 +128,68 @@ void TutorialUI::dealDealerCard(Blackjack::card dealerCard) {
 void TutorialUI::stand()
 {
     if(action == Blackjack::_stand) {
-        ui->wagerLabel->setText("Correct Move!");
+        ui->bustLabel->setText("Correct Move!");
     }
     else {
-        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
+        ui->bustLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
     ui->hitButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
     ui->standButton->hide();
-    ui->wagerLabel->show();
+    ui->bustLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
-}
-
-void TutorialUI::dealToDealer()
-{
-    Blackjack::card inputCard;
-    inputCard = game.dealerStep();
-    int currTime = 1000;
-    while(inputCard.suit != Blackjack::invalid)
-    {
-        QTimer::singleShot(currTime, [this, inputCard] () {dealDealerCard(inputCard);});
-        inputCard = game.dealerStep();
-        currTime += 1000;
-    }
-    QTimer::singleShot(currTime, this, &TutorialUI::analyzeResult);
-}
-
-void TutorialUI::checkDealer()
-{
-    //TODO: Check shuffle
-    if(game.getResult().outcome != Blackjack::blackjack)
-    {
-        dealToDealer();
-    }
-    else {
-        QTimer::singleShot(1000, this, &TutorialUI::analyzeResult);
-    }
-
-}
-
-void TutorialUI::analyzeResult() {
-    Blackjack::result result = game.getResult();
-
-    switch(result.outcome)
-    {
-    case Blackjack::win:
-        ui->winLabel->setText("You Win!\nYou won $" + QString::number(result.netGain));
-        ui->winLabel->show();
-        //money += result.netGain;
-        break;
-
-    case Blackjack::lose:
-        ui->loseLabel->setText("You Lose\nYou lost $" + QString::number(-result.netGain));
-        ui->loseLabel->show();
-        //money += result.netGain;
-        break;
-
-    case Blackjack::push:
-        ui->loseLabel->setText("You Tied! You're not broke yet!\n");
-        ui->loseLabel->show();
-        break;
-
-    case Blackjack::blackjack:
-        ui->winLabel->setText("BLACKJACK!!!\nYou won $" + QString::number(result.netGain));
-        ui->winLabel->show();
-        //money += result.netGain;
-        break;
-
-    case Blackjack::bust:
-        ui->loseLabel->setText("You Bust\nYou lost $" + QString::number(-result.netGain));
-        ui->loseLabel->show();
-        //money += result.netGain;
-        break;
-
-    }
-    //ui->moneyLabel->setText("$" + QString::number(money));
-    QTimer::singleShot(5000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::hitMe()
 {
     if(action == Blackjack::_hit) {
-        ui->wagerLabel->setText("Correct Move!");
+        ui->bustLabel->setText("Correct Move!");
     }
     else {
-        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
+        ui->bustLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
 
     ui->hitButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
     ui->standButton->hide();
-    ui->wagerLabel->show();
+    ui->bustLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::doubleDown()
 {
     if(action == Blackjack::_doubledown) {
-        ui->wagerLabel->setText("Correct Move!");
+        ui->bustLabel->setText("Correct Move!");
     }
     else {
-        ui->wagerLabel->setText("Incorrect!\n Optimal Move: \n" + correctMove);
+        ui->bustLabel->setText("Incorrect!\n Optimal Move: \n" + correctMove);
     }
 
     ui->hitButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
     ui->standButton->hide();
-    ui->wagerLabel->show();
+    ui->bustLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
 void TutorialUI::split()
 {
     if(action == Blackjack::_split) {
-        ui->wagerLabel->setText("Correct Move!");
+        ui->bustLabel->setText("Correct Move!");
     }
     else {
-        ui->wagerLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
+        ui->bustLabel->setText("Incorrect!\n Optimal Move: " + correctMove);
     }
 
     ui->hitButton->hide();
     ui->doubleButton->hide();
     ui->splitButton->hide();
     ui->standButton->hide();
-    ui->wagerLabel->show();
+    ui->bustLabel->show();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
-}
-
-void TutorialUI::wagerChanged() {
-    QString val = ui->wagerEdit->text();
-    int len = val.length();
-    if(len < 1) {
-        return;
-    }
-    if(val.at(len - 1) < 48 || val.at(len - 1) > 57) {
-        val.chop(1);
-        ui->wagerEdit->setText(val);
-    }
 }
 
 QString TutorialUI::getCardPath(Blackjack::card inputCard)
