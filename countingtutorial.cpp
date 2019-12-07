@@ -74,7 +74,6 @@ CountingTutorial::CountingTutorial(QWidget *parent) :
                 this, &CountingTutorial::split);
         connect(ui->checkButton, &QPushButton::pressed,
                 this, &CountingTutorial::checkCardCount);
-
 }
 
 CountingTutorial::~CountingTutorial()
