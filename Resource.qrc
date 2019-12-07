@@ -63,5 +63,6 @@
         <file>Resources/chipBlack.png</file>
         <file>Resources/countingCheatsheet.png</file>
         <file>Resources/hit_stay_CheatSheet.png</file>
+        <file>Resources/strat.png</file>
     </qresource>
 </RCC>

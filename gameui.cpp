@@ -169,6 +169,10 @@ void GameUI::stand()
 {
     if(game.stay())
     {
+        if(money >= (wager << 1))
+        {
+            ui->doubleButton->hide();
+        }
         index = 9;
         ui->secondHighlightLabel->show();
         ui->firstHighlightLabel->hide();
@@ -275,6 +279,10 @@ void GameUI::split()
     for(int i = 0; i < 8; i++) {
 
         cards[i]->setGeometry(cards[i]->geometry().x() - 200, cards[i]->geometry().y(), 131, 201);
+    }
+    if(money >= (wager << 1))
+    {
+        ui->doubleButton->hide();
     }
 
     game.split();

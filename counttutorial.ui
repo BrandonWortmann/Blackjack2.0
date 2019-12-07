@@ -446,6 +446,7 @@ QPushButton:hover{
  background-color: white;
 }</string>
      </property>
+<<<<<<< HEAD
      <widget class="QLabel" name="wagerLabel">
       <property name="geometry">
        <rect>
@@ -719,6 +720,411 @@ QPushButton:hover{
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
+=======
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="introductionTitle">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>331</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Counting Tutorial&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>570</y>
+       <width>35</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>550</y>
+       <width>20</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>154</x>
+       <y>330</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>570</y>
+       <width>111</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs3.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>570</y>
+       <width>31</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>320</y>
+       <width>35</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>540</y>
+       <width>321</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>The first card is a 3, so the count should increment by 1. The second card is a 9, so the count doesn't change.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>320</y>
+       <width>111</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/cardBack.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>127</x>
+       <y>550</y>
+       <width>20</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>652</x>
+       <y>100</y>
+       <width>321</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/countingCheatsheet.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>330</y>
+       <width>331</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>The dealer's showing card is an ace, so the current number should decrease by 1.
+</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>320</y>
+       <width>111</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpadesA.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>122</x>
+       <y>570</y>
+       <width>111</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="Resource.qrc">:/new/images/Resources/cardHearts9.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>540</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(239, 41, 41);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dealer's Hand</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>750</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Player's Hand</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>120</y>
+       <width>560</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Card counting is the practice of keeping track of a number that tells you if you are likely to win. The higher the number, the better your chances are of winning, so you should bet more. You start at 0 and change it based on every card that is dealt, including the dealer's face down card when it is revealed. The chart on the right shows how the number should change based on the value of each card. The number should reset to 0 whenever the deck is shuffled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>countTutorialBtn</zorder>
+    <zorder>introductionTitle</zorder>
+    <zorder>label_7</zorder>
+    <zorder>line</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_11</zorder>
+    <zorder>line_2</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label_10</zorder>
+    <zorder>line_3</zorder>
+    <zorder>line_4</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_13</zorder>
+    <zorder>label_14</zorder>
+   </widget>
+   <widget class="QWidget" name="gamePage">
+    <property name="minimumSize">
+     <size>
+      <width>1000</width>
+      <height>800</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+>>>>>>> 829ea23eda288a7d00627b4cec1f228f8ed18936
 	font-size: 12px;
 	color: white;
 	background-color: black;
@@ -1002,6 +1408,60 @@ card count?</string>
       </property>
      </widget>
     </widget>
+<<<<<<< HEAD
+=======
+    <widget class="QPushButton" name="cheatsheetBtn">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cheatsheet</string>
+     </property>
+    </widget>
+    <zorder>backgroundLabel</zorder>
+    <zorder>startButton</zorder>
+    <zorder>loseLabel</zorder>
+    <zorder>splitCard4</zorder>
+    <zorder>dealerCard1</zorder>
+    <zorder>splitCard3</zorder>
+    <zorder>card1</zorder>
+    <zorder>card6</zorder>
+    <zorder>splitCard5</zorder>
+    <zorder>dealerCard8</zorder>
+    <zorder>dealerCard7</zorder>
+    <zorder>dealerCard3</zorder>
+    <zorder>card8</zorder>
+    <zorder>dealerCard5</zorder>
+    <zorder>splitCard6</zorder>
+    <zorder>card7</zorder>
+    <zorder>dealerCard4</zorder>
+    <zorder>splitCard2</zorder>
+    <zorder>card3</zorder>
+    <zorder>dealerCard2</zorder>
+    <zorder>card4</zorder>
+    <zorder>wagerEdit</zorder>
+    <zorder>card5</zorder>
+    <zorder>moveLight</zorder>
+    <zorder>splitCard1</zorder>
+    <zorder>bustLabel</zorder>
+    <zorder>splitCard7</zorder>
+    <zorder>splitCard8</zorder>
+    <zorder>wagerLabel</zorder>
+    <zorder>dealerCard6</zorder>
+    <zorder>countTutorialUIReturnBtn</zorder>
+    <zorder>winLabel</zorder>
+    <zorder>card2</zorder>
+    <zorder>splitButton</zorder>
+    <zorder>doubleButton</zorder>
+    <zorder>standButton</zorder>
+    <zorder>hitButton</zorder>
+    <zorder>cheatsheetBtn</zorder>
+>>>>>>> 829ea23eda288a7d00627b4cec1f228f8ed18936
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
