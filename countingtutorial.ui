@@ -995,26 +995,10 @@ card count?</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <zorder>splitCard2</zorder>
-     <zorder>secondHighlightLabel</zorder>
-     <zorder>returnButton</zorder>
      <zorder>backgroundLabel</zorder>
-     <zorder>splitButton</zorder>
-     <zorder>hitButton</zorder>
-     <zorder>splitCard8</zorder>
-     <zorder>splitCard7</zorder>
      <zorder>firstHighlightLabel</zorder>
-     <zorder>standButton</zorder>
-     <zorder>resultLabel</zorder>
-     <zorder>splitCard6</zorder>
-     <zorder>doubleButton</zorder>
-     <zorder>splitCard1</zorder>
-     <zorder>splitCard3</zorder>
-     <zorder>splitCard5</zorder>
-     <zorder>splitCard4</zorder>
-     <zorder>checkButton</zorder>
-     <zorder>cardCountLabel</zorder>
-     <zorder>wagerEdit</zorder>
+     <zorder>secondHighlightLabel</zorder>
+     <zorder>hitButton</zorder>
      <zorder>card1</zorder>
      <zorder>card2</zorder>
      <zorder>card3</zorder>
@@ -1031,6 +1015,22 @@ card count?</string>
      <zorder>dealerCard6</zorder>
      <zorder>dealerCard7</zorder>
      <zorder>dealerCard8</zorder>
+     <zorder>splitCard1</zorder>
+     <zorder>splitCard2</zorder>
+     <zorder>splitCard3</zorder>
+     <zorder>splitCard4</zorder>
+     <zorder>splitCard5</zorder>
+     <zorder>splitCard6</zorder>
+     <zorder>splitCard7</zorder>
+     <zorder>splitCard8</zorder>
+     <zorder>returnButton</zorder>
+     <zorder>splitButton</zorder>
+     <zorder>standButton</zorder>
+     <zorder>resultLabel</zorder>
+     <zorder>doubleButton</zorder>
+     <zorder>checkButton</zorder>
+     <zorder>cardCountLabel</zorder>
+     <zorder>wagerEdit</zorder>
     </widget>
    </widget>
   </widget>
