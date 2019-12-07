@@ -308,25 +308,6 @@ QPushButton:hover{
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>652</x>
-        <y>100</y>
-        <width>321</width>
-        <height>571</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap resource="Resource.qrc">:/new/images/Resources/countingCheatsheet.png</pixmap>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
@@ -482,6 +463,355 @@ QPushButton:hover{
        <string>Return</string>
       </property>
      </widget>
+     <widget class="Line" name="countLine1">
+      <property name="geometry">
+       <rect>
+        <x>715</x>
+        <y>250</y>
+        <width>250</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="countLine2">
+      <property name="geometry">
+       <rect>
+        <x>715</x>
+        <y>370</y>
+        <width>250</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="countLine3">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>130</y>
+        <width>1</width>
+        <height>360</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countLabel1">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>+1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countLabel2">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>260</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countLabel3">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>-1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count2">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs2.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count3">
+      <property name="geometry">
+       <rect>
+        <x>745</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHearts3.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count4">
+      <property name="geometry">
+       <rect>
+        <x>765</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpades4.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count5">
+      <property name="geometry">
+       <rect>
+        <x>785</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds5.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count6">
+      <property name="geometry">
+       <rect>
+        <x>805</x>
+        <y>140</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs6.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count7">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>260</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHearts7.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count8">
+      <property name="geometry">
+       <rect>
+        <x>765</x>
+        <y>260</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpades8.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count9">
+      <property name="geometry">
+       <rect>
+        <x>805</x>
+        <y>260</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds9.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count10">
+      <property name="geometry">
+       <rect>
+        <x>725</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs10.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count11">
+      <property name="geometry">
+       <rect>
+        <x>745</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHeartsJ.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count12">
+      <property name="geometry">
+       <rect>
+        <x>765</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpadesQ.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count13">
+      <property name="geometry">
+       <rect>
+        <x>785</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamondsK.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count1">
+      <property name="geometry">
+       <rect>
+        <x>805</x>
+        <y>380</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubsA.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>label</zorder>
      <zorder>label_5</zorder>
      <zorder>label_6</zorder>
@@ -495,7 +825,6 @@ QPushButton:hover{
      <zorder>label_9</zorder>
      <zorder>label_11</zorder>
      <zorder>line_2</zorder>
-     <zorder>label_2</zorder>
      <zorder>label_10</zorder>
      <zorder>line_3</zorder>
      <zorder>line_4</zorder>
@@ -503,6 +832,25 @@ QPushButton:hover{
      <zorder>label_13</zorder>
      <zorder>label_14</zorder>
      <zorder>returnBtn</zorder>
+     <zorder>countLine1</zorder>
+     <zorder>countLine2</zorder>
+     <zorder>countLine3</zorder>
+     <zorder>countLabel1</zorder>
+     <zorder>countLabel2</zorder>
+     <zorder>countLabel3</zorder>
+     <zorder>count2</zorder>
+     <zorder>count3</zorder>
+     <zorder>count4</zorder>
+     <zorder>count5</zorder>
+     <zorder>count6</zorder>
+     <zorder>count7</zorder>
+     <zorder>count8</zorder>
+     <zorder>count9</zorder>
+     <zorder>count10</zorder>
+     <zorder>count11</zorder>
+     <zorder>count12</zorder>
+     <zorder>count13</zorder>
+     <zorder>count1</zorder>
     </widget>
     <widget class="QWidget" name="gamePage">
      <property name="minimumSize">
@@ -1022,6 +1370,355 @@ card count?</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="countLabel2_2">
+      <property name="geometry">
+       <rect>
+        <x>625</x>
+        <y>580</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count7_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>580</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHearts7.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count5_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds5.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="countLine2_2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>690</y>
+        <width>250</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count6_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs6.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countLabel3_2">
+      <property name="geometry">
+       <rect>
+        <x>625</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>-1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count11_2">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHeartsJ.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count9_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>580</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamonds9.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countLabel1_2">
+      <property name="geometry">
+       <rect>
+        <x>625</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>+1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count3_2">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardHearts3.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count1_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubsA.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count12_2">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpadesQ.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count2_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs2.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="countLine3_2">
+      <property name="geometry">
+       <rect>
+        <x>615</x>
+        <y>450</y>
+        <width>1</width>
+        <height>360</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count13_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardDiamondsK.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="countLine1_2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>570</y>
+        <width>250</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count10_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>700</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardClubs10.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count4_2">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>460</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpades4.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count8_2">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>580</y>
+        <width>65</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="Resource.qrc">:/new/images/Resources/cardSpades8.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>backgroundLabel</zorder>
      <zorder>firstHighlightLabel</zorder>
      <zorder>secondHighlightLabel</zorder>
@@ -1058,6 +1755,25 @@ card count?</string>
      <zorder>checkButton</zorder>
      <zorder>cardCountLabel</zorder>
      <zorder>wagerEdit</zorder>
+     <zorder>countLabel2_2</zorder>
+     <zorder>count7_2</zorder>
+     <zorder>count5_2</zorder>
+     <zorder>countLine2_2</zorder>
+     <zorder>count6_2</zorder>
+     <zorder>countLabel3_2</zorder>
+     <zorder>count11_2</zorder>
+     <zorder>count9_2</zorder>
+     <zorder>countLabel1_2</zorder>
+     <zorder>count3_2</zorder>
+     <zorder>count1_2</zorder>
+     <zorder>count12_2</zorder>
+     <zorder>count2_2</zorder>
+     <zorder>countLine3_2</zorder>
+     <zorder>count13_2</zorder>
+     <zorder>countLine1_2</zorder>
+     <zorder>count10_2</zorder>
+     <zorder>count4_2</zorder>
+     <zorder>count8_2</zorder>
     </widget>
    </widget>
   </widget>
