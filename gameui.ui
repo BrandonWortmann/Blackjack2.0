@@ -14,16 +14,143 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton{
-	font-size: 12px;
+   <string notr="true">#clearButton{
+	font-size: 15px;
 	color: white;
 	background-color: black;
 	border-radius: 15px;
 }
 
-QPushButton:hover{
+#clearButton:hover{
 	color: black;
  background-color: white;
+}
+
+#doubleButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#doubleButton:hover{
+	color: black;
+ background-color: white;
+}
+
+#splitButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#splitButton:hover{
+	color: black;
+ background-color: white;
+}
+
+#standButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#standButton:hover{
+	color: black;
+ background-color: white;
+}
+
+#hitButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#hitButton:hover{
+	color: black;
+ background-color: white;
+}
+
+#gameUIReturnBtn{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#gameUIReturnBtn:hover{
+	color: black;
+ background-color: white;
+}
+
+#startButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+#startButton:hover{
+	color: black;
+ background-color: white;
+}
+
+#chipWhiteButton{
+border:none;
+}
+
+#chipWhiteButton:Hover{
+border:none;
+background-color:black;
+border-radius:50;
+text-align:center
+}
+
+#chipRedButton{
+border:none;
+}
+
+#chipRedButton:Hover{
+border:none;
+background-color:black;
+border-radius:50;
+text-align:center
+}
+
+#chipBlueButton{
+border:none;
+}
+
+#chipBlueButton:Hover{
+border:none;
+background-color:black;
+border-radius:50;
+text-align:center
+}
+
+#chipGreenButton{
+border:none;
+}
+
+#chipGreenButton:Hover{
+border:none;
+background-color:black;
+border-radius:50;
+text-align:center
+}
+
+#chipBlackButton{
+border:none;
+}
+
+#chipBlackButton:Hover{
+border:none;
+background-color:black;
+border-radius:50;
+text-align:center
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -56,10 +183,10 @@ QPushButton:hover{
    <widget class="QLabel" name="resultLabel">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>159</y>
-      <width>420</width>
-      <height>331</height>
+      <x>219</x>
+      <y>209</y>
+      <width>561</width>
+      <height>281</height>
      </rect>
     </property>
     <property name="font">
@@ -153,9 +280,9 @@ You Received $200</string>
    <widget class="QLabel" name="moneyLabel">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>350</x>
       <y>20</y>
-      <width>121</width>
+      <width>621</width>
       <height>51</height>
      </rect>
     </property>
@@ -169,7 +296,7 @@ You Received $200</string>
      <string>$500</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="backgroundLabel">
@@ -546,6 +673,143 @@ QPushButton:hover{
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="chipWhiteButton">
+    <property name="geometry">
+     <rect>
+      <x>155</x>
+      <y>590</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Resource.qrc">
+      <normaloff>:/new/images/Resources/chipWhite.png</normaloff>:/new/images/Resources/chipWhite.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>94</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chipRedButton">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>590</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Resource.qrc">
+      <normaloff>:/new/images/Resources/chipRed.png</normaloff>:/new/images/Resources/chipRed.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>94</width>
+      <height>91</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chipBlueButton">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>590</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Resource.qrc">
+      <normaloff>:/new/images/Resources/chipBlue.png</normaloff>:/new/images/Resources/chipBlue.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>94</width>
+      <height>91</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chipGreenButton">
+    <property name="geometry">
+     <rect>
+      <x>575</x>
+      <y>590</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Resource.qrc">
+      <normaloff>:/new/images/Resources/chipGreen.png</normaloff>:/new/images/Resources/chipGreen.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>94</width>
+      <height>91</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chipBlackButton">
+    <property name="geometry">
+     <rect>
+      <x>715</x>
+      <y>590</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Resource.qrc">
+      <normaloff>:/new/images/Resources/chipBlack.png</normaloff>:/new/images/Resources/chipBlack.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>94</width>
+      <height>91</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearButton">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>480</y>
+      <width>16</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
    <zorder>backgroundLabel</zorder>
    <zorder>firstHighlightLabel</zorder>
    <zorder>secondHighlightLabel</zorder>
@@ -583,6 +847,12 @@ QPushButton:hover{
    <zorder>moneyLabel</zorder>
    <zorder>gameUIReturnBtn</zorder>
    <zorder>splitButton</zorder>
+   <zorder>chipWhiteButton</zorder>
+   <zorder>chipRedButton</zorder>
+   <zorder>chipBlueButton</zorder>
+   <zorder>chipGreenButton</zorder>
+   <zorder>chipBlackButton</zorder>
+   <zorder>clearButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -596,6 +866,8 @@ QPushButton:hover{
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

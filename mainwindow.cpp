@@ -19,7 +19,6 @@
 #include "ui_rules.h"
 #include "counting.h"
 #include "ui_counting.h"
-#include "ui_strats.h"
 #include "gameui.h"
 #include "ui_gameui.h"
 #include "tutorial.h"

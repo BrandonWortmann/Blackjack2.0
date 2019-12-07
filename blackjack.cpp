@@ -11,6 +11,7 @@
 #include "blackjack.h"
 #include <stdlib.h>
 #include <cmath>
+#include <QDebug>
 
 Blackjack::Blackjack()
 {
