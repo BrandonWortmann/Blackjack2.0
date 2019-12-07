@@ -75,7 +75,7 @@ void TutorialUI::beginDealing() {
     action = game.correctMove();
     switch(action) {
      case(Blackjack::_stand):
-        correctMove = "Stand";
+        correctMove = "Stay";
         break;
      case(Blackjack::_hit):
         correctMove = "Hit";

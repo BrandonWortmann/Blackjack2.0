@@ -273,7 +273,7 @@ void CountingTutorial::analyzeResult() {
         break;
 
     case Blackjack::push:
-        ui->resultLabel->setText("You Tied!");
+        ui->resultLabel->setText("You Push!");
         break;
 
     case Blackjack::blackjack:
