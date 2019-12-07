@@ -102,6 +102,7 @@ void TutorialUI::beginDealing() {
     dealDealerCard(game.getDealerHand()[1]);
     if(isBlackjack)
     {
+        game.getResult();
         startGame();
     }
 
@@ -141,6 +142,7 @@ void TutorialUI::stand()
     ui->splitButton->hide();
     ui->standButton->hide();
     ui->bustLabel->show();
+    game.getResult();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
@@ -158,6 +160,7 @@ void TutorialUI::hitMe()
     ui->splitButton->hide();
     ui->standButton->hide();
     ui->bustLabel->show();
+    game.getResult();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
@@ -175,6 +178,7 @@ void TutorialUI::doubleDown()
     ui->splitButton->hide();
     ui->standButton->hide();
     ui->bustLabel->show();
+    game.getResult();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
@@ -192,6 +196,7 @@ void TutorialUI::split()
     ui->splitButton->hide();
     ui->standButton->hide();
     ui->bustLabel->show();
+    game.getResult();
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
