@@ -1061,7 +1061,7 @@ QPushButton:hover{
        </rect>
       </property>
       <property name="text">
-       <string>HIt Me!</string>
+       <string>Hit Me!</string>
       </property>
      </widget>
      <widget class="QLabel" name="splitCard8">
@@ -1178,7 +1178,7 @@ QPushButton:hover{
        </rect>
       </property>
       <property name="text">
-       <string>Stand</string>
+       <string>Stay</string>
       </property>
      </widget>
      <widget class="QLabel" name="resultLabel">

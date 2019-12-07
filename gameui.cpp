@@ -260,7 +260,7 @@ void GameUI::analyzeResult() {
         break;
 
     case Blackjack::push:
-        ui->resultLabel->setText("You Tied! \nYou're not broke yet!");
+        ui->resultLabel->setText("You Push!\nYou're not broke yet!");
         break;
 
     case Blackjack::blackjack:

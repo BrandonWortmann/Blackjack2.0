@@ -164,7 +164,7 @@ text-align:center
      </rect>
     </property>
     <property name="text">
-     <string>HIt Me!</string>
+     <string>Hit Me!</string>
     </property>
    </widget>
    <widget class="QPushButton" name="standButton">
@@ -177,7 +177,7 @@ text-align:center
      </rect>
     </property>
     <property name="text">
-     <string>Stand</string>
+     <string>Stay</string>
     </property>
    </widget>
    <widget class="QLabel" name="resultLabel">

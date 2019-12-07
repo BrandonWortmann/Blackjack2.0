@@ -538,7 +538,7 @@ QPushButton:hover{
        </font>
       </property>
       <property name="text">
-       <string>H - Hit                                      S - Stand
+       <string>H - Hit                                         S - Stay
 
 D - Double Down                 SP - Split</string>
       </property>
@@ -653,7 +653,7 @@ QPushButton:hover{
        </rect>
       </property>
       <property name="text">
-       <string>HIt Me!</string>
+       <string>Hit Me!</string>
       </property>
      </widget>
      <widget class="QPushButton" name="tutorialUIReturnBtn">
@@ -766,7 +766,7 @@ You Lost $200</string>
        <string notr="true"/>
       </property>
       <property name="text">
-       <string>Stand</string>
+       <string>Stay</string>
       </property>
      </widget>
      <widget class="QLabel" name="splitCard8">
@@ -842,7 +842,7 @@ You Lost $200</string>
        </font>
       </property>
       <property name="text">
-       <string>H - Hit                                      S - Stand
+       <string>H - Hit                                         S - Stay
 
 D - Double Down                 SP - Split</string>
       </property>
