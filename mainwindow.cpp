@@ -17,7 +17,6 @@
 #include "ui_mainmenu.h"
 #include "rules.h"
 #include "ui_rules.h"
-#include "ui_counting.h"
 #include "gameui.h"
 #include "ui_gameui.h"
 #include "tutorial.h"
