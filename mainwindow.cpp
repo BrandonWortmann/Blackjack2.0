@@ -66,16 +66,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(gameUI->ui->gameUIReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backTutorialPage);
+    connect(countTutorial->ui->returnButton, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     //connect(countTutorial->ui->countTutorialUIReturnBtn, &QPushButton::pressed, this, &MainWindow::backCountTutorialPage);
 
     connect(rules->ui->rulesReturnBtn, &QPushButton::pressed, this, &MainWindow::startBtnPressed);
     connect(tutorial->ui->tutorialNextBtn, &QPushButton::pressed, this, &MainWindow::toTutorialPage);
-<<<<<<< HEAD
-    //connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
-=======
-    connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
-    connect(countTutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::countPopup);
->>>>>>> 829ea23eda288a7d00627b4cec1f228f8ed18936
+//    connect(countTutorial->ui->countTutorialBtn, &QPushButton::pressed, this, &MainWindow::toCountTutorialPage);
+//    connect(countTutorial->ui->cheatsheetBtn, &QPushButton::pressed, this, &MainWindow::countPopup);
     connect(rules->ui->toCardsBtn, &QPushButton::pressed, this, &MainWindow::toCardsPage);
     connect(rules->ui->toChipsBtn, &QPushButton::pressed, this, &MainWindow::toChipsPage);
     connect(rules->ui->backCardsBtn, &QPushButton::pressed, this, &MainWindow::backCardsPage);

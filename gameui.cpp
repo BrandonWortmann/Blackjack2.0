@@ -334,10 +334,14 @@ void GameUI::wagerChanged() {
     if(len < 1) {
         return;
     }
-    if(val.at(len - 1) < 48 || val.at(len - 1) > 57) {
-        val.chop(1);
-        ui->wagerEdit->setText(val);
+
+    QString newVal = val;
+    for(int i = 0; i < len; i++) {
+        if(val.at(i) < 48 || val.at(i) > 57) {
+            newVal.remove(i, 1);
+        }
     }
+    ui->wagerEdit->setText(newVal);
 }
 
 QString GameUI::getCardPath(Blackjack::card inputCard)
