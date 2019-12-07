@@ -44,7 +44,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-	font-size: 12px;
+	font-size: 15px;
 	color: white;
 	background-color: black;
 	border-radius: 15px;
@@ -558,19 +558,6 @@ D - Double Down                 SP - Split</string>
         <height>31</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-	font-size: 12px;
-	color: white;
-	background-color: black;
-	border-radius: 15px;
-}
-
-QPushButton:hover{
-	color: black;
- background-color: white;
-}</string>
-      </property>
       <property name="text">
        <string>Return</string>
       </property>
@@ -664,6 +651,19 @@ QPushButton:hover{
         <width>101</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
       </property>
       <property name="text">
        <string>Return</string>
@@ -803,6 +803,19 @@ You Lost $200</string>
         <width>101</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
       </property>
       <property name="text">
        <string>Cheatsheet</string>

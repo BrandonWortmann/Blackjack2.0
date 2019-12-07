@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton{
-	font-size: 30px;
+	font-size: 15px;
 	color: white;
 	background-color: black;
 	border-radius: 15px;
@@ -63,6 +63,19 @@ QPushButton:hover{
       <width>1000</width>
       <height>800</height>
      </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -211,6 +224,19 @@ QPushButton:hover{
       <width>1000</width>
       <height>800</height>
      </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
     </property>
     <widget class="QPushButton" name="toChipsBtn">
      <property name="geometry">
@@ -653,6 +679,19 @@ QPushButton:hover{
       <width>1000</width>
       <height>800</height>
      </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	color: black;
+ background-color: white;
+}</string>
     </property>
     <widget class="QPushButton" name="backCardsBtn">
      <property name="geometry">

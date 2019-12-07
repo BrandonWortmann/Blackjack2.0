@@ -21,7 +21,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QPushButton{
-	font-size: 30px;
+	font-size: 15px;
 	color: white;
 	background-color: black;
 	border-radius: 15px;
