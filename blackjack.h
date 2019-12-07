@@ -72,10 +72,10 @@ private:
     QList<hand> playerHand;
     int currentHand;
 
-    void shuffle();
     bool isBlackjack(QList<card> hand);
     card dealCard();
     bool sameCard(QList<card> hand);
+    void shuffle();
 };
 
 #endif // BLACKJACK_H

@@ -34,6 +34,26 @@ CountingTutorial::CountingTutorial(QWidget *parent) :
         ui->checkButton->hide();
         ui->returnButton->show();
 
+        ui->count1_2->hide();
+        ui->count2_2->hide();
+        ui->count3_2->hide();
+        ui->count4_2->hide();
+        ui->count5_2->hide();
+        ui->count6_2->hide();
+        ui->count7_2->hide();
+        ui->count8_2->hide();
+        ui->count9_2->hide();
+        ui->count10_2->hide();
+        ui->count11_2->hide();
+        ui->count12_2->hide();
+        ui->count13_2->hide();
+        ui->countLabel1_2->hide();
+        ui->countLabel2_2->hide();
+        ui->countLabel3_2->hide();
+        ui->countLine1_2->hide();
+        ui->countLine2_2->hide();
+        ui->countLine3_2->hide();
+
         ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
         index = 0;
         money = 500;
@@ -55,8 +75,6 @@ CountingTutorial::CountingTutorial(QWidget *parent) :
         dealerCards.push_back(ui->dealerCard7);
         dealerCards.push_back(ui->dealerCard8);
 
-        startGame();
-
         QImage* highlightColor = new QImage(561, 211, QImage::Format_RGBA64);
         highlightColor->fill(*(new QColor(0, 0, 255, 100)));
         ui->firstHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
@@ -74,6 +92,10 @@ CountingTutorial::CountingTutorial(QWidget *parent) :
                 this, &CountingTutorial::split);
         connect(ui->checkButton, &QPushButton::pressed,
                 this, &CountingTutorial::checkCardCount);
+        connect(ui->cheatsheetBtn, &QPushButton::pressed,
+                this, &CountingTutorial::cheatSheet);
+
+        startGame();
 }
 
 CountingTutorial::~CountingTutorial()
@@ -374,3 +396,52 @@ QString CountingTutorial::getCardPath(Blackjack::card inputCard)
     file_path += ".png) 0 0 0 0 stretch";
     return file_path;
 }
+
+void CountingTutorial::cheatSheet()
+{
+    if (ui->count1_2->isHidden())
+    {
+        ui->count1_2->show();
+        ui->count2_2->show();
+        ui->count3_2->show();
+        ui->count4_2->show();
+        ui->count5_2->show();
+        ui->count6_2->show();
+        ui->count7_2->show();
+        ui->count8_2->show();
+        ui->count9_2->show();
+        ui->count10_2->show();
+        ui->count11_2->show();
+        ui->count12_2->show();
+        ui->count13_2->show();
+        ui->countLabel1_2->show();
+        ui->countLabel2_2->show();
+        ui->countLabel3_2->show();
+        ui->countLine1_2->show();
+        ui->countLine2_2->show();
+        ui->countLine3_2->show();
+    }
+    else
+    {
+        ui->count1_2->hide();
+        ui->count2_2->hide();
+        ui->count3_2->hide();
+        ui->count4_2->hide();
+        ui->count5_2->hide();
+        ui->count6_2->hide();
+        ui->count7_2->hide();
+        ui->count8_2->hide();
+        ui->count9_2->hide();
+        ui->count10_2->hide();
+        ui->count11_2->hide();
+        ui->count12_2->hide();
+        ui->count13_2->hide();
+        ui->countLabel1_2->hide();
+        ui->countLabel2_2->hide();
+        ui->countLabel3_2->hide();
+        ui->countLine1_2->hide();
+        ui->countLine2_2->hide();
+        ui->countLine3_2->hide();
+    }
+}
+

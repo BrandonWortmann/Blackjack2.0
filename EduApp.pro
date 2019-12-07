@@ -63,7 +63,6 @@ SOURCES += \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
     blackjack.cpp \
-    counting.cpp \
     countingtutorial.cpp \
     gameui.cpp \
     intro.cpp \
@@ -123,7 +122,6 @@ HEADERS += \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
     blackjack.h \
-    counting.h \
     countingtutorial.h \
     gameui.h \
     intro.h \
@@ -134,7 +132,6 @@ HEADERS += \
     tutorial.h
 
 FORMS += \
-    counting.ui \
     countingtutorial.ui \
     gameui.ui \
     intro.ui \

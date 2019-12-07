@@ -47,6 +47,7 @@ private:
     Blackjack::action action;
     QString correctMove;
     int handCount;
+    void cheatSheet();
 };
 
 #endif // COUNTTUTORIAL_H

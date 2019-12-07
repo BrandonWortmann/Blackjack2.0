@@ -17,7 +17,6 @@
 #include "ui_mainmenu.h"
 #include "rules.h"
 #include "ui_rules.h"
-#include "counting.h"
 #include "ui_counting.h"
 #include "gameui.h"
 #include "ui_gameui.h"
@@ -39,7 +38,6 @@ MainWindow::MainWindow(QWidget *parent)
     menu = new MainMenu;
     rules = new Rules;
     intro = new Intro;
-    counting = new Counting;
     tutorial = new TutorialUI;
     countTutorial = new CountingTutorial;
     gameUI = new GameUI;
@@ -96,7 +94,6 @@ MainWindow::~MainWindow()
     delete menu;
     delete title;
     delete rules;
-    delete counting;
     delete gameUI;
 }
 
@@ -135,7 +132,6 @@ void MainWindow::practiceBtnPressed(){
 void MainWindow::hideAll(){
     this->title->hide();
     this->rules->hide();
-    this->counting->hide();
     this->menu->hide();
     this->gameUI->hide();
     this->tutorial->hide();
@@ -161,11 +157,6 @@ void MainWindow::toTutorialPage()
 {
     tutorial->ui->infoPage->hide();
     tutorial->ui->gamePage->show();
-}
-
-void MainWindow::countPopup()
-{
-    counting->show();
 }
 
 void MainWindow::toCountTutorialPage()
