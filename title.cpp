@@ -15,6 +15,12 @@
 #include <stdio.h>
 #include <QTimer>
 
+/**
+ * @brief Title::Title
+ * @param parent
+ * Title page that displays our animation
+ * Our Use of Box2D
+ */
 Title::Title(QWidget *parent) :
     QWidget(parent),
     world(b2Vec2(0.0f, 10.0f)),
@@ -79,11 +85,19 @@ Title::Title(QWidget *parent) :
     body4->CreateFixture(&fixtureDef);
 }
 
+/**
+ * @brief Title::~Title
+ * Title destructor
+ */
 Title::~Title()
 {
     delete ui;
 }
 
+/**
+ * @brief Title::startAnimation
+ * Starts the title animation
+ */
 void Title::startAnimation()
 {
 

@@ -11,6 +11,12 @@
 #include "mainwindow.h"
 #include <QApplication>
 
+/**
+ * @brief main
+ * @param argc
+ * @param argv
+ * Runs our Blackjack game
+ */
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

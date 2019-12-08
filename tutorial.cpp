@@ -18,6 +18,11 @@
 #include <unistd.h>
 #include <iostream>
 
+/**
+ * @brief TutorialUI::TutorialUI
+ * @param parent
+ * Strategies tutorial
+ */
 TutorialUI::TutorialUI(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::TutorialUI)
@@ -38,6 +43,7 @@ TutorialUI::TutorialUI(QWidget *parent) :
     dealerCards.push_back(ui->dealerCard2);
     startGame();
 
+    // Establishing connections
     connect(ui->hitButton, &QPushButton::pressed,
             this, &TutorialUI::hitMe);
     connect(ui->standButton, &QPushButton::pressed,
@@ -50,11 +56,19 @@ TutorialUI::TutorialUI(QWidget *parent) :
             this, &TutorialUI::cheatSheet);
 }
 
+/**
+ * @brief TutorialUI::~TutorialUI
+ * Strategies tutorial destructor
+ */
 TutorialUI::~TutorialUI()
 {
     delete ui;
 }
 
+/**
+ * @brief TutorialUI::startGame
+ * Starts the strategies tutorial game
+ */
 void TutorialUI::startGame() {
     ui->hitButton->hide();
     ui->doubleButton->hide();
@@ -69,6 +83,10 @@ void TutorialUI::startGame() {
     beginDealing();
 }
 
+/**
+ * @brief TutorialUI::beginDealing
+ * Deals the cards for the player and dealer
+ */
 void TutorialUI::beginDealing() {
 
     bool isBlackjack = game.bet(0);
@@ -108,6 +126,11 @@ void TutorialUI::beginDealing() {
 
 }
 
+/**
+ * @brief TutorialUI::dealUserCard
+ * @param userCard
+ * Helper method that deals a single user card
+ */
 void TutorialUI::dealUserCard(Blackjack::card userCard) {
     if(index == 8) {
         index = 0;
@@ -119,6 +142,11 @@ void TutorialUI::dealUserCard(Blackjack::card userCard) {
     index++;
 }
 
+/**
+ * @brief TutorialUI::dealDealerCard
+ * @param dealerCard
+ * Helper method that deals a single dealer card
+ */
 void TutorialUI::dealDealerCard(Blackjack::card dealerCard) {
     if(index == 8) {
         index = 0;
@@ -129,6 +157,10 @@ void TutorialUI::dealDealerCard(Blackjack::card dealerCard) {
     index++;
 }
 
+/**
+ * @brief TutorialUI::stand
+ * User selects to stand
+ */
 void TutorialUI::stand()
 {
     if(action == Blackjack::_stand) {
@@ -146,6 +178,10 @@ void TutorialUI::stand()
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
+/**
+ * @brief TutorialUI::hitMe
+ * User selects to hit
+ */
 void TutorialUI::hitMe()
 {
     if(action == Blackjack::_hit) {
@@ -164,6 +200,10 @@ void TutorialUI::hitMe()
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
+/**
+ * @brief TutorialUI::doubleDown
+ * User selects to double down
+ */
 void TutorialUI::doubleDown()
 {
     if(action == Blackjack::_doubledown) {
@@ -182,6 +222,10 @@ void TutorialUI::doubleDown()
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
+/**
+ * @brief TutorialUI::split
+ * User selects to split
+ */
 void TutorialUI::split()
 {
     if(action == Blackjack::_split) {
@@ -200,6 +244,11 @@ void TutorialUI::split()
     QTimer::singleShot(2000, this, &TutorialUI::startGame);
 }
 
+/**
+ * @brief TutorialUI::getCardPath
+ * @param inputCard
+ * Returns the file path of each card
+ */
 QString TutorialUI::getCardPath(Blackjack::card inputCard)
 {
 
@@ -247,6 +296,10 @@ QString TutorialUI::getCardPath(Blackjack::card inputCard)
     return file_path;
 }
 
+/**
+ * @brief TutorialUI::cheatSheet
+ * Displays the tutorial cheatsheet
+ */
 void TutorialUI::cheatSheet()
 {
     if (ui->stratPicture_2->isHidden())

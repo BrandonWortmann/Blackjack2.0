@@ -51,4 +51,3 @@ private:
 };
 
 #endif // COUNTTUTORIAL_H
-

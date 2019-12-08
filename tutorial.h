@@ -1,7 +1,3 @@
-#ifndef TUTORIALUI_H
-#define TUTORIALUI_H
-
-#include <QMainWindow>
 /************************************************
  *      A9 - Educational App                    *
  *  Author: Wasted Potential                    *
@@ -11,9 +7,13 @@
  *                                              *
  ************************************************/
 
+#ifndef TUTORIALUI_H
+#define TUTORIALUI_H
+
 #include <vector>
 #include <QLabel>
 #include "blackjack.h"
+#include <QMainWindow>
 
 namespace Ui {
 class TutorialUI;

@@ -1,0 +1,34 @@
+/************************************************
+ *      A9 - Educational App                    *
+ *  Author: Wasted Potential                    *
+ *  CS 3505                                     *
+ *                                              *
+ *  mainmenu.cpp                                *
+ *  Widget that holds menu buttons for          *
+ *  each tutorial and info widget page.         *
+ *                                              *
+ ************************************************/
+
+#include "mainmenu.h"
+#include "ui_mainmenu.h"
+
+/**
+ * @brief MainMenu::MainMenu
+ * @param parent
+ * Main Menu
+ */
+MainMenu::MainMenu(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::MainMenu)
+{
+    ui->setupUi(this);
+}
+
+/**
+ * @brief MainMenu::~MainMenu
+ * MainMenu destructor
+ */
+MainMenu::~MainMenu()
+{
+    delete ui;
+}

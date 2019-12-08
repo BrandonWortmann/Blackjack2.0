@@ -1,6 +1,3 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
 /************************************************
  *      A9 - Educational App                    *
  *  Author: Wasted Potential                    *
@@ -9,6 +6,9 @@
  *  header file for mainwindow                  *
  *                                              *
  ************************************************/
+
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
 #include "title.h"
@@ -37,7 +37,6 @@ public:
     TutorialUI* tutorial;
     CountingTutorial* countTutorial;
     Intro* intro;
-
     void hideAll();
 
 public slots:
@@ -55,7 +54,6 @@ public slots:
     void backCountTutorialPage();
     void backRulesPage();
     void backCardsPage();
-
     void updateCard1(int);
     void updateCard2(int);
     void updateCard3(int);

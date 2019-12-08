@@ -19,10 +19,16 @@
 #include <QDebug>
 #include <unistd.h>
 
+/**
+ * @brief GameUI::GameUI
+ * @param parent
+ * Game User Interface
+ */
 GameUI::GameUI(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GameUI)
 {
+    // Default setup
     ui->setupUi(this);
     srand((unsigned int) time(nullptr));
     ui->hitButton->hide();
@@ -30,6 +36,7 @@ GameUI::GameUI(QWidget *parent) :
     ui->doubleButton->hide();
     ui->splitButton->hide();
 
+    // Adds the background label
     ui->backgroundLabel->setStyleSheet("border-image: url(:/new/images/Resources/green-felt.jpg) 0 0 0 0 stretch");
     index = 0;
     money = 500;
@@ -51,11 +58,13 @@ GameUI::GameUI(QWidget *parent) :
     dealerCards.push_back(ui->dealerCard8);
     startGame();
 
+    // Splitting UI
     QImage* highlightColor = new QImage(561, 211, QImage::Format_RGBA64);
     highlightColor->fill(*(new QColor(0, 0, 255, 100)));
     ui->firstHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
     ui->secondHighlightLabel->setPixmap(QPixmap::fromImage(*highlightColor));
 
+    // Establish connections
     connect(ui->startButton, &QPushButton::pressed,
             this, &GameUI::beginDealing);
     connect(ui->hitButton, &QPushButton::pressed,
@@ -82,12 +91,21 @@ GameUI::GameUI(QWidget *parent) :
             ui->wagerEdit, &QLineEdit::clear);
 }
 
+/**
+ * @brief GameUI::~GameUI
+ * Game UI destructor
+ */
 GameUI::~GameUI()
 {
     delete ui;
 }
 
+/**
+ * @brief GameUI::startGame
+ * The Start of the Game Setup
+ */
 void GameUI::startGame() {
+    // Hides old UI stuff
     for(int i = 0; i < cards.size(); i++) {
         cards[i]->hide();
     }
@@ -122,6 +140,10 @@ void GameUI::startGame() {
     }
 }
 
+/**
+ * @brief GameUI::beginDealing
+ * Gets the users wager and deals the cards
+ */
 void GameUI::beginDealing() {
     unsigned long newWager = (unsigned long) ui->wagerEdit->text().toLong();
     if(newWager > money) {
@@ -170,9 +192,13 @@ void GameUI::beginDealing() {
     {
         stand();
     }
-
 }
 
+/**
+ * @brief GameUI::dealUserCard
+ * @param userCard
+ * Deals the User cards
+ */
 void GameUI::dealUserCard(Blackjack::card userCard) {
     if(index == 8) {
         index = 0;
@@ -184,6 +210,11 @@ void GameUI::dealUserCard(Blackjack::card userCard) {
     index++;
 }
 
+/**
+ * @brief GameUI::dealDealerCard
+ * @param dealerCard
+ * Helper to deal the Dealers card
+ */
 void GameUI::dealDealerCard(Blackjack::card dealerCard) {
     QString file_path = getCardPath(dealerCard);
     dealerCards[index]->setStyleSheet(file_path);
@@ -191,6 +222,10 @@ void GameUI::dealDealerCard(Blackjack::card dealerCard) {
     index++;
 }
 
+/**
+ * @brief GameUI::stand
+ * User chooses to stand round
+ */
 void GameUI::stand()
 {
     if(game.stay())
@@ -216,6 +251,10 @@ void GameUI::stand()
     checkDealer();
 }
 
+/**
+ * @brief GameUI::dealToDealer
+ * Deals the Dealers card
+ */
 void GameUI::dealToDealer()
 {
     Blackjack::card inputCard;
@@ -230,6 +269,10 @@ void GameUI::dealToDealer()
     QTimer::singleShot(currTime, this, &GameUI::analyzeResult);
 }
 
+/**
+ * @brief GameUI::checkDealer
+ * Checks if the dealer has won the round
+ */
 void GameUI::checkDealer()
 {
     Blackjack::result res = game.getResult();
@@ -244,6 +287,10 @@ void GameUI::checkDealer()
 
 }
 
+/**
+ * @brief GameUI::analyzeResult
+ * Notifies users of round result
+ */
 void GameUI::analyzeResult() {
     Blackjack::result result = game.getResult();
 
@@ -282,6 +329,10 @@ void GameUI::analyzeResult() {
     QTimer::singleShot(2500, this, &GameUI::startGame);
 }
 
+/**
+ * @brief GameUI::hitMe
+ * User selects Hit
+ */
 void GameUI::hitMe()
 {
     ui->splitButton->hide();
@@ -294,12 +345,20 @@ void GameUI::hitMe()
     }
 }
 
+/**
+ * @brief GameUI::doubleDown
+ * User Selects double down
+ */
 void GameUI::doubleDown()
 {
     dealUserCard(game.doubleDown());
     stand();
 }
 
+/**
+ * @brief GameUI::split
+ * User selects to split
+ */
 void GameUI::split()
 {
     ui->splitButton->hide();
@@ -328,6 +387,10 @@ void GameUI::split()
     ui->firstHighlightLabel->show();
 }
 
+/**
+ * @brief GameUI::wagerChanged
+ * New Wager from the user
+ */
 void GameUI::wagerChanged() {
     QString val = ui->wagerEdit->text();
     int len = val.length();
@@ -344,9 +407,13 @@ void GameUI::wagerChanged() {
     ui->wagerEdit->setText(newVal);
 }
 
+/**
+ * @brief GameUI::getCardPath
+ * @param inputCard
+ * Gets the file path of a card
+ */
 QString GameUI::getCardPath(Blackjack::card inputCard)
 {
-
     QString file_path = "border-image: url(:/new/images/Resources/";
     QString card = "card";
 
@@ -391,6 +458,10 @@ QString GameUI::getCardPath(Blackjack::card inputCard)
     return file_path;
 }
 
+/**
+ * @brief GameUI::chipWhiteButtonPressed
+ * User selects the white chip for wagering
+ */
 void GameUI::chipWhiteButtonPressed() {
     QString val = ui->wagerEdit->text();
     int num;
@@ -404,6 +475,10 @@ void GameUI::chipWhiteButtonPressed() {
     ui->wagerEdit->setText(QString::number(num + 1));
 }
 
+/**
+ * @brief GameUI::chipRedButtonPressed
+ * User seleccts the red chip for wagering
+ */
 void GameUI::chipRedButtonPressed() {
     QString val = ui->wagerEdit->text();
     int num;
@@ -417,6 +492,10 @@ void GameUI::chipRedButtonPressed() {
     ui->wagerEdit->setText(QString::number(num + 5));
 }
 
+/**
+ * @brief GameUI::chipBlueButtonPressed
+ * User selects the blue chip for wagering
+ */
 void GameUI::chipBlueButtonPressed() {
     QString val = ui->wagerEdit->text();
     int num;
@@ -430,6 +509,10 @@ void GameUI::chipBlueButtonPressed() {
     ui->wagerEdit->setText(QString::number(num + 25));
 }
 
+/**
+ * @brief GameUI::chipGreenButtonPressed
+ * User selects the green chip for wagering
+ */
 void GameUI::chipGreenButtonPressed() {
     QString val = ui->wagerEdit->text();
     int num;
@@ -443,6 +526,10 @@ void GameUI::chipGreenButtonPressed() {
     ui->wagerEdit->setText(QString::number(num + 100));
 }
 
+/**
+ * @brief GameUI::chipBlackButtonPressed
+ * User selects the blackchip for wagering
+ */
 void GameUI::chipBlackButtonPressed() {
     QString val = ui->wagerEdit->text();
     int num;

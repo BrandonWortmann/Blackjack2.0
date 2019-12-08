@@ -13,11 +13,20 @@
 #include <cmath>
 #include <QDebug>
 
+/**
+ * @brief Blackjack::Blackjack
+ * Before we begin the game we shuffle the deck
+ */
 Blackjack::Blackjack()
 {
     shuffle();
 }
 
+/**
+ * @brief Blackjack::bet
+ * @param amount
+ * Players bet
+ */
 bool Blackjack::bet(unsigned long amount)
 {
     currentHand = 0;
@@ -28,6 +37,8 @@ bool Blackjack::bet(unsigned long amount)
     dealerHand.push_back(dealCard());
     playerHand[currentHand].hand.push_back(dealCard());
     dealerHand.push_back(dealCard());
+
+    // Blackjack
     if (isBlackjack(playerHand[currentHand].hand) || isBlackjack(dealerHand))
     {
         return true;
@@ -35,6 +46,11 @@ bool Blackjack::bet(unsigned long amount)
     return false;
 }
 
+/**
+ * @brief Blackjack::hit
+ * @param isBust
+ * Player selects hit
+ */
 Blackjack::card Blackjack::hit(bool& isBust)
 {
     playerHand[currentHand].hand.push_back(dealCard());
@@ -45,7 +61,10 @@ Blackjack::card Blackjack::hit(bool& isBust)
     return playerHand[currentHand].hand.back();
 }
 
-// returns true if player can still play
+/**
+ * @brief Blackjack::stay
+ * Returns true if player can still play
+ */
 bool Blackjack::stay()
 {
     currentHand++;
@@ -56,12 +75,20 @@ bool Blackjack::stay()
     return true;
 }
 
+/**
+ * @brief Blackjack::split
+ * Player chooses to split
+ */
 void Blackjack::split()
 {
     playerHand.insert(currentHand+1, {QList<card>(), playerHand[currentHand].betAmount});
     playerHand[currentHand+1].hand.push_back(playerHand[currentHand].hand.takeLast());
 }
 
+/**
+ * @brief Blackjack::doubleDown
+ * Player chooses to double down
+ */
 Blackjack::card Blackjack::doubleDown()
 {
     bool isBust = false;
@@ -69,6 +96,10 @@ Blackjack::card Blackjack::doubleDown()
     return hit(isBust);
 }
 
+/**
+ * @brief Blackjack::dealerStep
+ * Determines the dealers step
+ */
 Blackjack::card Blackjack::dealerStep()
 {
     bool bust = true;
@@ -87,6 +118,10 @@ Blackjack::card Blackjack::dealerStep()
     return dealerHand.back();
 }
 
+/**
+ * @brief Blackjack::getResult
+ * Returns result of the game
+ */
 Blackjack::result Blackjack::getResult()
 {
     result result;
@@ -168,11 +203,21 @@ Blackjack::result Blackjack::getResult()
     return result;
 }
 
+/**
+ * @brief Blackjack::isBlackjack
+ * @param hand
+ * Determines whether the hand is a blackjack
+ */
 bool Blackjack::isBlackjack(QList<card> hand)
 {
     return hand.size() == 2 && sumHand(hand) == 21;
 }
 
+/**
+ * @brief Blackjack::sumHand
+ * @param hand
+ * Returns the Sums of players current hand
+ */
 int Blackjack::sumHand(QList<card> hand)
 {
     int sum = 0;
@@ -204,26 +249,46 @@ int Blackjack::sumHand(QList<card> hand)
     return sum;
 }
 
+/**
+ * @brief Blackjack::getCount
+ * Getter for count
+ */
 int Blackjack::getCount()
 {
     return count;
 }
 
+/**
+ * @brief Blackjack::getDealerHand
+ * Getter for the dealers hand
+ */
 QList<Blackjack::card> Blackjack::getDealerHand()
 {
     return dealerHand;
 }
 
+/**
+ * @brief Blackjack::getPlayerHand
+ * Getter for the players hand
+ */
 QList<Blackjack::hand> Blackjack::getPlayerHand()
 {
     return playerHand;
 }
 
+/**
+ * @brief Blackjack::getCurrentHand
+ * Gets the current hand
+ */
 int Blackjack::getCurrentHand()
 {
     return currentHand;
 }
 
+/**
+ * @brief Blackjack::shuffle
+ * Shuffles the deck
+ */
 void Blackjack::shuffle()
 {
     srand(time(NULL));
@@ -249,6 +314,10 @@ void Blackjack::shuffle()
     }
 }
 
+/**
+ * @brief Blackjack::dealCard
+ * Deals the card
+ */
 Blackjack::card Blackjack::dealCard()
 {
     card card = deck.pop();
@@ -263,6 +332,10 @@ Blackjack::card Blackjack::dealCard()
     return card;
 }
 
+/**
+ * @brief Blackjack::correctMove
+ * Checks whether a player has selected the correct move
+ */
 Blackjack::action Blackjack::correctMove()
 {
     int dealerValue = dealerHand[1].number;
